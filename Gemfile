@@ -17,7 +17,7 @@ gem "friendly_id", "~> 4.0.0.beta8"
 gem 'devise'
 gem 'oauth'
 gem 'omniauth-twitter'
-# gem 'omniauth-instagram'
+gem 'omniauth-facebook'
 
 # For printing
 gem 'awesome_print'

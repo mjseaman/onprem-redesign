@@ -16,18 +16,19 @@ gem "friendly_id", "~> 4.0.0.beta8"
 # Authentication, API and Oauth
 gem 'devise'
 gem 'oauth'
-gem 'omniauth'
-# gem 'omniauth-twitter'
+gem 'omniauth-twitter'
 # gem 'omniauth-instagram'
 
 # For printing
 gem 'awesome_print'
 
+# HAML support
+gem 'haml-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'haml-rails'
   gem 'compass-rails'
   gem 'susy'
   # gem 'sassy-buttons'

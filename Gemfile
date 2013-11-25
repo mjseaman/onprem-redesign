@@ -42,7 +42,8 @@ end
 group :development, :test do
   gem 'annotate'
  #  gem 'meta_request'
- #  gem 'rspec-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
  #  gem 'capybara'
 	# # gem 'spork'
  #  gem 'guard-rspec'

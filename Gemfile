@@ -18,6 +18,7 @@ gem 'devise'
 gem 'oauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 # For printing
 gem 'awesome_print'

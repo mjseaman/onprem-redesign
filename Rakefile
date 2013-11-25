@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ServiceReferral::Application.load_tasks
+OnPrem::Application.load_tasks

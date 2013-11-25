@@ -29,31 +29,20 @@ gem 'haml-rails'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'compass-rails'
-  gem 'susy'
-  # gem 'sassy-buttons'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'bourbon'
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 group :development, :test do
   gem 'annotate'
- #  gem 'meta_request'
   gem 'rspec'
   gem 'rspec-rails'
- #  gem 'capybara'
-	# # gem 'spork'
- #  gem 'guard-rspec'
- #  gem 'selenium-webdriver'
- #  gem 'factory_girl_rails'
-	# # gem 'faker'
- #  gem 'shoulda-matchers'
- #  gem 'database_cleaner'
- #  gem 'jasmine-rails'
- #  gem 'simplecov', require: false
+  # gem 'factory_girl_rails'
+  # gem 'faker'
+  # gem 'shoulda-matchers'
+  # gem 'database_cleaner'
+  # gem 'simplecov', require: false
   gem 'dotenv-rails' # Dot env, saves keys in the environment
 end
 
@@ -62,19 +51,5 @@ gem 'jquery-ui-rails'
 # gem 'underscore-rails'
 gem 'debugger'
 
-# gem 'ransack'
-
-# To use ActiveModel has_secure_password
- # gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
 # To use debugger
-# gem 'debugger'
+gem 'debugger'

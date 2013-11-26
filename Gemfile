@@ -41,7 +41,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'nifty-generators' # Ryan Bates generators
   # gem 'factory_girl_rails'
-  # gem 'faker'
+  gem 'faker'
   # gem 'shoulda-matchers'
   # gem 'database_cleaner'
   # gem 'simplecov', require: false

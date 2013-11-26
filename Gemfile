@@ -39,6 +39,7 @@ group :development, :test do
   gem 'annotate'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'nifty-generators' # Ryan Bates generators
   # gem 'factory_girl_rails'
   # gem 'faker'
   # gem 'shoulda-matchers'

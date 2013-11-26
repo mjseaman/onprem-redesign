@@ -1,0 +1,15 @@
+one:
+  title: MyString
+  client: MyString
+  client_logo_url: MyString
+  caption: MyString
+  description: MyText
+  image_url: MyText
+
+two:
+  title: MyString
+  client: MyString
+  client_logo_url: MyString
+  caption: MyString
+  description: MyText
+  image_url: MyText

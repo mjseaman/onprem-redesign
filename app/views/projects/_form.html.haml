@@ -1,0 +1,28 @@
+= form_for @project do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :client
+    %br
+    = f.text_field :client
+  %p
+    = f.label :client_logo_url
+    %br
+    = f.text_field :client_logo_url
+  %p
+    = f.label :caption
+    %br
+    = f.text_field :caption
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :image_url
+    %br
+    = f.text_field :image_url
+  %p
+    = f.submit

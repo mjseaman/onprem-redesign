@@ -6,19 +6,31 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .container
-      .user-nav
-        -if user_signed_in?
-          ="Logged in as #{ current_user.email }"
-          =link_to 'Edit Profile', edit_user_registration_path
-          =link_to 'Logout', destroy_user_session_path, method: :delete
-        -else
-          / =link_to 'Sign Up', new_user_registration_path
-          / =link_to 'Login', new_user_session_path
-          / =link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter)
-          / =link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook)
-          =link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2)
-      .flash
-        -flash.each do |name, msg|
-          =content_tag :div, msg, id: "flash_#{name}"
-      = yield
+    #logo
+      Onprem Solution Partners
+
+    #nav
+      %ul
+        %li
+          About Us
+        %li
+          Offerings
+        %li
+          Partners
+        %li
+          Contact Us
+    .user-nav
+      -if user_signed_in?
+        ="Logged in as #{ current_user.email }"
+        =link_to 'Edit Profile', edit_user_registration_path
+        =link_to 'Logout', destroy_user_session_path, method: :delete
+      -else
+        / =link_to 'Sign Up', new_user_registration_path
+        / =link_to 'Login', new_user_session_path
+        / =link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter)
+        / =link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook)
+        =link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2)
+    .flash
+      -flash.each do |name, msg|
+        =content_tag :div, msg, id: "flash_#{name}"
+    = yield

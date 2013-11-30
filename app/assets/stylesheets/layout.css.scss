@@ -1,0 +1,35 @@
+
+$default-font: 				$helvetica;
+$default-font-weight: 200;
+$header-font: 				$helvetica;
+$header-font-weight: 	200;
+$body-font: 					$helvetica;
+$body-font-weight: 		200;
+
+body {
+	font-family: $default-font;
+	font-weight: $default-font-weight;
+}
+
+h1,h2 {
+	font-family: $header-font;
+	font-weight: $header-font-weight;
+}
+
+p {
+	font-family: $body-font;
+	font-weight: $body-font-weight;
+}
+
+#container {
+	@include outer-container;
+
+	#offerings {
+
+		/*display: inline-block;*/
+
+		.offering {
+			@include span-columns(3);
+		}
+	}
+}

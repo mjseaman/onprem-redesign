@@ -1,3 +1,80 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#container {
+	@include outer-container;
+
+
+// OnPrem Offerings blocks.  Four per row on large screen, 2 per row tablet, 1 per row mobile
+	#offerings {
+
+		display: inline-block;
+
+		.offering {
+
+			@include media($mobile) {
+				@include span-columns(4);
+				@include omega(1n);
+			}
+
+			@include media($tablet) {
+				@include span-columns(4);
+				@include omega(2n block);
+			}
+
+			@include span-columns(3);
+
+			.offering-detail {
+				display: none;
+			}
+		}
+	}
+
+// OnPrem Partner descriptions.  Two per row on large screen, 2 per row tablet, 1 per row mobile
+	#partners {
+
+		display:inline-block;
+
+		.partner {
+
+			@include media($mobile) {
+				@include span-columns(4);
+				@include omega(1n);
+			}
+
+			@include media($tablet) {
+				@include span-columns(4);
+				@include omega(2n block);
+			}
+
+			@include span-columns(6);
+			@include omega(2n block);
+		}
+	}
+
+	#contact-us {
+
+		display: inline-block;
+
+		.contact-info {
+			@include media($mobile) {
+				@include span-columns(4 of 4);
+				@include omega(1n);
+			}
+
+			@include media($tablet) {
+				@include span-columns(4 of 8);
+				@include omega(2n block);
+			}
+
+			@include span-columns(6);
+			@include omega(2n block);
+		}
+	}
+}
+
+
+
+
+

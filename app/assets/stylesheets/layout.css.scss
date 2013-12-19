@@ -6,8 +6,8 @@ $header-font-weight: 	200;
 $body-font: 					$helvetica;
 $body-font-weight: 		200;
 
-$mobile:							new-breakpoint(max-width 768px 4);
-$tablet:							new-breakpoint(min-width 768px max-width 1024px 8);
+$mobile:							new-breakpoint(max-width 768px, 4);
+$tablet:							new-breakpoint(min-width 768px max-width 1024px, 8);
 
 body {
 	font-family: $default-font;
@@ -22,29 +22,4 @@ h1,h2 {
 p {
 	font-family: $body-font;
 	font-weight: $body-font-weight;
-}
-
-#container {
-	@include outer-container;
-
-	#offerings {
-
-		display: inline-block;
-
-		.offering {
-
-			@include media($mobile) {
-				@include span-columns(4);
-			}
-
-			@include media($tablet) {
-				@include span-columns(4);
-				.offering:nth-child(2) {
-					@include omega();
-				}
-			}
-
-			@include span-columns(3);
-		}
-	}
 }

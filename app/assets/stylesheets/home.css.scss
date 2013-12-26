@@ -2,28 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#container {
-	// @include outer-container;
+.main {
+	@include susy-grid-background;
 
-
-// OnPrem Offerings blocks.  Four per row on large screen, 2 per row tablet, 1 per row mobile
+// OnPrem Offerings blocks.  
+// Four per row on large screen, 2 per row tablet, 1 per row mobile
 	#offerings {
 
 		display: inline-block;
 
 		.offering {
-
-			// @include media($mobile) {
-			// 	@include span-columns(4);
-			// 	@include omega(1n);
-			// }
-
-			// @include media($tablet) {
-			// 	@include span-columns(4);
-			// 	@include omega(2n block);
-			// }
-
-			// @include span-columns(3);
 
 			.offering-detail {
 				display: none;
@@ -31,25 +19,14 @@
 		}
 	}
 
-// OnPrem Partner descriptions.  Two per row on large screen, 2 per row tablet, 1 per row mobile
+// OnPrem Partner descriptions.  
+// Two per row on large screen, 2 per row tablet, 1 per row mobile
 	#partners {
 
 		display:inline-block;
 
 		.partner {
 
-			// @include media($mobile) {
-			// 	@include span-columns(4);
-			// 	@include omega(1n);
-			// }
-
-			// @include media($tablet) {
-			// 	@include span-columns(4);
-			// 	@include omega(2n block);
-			// }
-
-			// @include span-columns(6);
-			// @include omega(2n block);
 		}
 	}
 
@@ -58,23 +35,35 @@
 		display: inline-block;
 
 		.contact-info {
-			// @include media($mobile) {
-			// 	@include span-columns(4 of 4);
-			// 	@include omega(1n);
-			// }
-
-			// @include media($tablet) {
-			// 	@include span-columns(4 of 8);
-			// 	@include omega(2n block);
-			// }
-
-			// @include span-columns(6);
-			// @include omega(2n block);
+	
 		}
 	}
 }
 
+@include at-breakpoint($tablet) {
+	.main {
+		//background-color: red; //REMOVE IN PROD - turns bg red in tablet mode
+		#offerings {
+			.offering {
+				// float: left !important;
+				background-color: #E6B863;
+				@include span-columns(4);
+				@include nth-omega(2n);
+				// @include from-direction($from-direction);
+				// &:nth-child(2n) { @include omega; }
+			}
+		}
+	}
+}
 
-
-
-
+@include at-breakpoint($computer) {
+	.main {
+		//background-color: #F2CF8F; //REMOVE IN PROD - turns bg red in tablet mode
+		#offerings {
+			.offering {
+				background-color: #F0C16C;
+				@include span-columns(3);
+			}
+		}
+	}
+}

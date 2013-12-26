@@ -33,6 +33,7 @@ group :assets do
   gem 'bourbon'
   gem 'compass-rails'
   gem 'susy'
+  gem 'font-awesome-sass'
   
   gem 'uglifier', '>= 1.0.3'
 end

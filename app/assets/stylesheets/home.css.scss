@@ -4,53 +4,62 @@
 
 .main {
 	@include susy-grid-background;
-
-// OnPrem Offerings blocks.  
-// Four per row on large screen, 2 per row tablet, 1 per row mobile
+	@include container($total-columns, $tablet, $computer);
+	// OnPrem Offerings blocks.  
+	// Four per row on large screen, 2 per row tablet, 1 per row mobile
 	#offerings {
-
-		display: inline-block;
-
+		// display: inline-block;
 		.offering {
-
+			background-color: white;
+			.offering-icon {
+				display: inline-block;
+				width: 3em;
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			.offering-title {
+				display: inline-block;
+			}
 			.offering-detail {
 				display: none;
 			}
 		}
 	}
-
-// OnPrem Partner descriptions.  
-// Two per row on large screen, 2 per row tablet, 1 per row mobile
+	// OnPrem Partner descriptions.  
+	// Two per row on large screen, 2 per row tablet, 1 per row mobile
 	#partners {
-
 		display:inline-block;
-
 		.partner {
-
 		}
 	}
-
 	#contact-us {
-
 		display: inline-block;
-
 		.contact-info {
-	
 		}
 	}
 }
 
 @include at-breakpoint($tablet) {
 	.main {
-		//background-color: red; //REMOVE IN PROD - turns bg red in tablet mode
+		@include susy-grid-background;
 		#offerings {
 			.offering {
-				// float: left !important;
-				background-color: #E6B863;
 				@include span-columns(4);
-				@include nth-omega(2n);
-				// @include from-direction($from-direction);
-				// &:nth-child(2n) { @include omega; }
+				@include nth-omega('2n + 1');
+			}
+		}
+		#partners {
+			.partner {
+				@include span-columns(4);
+				@include nth-omega('2n + 1');
+			}
+		}
+		#contact-us {
+			.contact-info {
+				@include span-columns(4);
+				@include nth-omega('2n + 1');
 			}
 		}
 	}
@@ -58,11 +67,24 @@
 
 @include at-breakpoint($computer) {
 	.main {
-		//background-color: #F2CF8F; //REMOVE IN PROD - turns bg red in tablet mode
+		@include susy-grid-background;
 		#offerings {
 			.offering {
-				background-color: #F0C16C;
 				@include span-columns(3);
+				@include remove-nth-omega('2n + 1');
+				@include nth-omega(5);
+			}
+		}
+		#partners {
+			.partner {
+				@include span-columns(6);
+				@include nth-omega('2n + 1');
+			}
+		}
+		#contact-us {
+			.contact-info {
+				@include span-columns(6);
+				@include nth-omega('2n + 1');
 			}
 		}
 	}

@@ -14,10 +14,14 @@
 			.offering-icon {
 				display: inline-block;
 				width: 3em;
-				img {
-					max-width: 100%;
-					height: auto;
+				i {
+					@extend .fa, .fa-lg;
 				}
+				// img {
+				// 	display: none;
+				// 	max-width: 100%;
+				// 	height: auto;
+				// }
 			}
 			.offering-title {
 				display: inline-block;

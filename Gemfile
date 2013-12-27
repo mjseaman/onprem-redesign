@@ -26,6 +26,9 @@ gem 'awesome_print'
 # HAML support
 gem 'haml-rails'
 
+# Carrierwave for image uploads
+gem 'carrierwave'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

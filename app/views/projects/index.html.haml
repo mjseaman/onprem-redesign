@@ -15,7 +15,6 @@
 /       %td= project.client_logo_url
 /       %td= project.caption
 /       %td= project.description
-/       %td= project.image_url
 /       %td= link_to 'Show', project
 /       %td= link_to 'Edit', edit_project_path(project)
 /       %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
@@ -25,6 +24,7 @@
 .project-container
   -for project in @projects
     .project
+      .project-image
       .project-title
         %h2=project.title
         / %h2

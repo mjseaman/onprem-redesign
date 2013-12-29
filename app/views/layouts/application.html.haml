@@ -6,46 +6,29 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav
-      .navbar-header
-        %button{:class => "navbar-toggle", :data => {:toggle => "collapse", :target => "#navbar-collapse-1"}}
-          %span.sr-only Toggle Navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-      .collapse.navbar-collapse#navbar-collapse-1
-        %ul.nav.navbar-nav
-          %li.active
-            %a#mn_about{href: ""} About Us
-          %li
-            %a#mn_offerings{href: ""} Offerings
-          %li
-            %a#mn_partners{href: ""} Partners
-          %li
-            %a#mn_contact{href: ""} Contact Us
-    / #headercontainer
-    /   #logodiv
-    /     / <img src="images/OnPremLogoOnly.png" id="logopic">
-    /     = image_tag("OnPremLogoOnly.png", id: "logopic")
-    /     / <img src="images/OnPremTextOnly.png" id="logotext" >
-    /     = image_tag("OnPremTextOnly.png", id: "logotext")
-    /   #header
-    /     #nav
-    /       %a#mn_about{href: ""} About Us
-    /       %a#mn_offerings{href: ""} Offerings
-    /       %a#mn_partners{href: ""} Partners
-    /       %a#mn_contact{href: ""} Contact Us
-    /   .user-nav
-    /     -if user_signed_in?
-    /       ="Logged in as #{ current_user.email }"
-    /       =link_to 'Edit Profile', edit_user_registration_path
-    /       =link_to 'Logout', destroy_user_session_path, method: :delete
-    /     -else
-    /       / =link_to 'Sign Up', new_user_registration_path
-    /       / =link_to 'Login', new_user_session_path
-    /       / =link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter)
-    /       / =link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook)
-    /       =link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2)
+    #headercontainer
+      #logodiv
+        / <img src="images/OnPremLogoOnly.png" id="logopic">
+        = image_tag("OnPremLogoOnly.png", id: "logopic")
+        / <img src="images/OnPremTextOnly.png" id="logotext" >
+        = image_tag("OnPremTextOnly.png", id: "logotext")
+      #header
+        #nav
+          %a#mn_about{href: ""} About Us
+          %a#mn_offerings{href: ""} Offerings
+          %a#mn_partners{href: ""} Partners
+          %a#mn_contact{href: ""} Contact Us
+      .user-nav
+        -if user_signed_in?
+          ="Logged in as #{ current_user.email }"
+          =link_to 'Edit Profile', edit_user_registration_path
+          =link_to 'Logout', destroy_user_session_path, method: :delete
+        -else
+          / =link_to 'Sign Up', new_user_registration_path
+          / =link_to 'Login', new_user_session_path
+          / =link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter)
+          / =link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook)
+          =link_to 'Sign in with Google', user_omniauth_authorize_path(:google_oauth2)
     .main
       .flash
         -flash.each do |name, msg|

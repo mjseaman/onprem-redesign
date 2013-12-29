@@ -6,22 +6,26 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav.navbar.navbar-default{role: "navigation"}
+    %nav#navbar{role: "navigation"}
       / Brand and toggle get grouped for better mobile display
-      .navbar-header
-        %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
-          %span.sr-only
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        %a.navbar-brand{href: "#"} Brand
+      .header
+        %button.toggle{"data-target" => "#nav-links", "data-toggle" => "collapse", type: "button"}
+          / Bars that make up the toggle button icon
+          %span
+          %span
+          %span
+        %a.logo{href: "#"} Brand
       / Collect the nav links, forms, and other content for toggling
-      #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.navbar-nav.navbar-right
+      #nav-links
+        %ul
           %li.active
-            %a{href: "#"} Link
+            %a{href: "#"} About Us
           %li
-            %a{href: "#"} Link
+            %a{href: "#"} Offerings          
+          %li
+            %a{href: "#"} Partners          
+          %li
+            %a{href: "#"} Contact Us
     / #headercontainer
     /   #logodiv
     /     / <img src="images/OnPremLogoOnly.png" id="logopic">

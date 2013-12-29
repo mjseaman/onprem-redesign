@@ -23,7 +23,7 @@ $logo-pic-width         : 140px;
 $logo-text-height       : 62px;
 $logo-text-top-margin   : 18px;
 $logo-text-left-margin  : $logo-pic-width + 5px;
-$header-height          : 
+$header-height          : $logo-text-height + $logo-text-top-margin;
 
 
 // Font defaults

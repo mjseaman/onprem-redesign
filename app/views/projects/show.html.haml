@@ -7,9 +7,6 @@
   %strong Client:
   = @project.client
 %p
-  %strong Client Logo Url:
-  = @project.client_logo_url
-%p
   %strong Caption:
   = @project.caption
 %p
@@ -18,7 +15,9 @@
 %p
   %strong Image:
   = image_tag @project.image_url.to_s
-
+%p
+  %strong Image:
+  = image_tag @project.logo_url.to_s
 %p
   = link_to "Edit", edit_project_path(@project)
   |

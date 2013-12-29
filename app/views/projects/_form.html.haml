@@ -9,10 +9,6 @@
     %br
     = f.text_field :client
   %p
-    = f.label :client_logo_url
-    %br
-    = f.text_field :client_logo_url
-  %p
     = f.label :caption
     %br
     = f.text_field :caption
@@ -28,5 +24,9 @@
     =f.label :remote_image_url, "or image URL:"
     %br
     =f.text_field :remote_image_url
+  %p
+    =f.label :logo
+    %br
+    =f.file_field :logo
   %p
     = f.submit

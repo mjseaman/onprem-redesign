@@ -4,15 +4,12 @@
 /   %tr
 /     %th Title
 /     %th Client
-/     %th Client logo url
 /     %th Caption
 /     %th Description
-/     %th Image url
 /   - for project in @projects
 /     %tr
 /       %td= project.title
 /       %td= project.client
-/       %td= project.client_logo_url
 /       %td= project.caption
 /       %td= project.description
 /       %td= link_to 'Show', project
@@ -26,10 +23,4 @@
     .project
       .project-image
       .project-title
-        %h2=project.title
-        / %h2
-        /   Sample
       .project-client
-        %p=project.client
-        / %p
-        /   sample

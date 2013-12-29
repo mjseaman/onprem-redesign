@@ -1,11 +1,29 @@
 
+// * {
+// 	border: 1px solid red;
+// }
+
 .main {
 	.project-container {
+		margin:	auto;
 		.project {
-			// display: inline-block;
-			background-color: yellow;
-			// @include span-columns(2);
+			width:14em;
+			margin:0.25em;
+			background-color: #EBEBEB;
+			border: 1px solid black;
+			.project-image {
+				background-color: #CCCCCC;
+				height: 10em;
+				margin: 2%;
+			}
+			.project-title {
+				background-color: #B0B0B0;
+				height: 3em;
+				margin: 2%;
+			}
+			.project-client {
+				background-color: #808080;
+			}
 		}
 	}
 }
-

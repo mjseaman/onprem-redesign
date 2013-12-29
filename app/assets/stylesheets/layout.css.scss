@@ -1,4 +1,5 @@
 
+// Font Defaults
 $default-font: 				$helvetica;
 $default-font-weight: 200;
 $header-font: 				$helvetica;
@@ -11,16 +12,21 @@ $total-columns  : 7;             // a 12-column grid
 $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
-// $from-direction : left;
-$show-grid-backgrounds: true;
-$omega-float: left;
+$show-grid-backgrounds: true;     // Display grid background - remove/comment in PROD
+// $omega-float: left;             
 
 $tablet					: 8;							//set tablet breakpoint when screen can fit 8 columns
 $computer				: 55em 12;				// set large breakpoint to 12 columns when screen islarger than 55em
 
-// $mobile:							new-breakpoint(max-width 768px, 4);
-// $tablet:							new-breakpoint(min-width 768px max-width 1024px, 8);
+// Spacing variables
+$logo-pic-width         : 140px;
+$logo-text-height       : 62px;
+$logo-text-top-margin   : 18px;
+$logo-text-left-margin  : $logo-pic-width + 5px;
+$header-height          : 
 
+
+// Font defaults
 body {
 	font-family: $default-font;
 	font-weight: $default-font-weight;
@@ -36,7 +42,67 @@ p {
 	font-weight: $body-font-weight;
 }
 
+/**** Header ****/
 
+#headercontainer{
+  background:#fff;
+  height:80px;
+  margin:0px;
+  padding:0px;
+  position:fixed;
+  display:block;
+  top:0px;
+  opacity:0.9;
+  width:100%;
+  z-index:2;
+  box-shadow: 2px 2px 5px #6b6b6b;
+
+  #logopic{
+    position:absolute;
+    width:140px;
+    cursor: pointer;
+  }
+
+  #logotext {
+    height: 62px;
+    margin-top: 17px;
+    margin-left:145px;
+  }
+
+  #header{
+    position: relative;
+    float: right;
+    display: block;
+    margin-right: 5%;
+    margin-top:-73px;
+    width: 70%;
+  }
+
+  #nav{
+    display: block;
+    position: relative;
+    float: right;
+    text-align: right;
+    margin-top:25px;
+    width: 80%;
+  }
+
+  #nav a{
+    font-size: 14px;
+    line-height: 28px;
+    margin:4px 0%;
+    padding: 8px; 
+    color: #7e7e7e;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    border-radius: 8px;
+  }
+
+  #nav .selected{
+    color: white;
+  }
+}
 
 /**** Isotope Filtering ****/
 

@@ -6,9 +6,18 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .banner
-      .logo
-      .pagenav
+    #headercontainer
+      #logodiv
+        / <img src="images/OnPremLogoOnly.png" id="logopic">
+        = image_tag("OnPremLogoOnly.png", id: "logopic")
+        / <img src="images/OnPremTextOnly.png" id="logotext" >
+        = image_tag("OnPremTextOnly.png", id: "logotext")
+      #header
+        #nav
+          %a#mn_about{href: ""} About Us
+          %a#mn_offerings{href: ""} Offerings
+          %a#mn_partners{href: ""} Partners
+          %a#mn_contact{href: ""} Contact Us
       .user-nav
         -if user_signed_in?
           ="Logged in as #{ current_user.email }"

@@ -1,4 +1,4 @@
-
+// NOTE: for Navbar variables, see bootstrap-custom.css.scss.
 // Font Defaults
 $default-font: 				$helvetica;
 $default-font-weight: 200;
@@ -25,7 +25,6 @@ $logo-text-top-margin   : 18px;
 $logo-text-left-margin  : $logo-pic-width + 5px;
 $header-height          : $logo-text-height + $logo-text-top-margin;
 
-
 // Font defaults
 body {
 	font-family: $default-font;
@@ -45,7 +44,7 @@ p {
 /**** Responsive Header ****/
 
 nav#navbar {
-  @extend .navbar, .navbar-default;
+  @extend .navbar, .navbar-default, .navbar-fixed-top;
   .header {
     @extend .navbar-header;
     button.toggle {
@@ -59,7 +58,22 @@ nav#navbar {
     }
     a.logo {
       @extend .navbar-brand;
+      max-height:1em;
+      overflow: visible;
       text-decoration: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      #logopic{
+        // position:absolute;
+        width:90px;
+        cursor: pointer;
+      }
+      #logotext {
+        height: 40px;
+        margin-top: 5px;
+        // margin-left:1em;
+        vertical-align: top;
+      }
     }
   }
   #nav-links {
@@ -74,6 +88,22 @@ nav#navbar {
     }
   }
 }
+
+// Logo
+// #logodiv {
+//   z-index: 999;
+//   #logopic{
+//     position:absolute;
+//     width:140px;
+//     cursor: pointer;
+//   }
+
+//   #logotext {
+//     height: 62px;
+//     margin-top: 17px;
+//     margin-left:145px;
+//   }
+// }
 
 /**** Header ****/
 
@@ -90,17 +120,17 @@ nav#navbar {
 //   z-index:2;
 //   box-shadow: 2px 2px 5px #6b6b6b;
 
-//   #logopic{
-//     position:absolute;
-//     width:140px;
-//     cursor: pointer;
-//   }
+  // #logopic{
+  //   position:absolute;
+  //   width:140px;
+  //   cursor: pointer;
+  // }
 
-//   #logotext {
-//     height: 62px;
-//     margin-top: 17px;
-//     margin-left:145px;
-//   }
+  // #logotext {
+  //   height: 62px;
+  //   margin-top: 17px;
+  //   margin-left:145px;
+  // }
 
 //   #header{
 //     position: relative;

@@ -14,7 +14,10 @@
           %span
           %span
           %span
-        %a.logo{href: "#"} Brand
+        %a.logo{href: "#"}
+          / #logodiv
+          = image_tag("OnPremLogoOnly.png", id: "logopic")
+          = image_tag("OnPremTextOnly.png", id: "logotext")
       / Collect the nav links, forms, and other content for toggling
       #nav-links
         %ul

@@ -1,0 +1,24 @@
+%nav#navbar{role: "navigation"}
+  / Brand and toggle get grouped for better mobile display
+  / .container
+  .header
+    %button.toggle{"data-target" => "#nav-links", "data-toggle" => "collapse", type: "button"}
+      / Bars that make up the toggle button icon
+      %span
+      %span
+      %span
+    %a.logo{href: "/"}
+      / #logodiv
+      = image_tag("OnPremLogoOnly.png", id: "logopic")
+      = image_tag("OnPremTextOnly.png", id: "logotext")
+  / Collect the nav links, forms, and other content for toggling
+  #nav-links
+    %ul
+      %li
+        %a{href: "#"} About Us
+      %li
+        %a{href: "#"} Offerings
+      %li
+        %a{href: "#"} Partners
+      %li
+        %a{href: "#"} Contact Us

@@ -1,4 +1,5 @@
 // NOTE: for Navbar variables, see bootstrap-custom.css.scss.
+
 // Font Defaults
 $default-font: 				$helvetica;
 $default-font-weight: 200;
@@ -7,12 +8,15 @@ $header-font-weight: 	200;
 $body-font: 					$helvetica;
 $body-font-weight: 		200;
 
+// Background images
+$dark-background: url(image_path("dark-bg.jpg"));
+
 // Susy magic grid
 $total-columns  : 7;             // a 12-column grid
 $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
-$show-grid-backgrounds: true;     // Display grid background - remove/comment in PROD
+$show-grid-backgrounds: false;     // Display grid background - remove/comment in PROD
 // $omega-float: left;             
 
 $tablet					: 8;							//set tablet breakpoint when screen can fit 8 columns
@@ -25,10 +29,14 @@ $logo-text-top-margin   : 18px;
 $logo-text-left-margin  : $logo-pic-width + 5px;
 $header-height          : $logo-text-height + $logo-text-top-margin;
 
-// Font defaults
+// Font and Background defaults
 body {
 	font-family: $default-font;
 	font-weight: $default-font-weight;
+  background-image: $dark-background;
+  margin: 0;
+  background-repeat: repeat;
+  background-color: #2c2b29;
 }
 
 h1,h2 {
@@ -43,8 +51,19 @@ p {
 
 /**** Responsive Header ****/
 
+@include at-breakpoint($tablet) {
+  #logopic{
+    width:50px;
+    cursor: pointer;
+  }
+  #logotext {
+    display: none;
+  }
+}
+
 nav#navbar {
   @extend .navbar, .navbar-default, .navbar-fixed-top;
+  margin-bottom:0;
   .header {
     @extend .navbar-header;
     button.toggle {
@@ -63,16 +82,25 @@ nav#navbar {
       text-decoration: none;
       padding-top: 0;
       padding-bottom: 0;
+      padding-left: 0;
       #logopic{
         // position:absolute;
         width:90px;
         cursor: pointer;
+        // z-index: 9999;
+        @media screen and (max-width: $grid-float-breakpoint) {
+          width: 50px;
+        }
       }
       #logotext {
+        display: inline-block;
         height: 40px;
         margin-top: 5px;
         // margin-left:1em;
         vertical-align: top;
+        // @media screen and (max-width: 300px) {
+        //   display:none;
+        // }
       }
     }
   }
@@ -81,91 +109,18 @@ nav#navbar {
     ul {
       @extend .nav, .navbar-nav, .navbar-right;
       li {
+        width:auto;
         a {
+          // z-index: -1; // Set behind #logopic
           text-decoration: none;
+          text-align: right;
+          width:auto;
         }
       }
     }
   }
 }
 
-// Logo
-// #logodiv {
-//   z-index: 999;
-//   #logopic{
-//     position:absolute;
-//     width:140px;
-//     cursor: pointer;
-//   }
-
-//   #logotext {
-//     height: 62px;
-//     margin-top: 17px;
-//     margin-left:145px;
-//   }
-// }
-
-/**** Header ****/
-
-// #headercontainer{
-//   background:#fff;
-//   height:80px;
-//   margin:0px;
-//   padding:0px;
-//   position:fixed;
-//   display:block;
-//   top:0px;
-//   opacity:0.9;
-//   width:100%;
-//   z-index:2;
-//   box-shadow: 2px 2px 5px #6b6b6b;
-
-  // #logopic{
-  //   position:absolute;
-  //   width:140px;
-  //   cursor: pointer;
-  // }
-
-  // #logotext {
-  //   height: 62px;
-  //   margin-top: 17px;
-  //   margin-left:145px;
-  // }
-
-//   #header{
-//     position: relative;
-//     float: right;
-//     display: block;
-//     margin-right: 5%;
-//     margin-top:-73px;
-//     width: 70%;
-//   }
-
-//   #nav{
-//     display: block;
-//     position: relative;
-//     float: right;
-//     text-align: right;
-//     margin-top:25px;
-//     width: 80%;
-//   }
-
-//   #nav a{
-//     font-size: 14px;
-//     line-height: 28px;
-//     margin:4px 0%;
-//     padding: 8px; 
-//     color: #7e7e7e;
-//     text-decoration: none;
-//     white-space: nowrap;
-//     -webkit-tap-highlight-color: rgba(0,0,0,0);
-//     border-radius: 8px;
-//   }
-
-//   #nav .selected{
-//     color: white;
-//   }
-// }
 
 /**** Isotope Filtering ****/
 

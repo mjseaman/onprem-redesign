@@ -22,5 +22,6 @@
   -for project in @projects
     .project
       .project-image
+        = image_tag project.image_url(:thumb) if project.image?
       .project-title
       .project-client

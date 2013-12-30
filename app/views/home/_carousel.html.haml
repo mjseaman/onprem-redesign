@@ -1,0 +1,30 @@
+#carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+  / Wrapper for slides
+  .carousel-inner
+    .item.active
+      = image_tag("centurycity.jpg")
+      .carousel-caption
+        %h2
+          From Century City to Manhattan
+        %p
+          No firm is more versed in Media & Entertainment
+    .item
+      = image_tag("onprem_team.jpg")
+      .carousel-caption
+        %h2
+          Work Hard, Play Hard
+    .item
+      = image_tag("flight.jpg")
+      .carousel-caption
+        %h2
+          Going the extra mile
+  / Controls
+  %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic"}
+    %span.glyphicon.glyphicon-chevron-right

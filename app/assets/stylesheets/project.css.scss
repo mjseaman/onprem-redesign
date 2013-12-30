@@ -12,9 +12,15 @@
 			background-color: #EBEBEB;
 			border: 1px solid black;
 			.project-image {
+				overflow: hidden;
 				background-color: #CCCCCC;
 				height: 10em;
 				margin: 2%;
+				img {
+					min-width:100%;
+					min-height:100%;
+					// position:relative;
+				}
 			}
 			.project-title {
 				background-color: #B0B0B0;

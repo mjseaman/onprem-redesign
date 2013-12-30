@@ -1,10 +1,7 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .main {
 	@include susy-grid-background;
 	@include container($total-columns, $tablet, $computer);
+	background-color: white;
 	// OnPrem Offerings blocks.  
 	// Four per row on large screen, 2 per row tablet, 1 per row mobile
 	#offerings {

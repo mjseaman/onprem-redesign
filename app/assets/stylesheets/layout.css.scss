@@ -51,16 +51,6 @@ p {
 
 /**** Responsive Header ****/
 
-@include at-breakpoint($tablet) {
-  #logopic{
-    width:50px;
-    cursor: pointer;
-  }
-  #logotext {
-    display: none;
-  }
-}
-
 nav#navbar {
   @extend .navbar, .navbar-default, .navbar-fixed-top;
   margin-bottom:0;

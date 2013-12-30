@@ -1,12 +1,14 @@
 .main {
-	@include susy-grid-background;
-	@include container($total-columns, $tablet, $computer);
+	// @include susy-grid-background;
+	@extend .container;
 	background-color: white;
 	// OnPrem Offerings blocks.  
 	// Four per row on large screen, 2 per row tablet, 1 per row mobile
 	#offerings {
 		// display: inline-block;
 		.offering {
+			@extend .col-md-3, .col-sm-6;
+			padding: 0;
 			background-color: white;
 			.offering-icon {
 				display: inline-block;
@@ -33,6 +35,7 @@
 	#partners {
 		display:inline-block;
 		.partner {
+			@extend .col-md-6;
 		}
 	}
 	#contact-us {
@@ -42,51 +45,51 @@
 	}
 }
 
-@include at-breakpoint($tablet) {
-	.main {
-		@include susy-grid-background;
-		#offerings {
-			.offering {
-				@include span-columns(4);
-				@include nth-omega('2n + 1');
-			}
-		}
-		#partners {
-			.partner {
-				@include span-columns(4);
-				@include nth-omega('2n + 1');
-			}
-		}
-		#contact-us {
-			.contact-info {
-				@include span-columns(4);
-				@include nth-omega('2n + 1');
-			}
-		}
-	}
-}
+// @include at-breakpoint($tablet) {
+// 	.main {
+// 		@include susy-grid-background;
+// 		#offerings {
+// 			.offering {
+// 				@include span-columns(4);
+// 				@include nth-omega('2n + 1');
+// 			}
+// 		}
+// 		#partners {
+// 			.partner {
+// 				@include span-columns(4);
+// 				@include nth-omega('2n + 1');
+// 			}
+// 		}
+// 		#contact-us {
+// 			.contact-info {
+// 				@include span-columns(4);
+// 				@include nth-omega('2n + 1');
+// 			}
+// 		}
+// 	}
+// }
 
-@include at-breakpoint($computer) {
-	.main {
-		@include susy-grid-background;
-		#offerings {
-			.offering {
-				@include span-columns(3);
-				@include remove-nth-omega('2n + 1');
-				@include nth-omega(5);
-			}
-		}
-		#partners {
-			.partner {
-				@include span-columns(6);
-				@include nth-omega('2n + 1');
-			}
-		}
-		#contact-us {
-			.contact-info {
-				@include span-columns(6);
-				@include nth-omega('2n + 1');
-			}
-		}
-	}
-}
+// @include at-breakpoint($computer) {
+// 	.main {
+// 		@include susy-grid-background;
+// 		#offerings {
+// 			.offering {
+// 				@include span-columns(3);
+// 				@include remove-nth-omega('2n + 1');
+// 				@include nth-omega(5);
+// 			}
+// 		}
+// 		#partners {
+// 			.partner {
+// 				@include span-columns(6);
+// 				@include nth-omega('2n + 1');
+// 			}
+// 		}
+// 		#contact-us {
+// 			.contact-info {
+// 				@include span-columns(6);
+// 				@include nth-omega('2n + 1');
+// 			}
+// 		}
+// 	}
+// }

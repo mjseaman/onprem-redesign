@@ -35,8 +35,8 @@ gem 'rmagick', '2.13.2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'bourbon'
-  gem 'compass-rails'
-  gem 'susy'
+  # gem 'compass-rails'
+  # gem 'susy'
   gem 'font-awesome-sass'
   gem 'bootstrap-sass', '~> 3.0.3.0'
   

@@ -11,17 +11,6 @@ $body-font-weight: 		200;
 // Background images
 $dark-background: url(image_path("dark-bg.jpg"));
 
-// Susy magic grid
-$total-columns  : 7;             // a 12-column grid
-$column-width   : 4em;            // each column is 4em wide
-$gutter-width   : 1em;            // 1em gutters between columns
-$grid-padding   : $gutter-width;  // grid-padding equal to gutters
-$show-grid-backgrounds: false;     // Display grid background - remove/comment in PROD
-// $omega-float: left;             
-
-$tablet					: 8;							//set tablet breakpoint when screen can fit 8 columns
-$computer				: 55em 12;				// set large breakpoint to 12 columns when screen islarger than 55em
-
 // Spacing variables
 $logo-pic-width         : 140px;
 $logo-text-height       : 62px;
@@ -61,7 +50,7 @@ nav#navbar {
       span:first-child {
         @extend .sr-only;
       }
-      span {
+      span:nth-child(n+2) {
         @extend .icon-bar;
       }
     }

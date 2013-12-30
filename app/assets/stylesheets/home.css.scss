@@ -1,26 +1,21 @@
 .main {
-	// @include susy-grid-background;
 	@extend .container;
 	background-color: white;
+	margin-top: 50px;
 	// OnPrem Offerings blocks.  
 	// Four per row on large screen, 2 per row tablet, 1 per row mobile
 	#offerings {
-		// display: inline-block;
+		@extend .row;
 		.offering {
-			@extend .col-md-3, .col-sm-6;
-			padding: 0;
+			@extend .col-sm-6, .col-md-3;
 			background-color: white;
 			.offering-icon {
 				display: inline-block;
+				margin:auto;
 				width: 3em;
-				i {
-					@extend .fa, .fa-lg;
+				img {
+					margin:auto;
 				}
-				// img {
-				// 	display: none;
-				// 	max-width: 100%;
-				// 	height: auto;
-				// }
 			}
 			.offering-title {
 				display: inline-block;
@@ -32,15 +27,18 @@
 	}
 	// OnPrem Partner descriptions.  
 	// Two per row on large screen, 2 per row tablet, 1 per row mobile
-	#partners {
+	.partners {
+		@extend .row;
 		display:inline-block;
 		.partner {
 			@extend .col-md-6;
 		}
 	}
 	#contact-us {
+		@extend .row;
 		display: inline-block;
 		.contact-info {
+			@extend .col-sm-6;
 		}
 	}
 }

@@ -1,0 +1,247 @@
+/ .slider-container.demo-1
+/   #slider.sl-slider-wrapper
+/     .sl-slider
+/       .sl-slide.bg-1{"data-orientation" => "horizontal", "data-slice1-rotation" => "-25", "data-slice1-scale" => "2", "data-slice2-rotation" => "-25", "data-slice2-scale" => "2"}
+/         .sl-slide-inner
+/           .deco{"data-icon" => "H"}
+/           %h2 A bene placito
+/           %blockquote
+/             %p You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.
+/             %cite Ralph Waldo Emerson
+/       .sl-slide.bg-2{"data-orientation" => "vertical", "data-slice1-rotation" => "10", "data-slice1-scale" => "1.5", "data-slice2-rotation" => "-15", "data-slice2-scale" => "1.5"}
+/         .sl-slide-inner
+/           .deco{"data-icon" => "q"}
+/           %h2 Regula aurea
+/           %blockquote
+/             %p Until he extends the circle of his compassion to all living things, man will not himself find peace.
+/             %cite Albert Schweitzer
+/       .sl-slide.bg-3{"data-orientation" => "horizontal", "data-slice1-rotation" => "3", "data-slice1-scale" => "2", "data-slice2-rotation" => "3", "data-slice2-scale" => "1"}
+/         .sl-slide-inner
+/           .deco{"data-icon" => "O"}
+/           %h2 Dum spiro, spero
+/           %blockquote
+/             %p Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.
+/             %cite Dame Jane Morris Goodall
+/       .sl-slide.bg-4{"data-orientation" => "vertical", "data-slice1-rotation" => "-5", "data-slice1-scale" => "2", "data-slice2-rotation" => "25", "data-slice2-scale" => "1"}
+/         .sl-slide-inner
+/           .deco{"data-icon" => "I"}
+/           %h2 Donna nobis pacem
+/           %blockquote
+/             %p The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.
+/             %cite Michael Klaper M.D.
+/       .sl-slide.bg-5{"data-orientation" => "horizontal", "data-slice1-rotation" => "-5", "data-slice1-scale" => "2", "data-slice2-rotation" => "10", "data-slice2-scale" => "1"}
+/         .sl-slide-inner
+/           .deco{"data-icon" => "t"}
+/           %h2 Acta Non Verba
+/           %blockquote
+/             %p I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.
+/             %cite Margi Clarke
+/     / /sl-slider
+/     %nav#nav-arrows.nav-arrows
+/       %span.nav-arrow-prev Previous
+/       %span.nav-arrow-next Next
+/     %nav#nav-dots.nav-dots
+/       %span.nav-dot-current
+/       %span
+/       %span
+/       %span
+/       %span
+/   / /slider-wrapper
+/ / %script{src: "js/jquery.ba-cond.min.js", type: "text/javascript"}
+/ / %script{src: "js/jquery.slitslider.js", type: "text/javascript"}
+/ :javascript
+/   $(function() {
+  
+/           var Page = (function() {
+
+/                   var $navArrows = $( '#nav-arrows' ),
+/                           $nav = $( '#nav-dots > span' ),
+/                           slitslider = $( '#slider' ).slitslider( {
+/                                   onBeforeChange : function( slide, pos ) {
+
+/                                           $nav.removeClass( 'nav-dot-current' );
+/                                           $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+/                                   }
+/                           } ),
+
+/                           init = function() {
+
+/                                   initEvents();
+                                  
+/                           },
+/                           initEvents = function() {
+
+/                                   // add navigation events
+/                                   $navArrows.children( ':last' ).on( 'click', function() {
+
+/                                           slitslider.next();
+/                                           return false;
+
+/                                   } );
+
+/                                   $navArrows.children( ':first' ).on( 'click', function() {
+                                          
+/                                           slitslider.previous();
+/                                           return false;
+
+/                                   } );
+
+/                                   $nav.each( function( i ) {
+                                  
+/                                           $( this ).on( 'click', function( event ) {
+                                                  
+/                                                   var $dot = $( this );
+                                                  
+/                                                   if( !slitslider.isActive() ) {
+
+/                                                           $nav.removeClass( 'nav-dot-current' );
+/                                                           $dot.addClass( 'nav-dot-current' );
+                                                  
+/                                                   }
+                                                  
+/                                                   slitslider.jump( i + 1 );
+/                                                   return false;
+                                          
+/                                           } );
+                                          
+/                                   } );
+
+/                           };
+
+/                           return { init : init };
+
+/           })();
+
+/           Page.init();
+
+/           /**
+/            * Notes: 
+/            * 
+/            * example how to add items:
+/            */
+
+/           /*
+          
+/           var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+          
+/           // call the plugin's add method
+/           ss.add($items);
+
+/           */
+  
+/   });
+
+
+
+.slider-container.demo-2
+  #slider.sl-slider-wrapper
+    .sl-slider
+      .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "-25", "data-slice1-scale" => "2", "data-slice2-rotation" => "-25", "data-slice2-scale" => "2"}
+        .sl-slide-inner
+          .bg-img.bg-img-1
+          %h2 A bene placito.
+          %blockquote
+            %p You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.
+            %cite Ralph Waldo Emerson
+      .sl-slide{"data-orientation" => "vertical", "data-slice1-rotation" => "10", "data-slice1-scale" => "1.5", "data-slice2-rotation" => "-15", "data-slice2-scale" => "1.5"}
+        .sl-slide-inner
+          .bg-img.bg-img-2
+          %h2 Regula aurea.
+          %blockquote
+            %p Until he extends the circle of his compassion to all living things, man will not himself find peace.
+            %cite Albert Schweitzer
+      .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "3", "data-slice1-scale" => "2", "data-slice2-rotation" => "3", "data-slice2-scale" => "1"}
+        .sl-slide-inner
+          .bg-img.bg-img-3
+          %h2 Dum spiro, spero.
+          %blockquote
+            %p Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.
+            %cite Dame Jane Morris Goodall
+      .sl-slide{"data-orientation" => "vertical", "data-slice1-rotation" => "-5", "data-slice1-scale" => "2", "data-slice2-rotation" => "25", "data-slice2-scale" => "1"}
+        .sl-slide-inner
+          .bg-img.bg-img-4
+          %h2 Donna nobis pacem.
+          %blockquote
+            %p The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.
+            %cite Michael Klaper M.D.
+      .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "-5", "data-slice1-scale" => "2", "data-slice2-rotation" => "10", "data-slice2-scale" => "1"}
+        .sl-slide-inner
+          .bg-img.bg-img-5
+          %h2 Acta Non Verba.
+          %blockquote
+            %p I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.
+            %cite Margi Clarke
+    / /sl-slider
+    %nav#nav-dots.nav-dots
+      %span.nav-dot-current
+      %span
+      %span
+      %span
+      %span
+:javascript
+  $(function() {
+  
+    var Page = (function() {
+
+      var $nav = $( '#nav-dots > span' ),
+        slitslider = $( '#slider' ).slitslider( {
+          onBeforeChange : function( slide, pos ) {
+
+            $nav.removeClass( 'nav-dot-current' );
+            $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+          }
+        } ),
+
+        init = function() {
+
+          initEvents();
+          
+        },
+        initEvents = function() {
+
+          $nav.each( function( i ) {
+          
+            $( this ).on( 'click', function( event ) {
+              
+              var $dot = $( this );
+              
+              if( !slitslider.isActive() ) {
+
+                $nav.removeClass( 'nav-dot-current' );
+                $dot.addClass( 'nav-dot-current' );
+              
+              }
+              
+              slitslider.jump( i + 1 );
+              return false;
+            
+            } );
+            
+          } );
+
+        };
+
+        return { init : init };
+
+    })();
+
+    Page.init();
+
+    /**
+     * Notes: 
+     * 
+     * example how to add items:
+     */
+
+    /*
+    
+    var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+    
+    // call the plugin's add method
+    ss.add($items);
+
+    */
+  
+  });

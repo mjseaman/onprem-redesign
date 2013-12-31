@@ -32,7 +32,7 @@
       padding-top: 10px;
       font-weight: 300;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-      /*p {
+      p {
         margin: 0 2.5em;
         width: 60%;
         max-width: 400px;
@@ -51,7 +51,7 @@
           top: 35px;
           content: '\201C';
         }
-      }*/
+      }
       cite {
         font-size: 16px;
         font-weight: 700;
@@ -60,6 +60,9 @@
         letter-spacing: 5px;
         padding-top: 30px;
         display: inline-block;
+        span.darken {
+        	color: $light-grey;
+        }
       }
     }
   }
@@ -357,10 +360,10 @@
 
 .demo-2 {
   .bg-img-1 {
-    background-image: url(image_path('1.jpg'));
+    background-image: url(image_path('work2.jpg'));
   }
   .bg-img-2 {
-    background-image: url(image_path('flight.jpg'));
+    background-image: url(image_path('surf.jpg'));
   }
   .bg-img-3 {
     background-image: url(image_path('rock.jpg'));

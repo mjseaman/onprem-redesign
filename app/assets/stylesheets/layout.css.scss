@@ -1,40 +1,32 @@
-// NOTE: for Navbar variables, see bootstrap-custom.css.scss.
 
-// Font Defaults
-$default-font: 				$helvetica;
-$default-font-weight: 200;
-$header-font: 				$helvetica;
-$header-font-weight: 	200;
-$body-font: 					$helvetica;
-$body-font-weight: 		200;
-
-// Background images
-$dark-background: url(image_path("dark-bg.jpg"));
-
-// Spacing variables
-$logo-pic-width         : 140px;
-$logo-text-height       : 62px;
-$logo-text-top-margin   : 18px;
-$logo-text-left-margin  : $logo-pic-width + 5px;
-$header-height          : $logo-text-height + $logo-text-top-margin;
 
 // Font and Background defaults
 body {
-	font-family: $default-font;
-	font-weight: $default-font-weight;
+	font-family: $body-font-family;
+	font-weight: $body-font-weight;
   background-image: $dark-background;
   margin: 0;
   background-repeat: repeat;
-  background-color: #2c2b29;
+  background-color: $very-dark-grey;
 }
 
-h1,h2 {
-	font-family: $header-font;
-	font-weight: $header-font-weight;
+h1 {
+	font-family: $h1-font-family;
+	font-weight: $h1-font-weight;
+  font-size: $h1-font-size;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $h2-font-family;
+  font-weight: $h2-font-weight;
+  font-size  : $h2-font-size;
+  // font-style : italic;
+  text-transform: uppercase;
 }
 
 p {
-	font-family: $body-font;
+	font-family: $body-font-family;
 	font-weight: $body-font-weight;
 }
 

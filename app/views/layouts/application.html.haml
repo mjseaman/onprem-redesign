@@ -1,15 +1,19 @@
 !!!
 %html
-  %head
-    %title OnPrem
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
-  %body
-    =render "layouts/navbar"
-    .main
-      .flash
-        -flash.each do |name, msg|
-          =content_tag :div, msg, id: "flash_#{name}"
-      = yield
-    .footer 
+	%head
+		%title OnPrem
+
+		/ %link{href: "http://fonts.googleapis.com/css?family=Rokkitt:700|Roboto|Roboto+condensed|Alegreya:700", rel: "stylesheet", type: "text/css"}/
+
+		%link{href: "http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700|Oswald:700|Droid+Serif:400,700italic|Rokkitt:700|Coustard:900|Bitter:900", rel: "stylesheet", type: "text/css"}/
+
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+		=render "layouts/navbar"
+		.flash
+			-flash.each do |name, msg|
+				=content_tag :div, msg, id: "flash_#{name}"
+		= yield
+		.footer 

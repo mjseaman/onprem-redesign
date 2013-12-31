@@ -1,6 +1,6 @@
 .main {
 	@extend .container;
-	background-color: white;
+	background-color: $white;
 	margin-top: 50px;
 	// OnPrem Offerings blocks.  
 	// Four per row on large screen, 2 per row tablet, 1 per row mobile
@@ -8,18 +8,25 @@
 		@extend .row;
 		.offering {
 			@extend .col-sm-6, .col-md-3;
-			background-color: white;
-			.offering-icon {
-				display: inline-block;
-				margin:auto;
-				width: 3em;
-				img {
+			background-color: $white;
+			.offering-header {
+				@extend .row;
+				.offering-icon {
+					@extend .col-xs-4;
+					display: inline-block;
 					margin:auto;
+					width: 48px;
+					img { }
+				}
+				.offering-title {
+					@extend .col-xs-8;
+					display: inline-block;
+					h2 {
+						margin: 0 auto;
+					}
 				}
 			}
-			.offering-title {
-				display: inline-block;
-			}
+			.offering-body { }
 			.offering-detail {
 				display: none;
 			}
@@ -31,7 +38,7 @@
 		@extend .row;
 		display:inline-block;
 		.partner {
-			@extend .col-md-6;
+			@extend .col-sm-6;
 		}
 	}
 	#contact-us {
@@ -42,52 +49,3 @@
 		}
 	}
 }
-
-// @include at-breakpoint($tablet) {
-// 	.main {
-// 		@include susy-grid-background;
-// 		#offerings {
-// 			.offering {
-// 				@include span-columns(4);
-// 				@include nth-omega('2n + 1');
-// 			}
-// 		}
-// 		#partners {
-// 			.partner {
-// 				@include span-columns(4);
-// 				@include nth-omega('2n + 1');
-// 			}
-// 		}
-// 		#contact-us {
-// 			.contact-info {
-// 				@include span-columns(4);
-// 				@include nth-omega('2n + 1');
-// 			}
-// 		}
-// 	}
-// }
-
-// @include at-breakpoint($computer) {
-// 	.main {
-// 		@include susy-grid-background;
-// 		#offerings {
-// 			.offering {
-// 				@include span-columns(3);
-// 				@include remove-nth-omega('2n + 1');
-// 				@include nth-omega(5);
-// 			}
-// 		}
-// 		#partners {
-// 			.partner {
-// 				@include span-columns(6);
-// 				@include nth-omega('2n + 1');
-// 			}
-// 		}
-// 		#contact-us {
-// 			.contact-info {
-// 				@include span-columns(6);
-// 				@include nth-omega('2n + 1');
-// 			}
-// 		}
-// 	}
-// }

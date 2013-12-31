@@ -1,0 +1,72 @@
+// Navbar (Bootstrap)
+$navbar-default-bg 						: rgba(255,255,255,0.9);
+$navbar-default-link-hover-bg	: darken($navbar-default-bg, 6.5%);
+
+// Default Fonts (Make sure new fonts are included in application.html.haml)
+$rokkitt								: "Rokkitt", serif; //Only 700 weight available
+$alegreya								: "Alegreya", serif; //Only 700 weight available
+$roboto-condensed				: "Roboto Condensed", sans-serif;
+$roboto 								: "Roboto", sans-serif;
+$coustard								: "Coustard", serif;
+$oswald									: "Oswald", sans-serif;
+$droid-serif						: "Droid Serif", serif;
+$bitter									: "Bitter", sans-serif;
+
+
+// // ROKKITT-ROBOTO
+// $default-font-family		: $roboto;
+// $default-font-weight		: 200;
+
+// $h1-font-family					: $rokkitt; 
+// $h1-font-weight					: 700;
+// $h1-font-size						: 3em;
+
+// $h2-font-family					: $rokkitt; 
+// $h2-font-weight					: normal;
+// $h2-font-size						: 1.5em;
+
+// $body-font-family				: $roboto; 
+// $body-font-weight				: 200;
+
+
+// ALEGREYA-ROBOTO
+$default-font-family		: $roboto;
+$default-font-weight		: 200;
+
+$h1-font-family					: $oswald; 
+$h1-font-weight					: 900; 
+$h1-font-size						: 3em;
+
+$h2-font-family					: $roboto-condensed; 
+$h2-font-weight					: 700; 
+$h2-font-size						: 1.5em;
+
+$body-font-family				: $roboto;
+$body-font-weight				: normal;
+
+
+
+
+// Color Defaults
+$dark-blue        			: #0d3a67;
+$light-blue       			: #3f87bc;
+$bright-blue      			: #31b6fd;
+$lighter-blue     			: #8fc3ee;
+$green            			: #30ae2d;
+$purple           			: #aa29ae;
+$yellow           			: #dfd235;
+$brown            			: #907c5e;
+$very-dark-grey   			: #4d4d4d;
+$dark-grey        			: #6b6b6b;
+$light-grey       			: #b9b9b9;
+$white            			: white;
+
+// Background images
+$dark-background: url(image_path("dark-bg.jpg"));
+
+// Spacing variables
+$logo-pic-width         : 140px;
+$logo-text-height       : 62px;
+$logo-text-top-margin   : 18px;
+$logo-text-left-margin  : $logo-pic-width + 5px;
+$header-height          : $logo-text-height + $logo-text-top-margin;

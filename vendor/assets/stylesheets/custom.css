@@ -15,7 +15,7 @@
   }
   .sl-slider {
     h2, blockquote {
-      padding: 100px 30px 10px 30px;
+      padding: 50px 30px 10px 30px;
       width: 80%;
       max-width: 960px;
       color: #fff;
@@ -32,6 +32,26 @@
       padding-top: 10px;
       font-weight: 300;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+      /*p {
+        margin: 0 2.5em;
+        width: 60%;
+        max-width: 400px;
+        position: relative;
+        &:before {
+          color: #f0f0f0;
+          color: rgba(244, 244, 244, 0.65);
+          font-family: "Bookman Old Style", Bookman, Garamond, serif;
+          position: absolute;
+          line-height: 60px;
+          width: 75px;
+          height: 75px;
+          font-size: 200px;
+          z-index: -1;
+          left: -80px;
+          top: 35px;
+          content: '\201C';
+        }
+      }*/
       cite {
         font-size: 16px;
         font-weight: 700;
@@ -340,16 +360,16 @@
     background-image: url(image_path('1.jpg'));
   }
   .bg-img-2 {
-    background-image: url(image_path('2.jpg'));
+    background-image: url(image_path('flight.jpg'));
   }
   .bg-img-3 {
-    background-image: url(image_path('3.jpg'));
+    background-image: url(image_path('rock.jpg'));
   }
   .bg-img-4 {
-    background-image: url(image_path('4.jpg'));
+    background-image: url(image_path('tech.jpg'));
   }
   .bg-img-5 {
-    background-image: url(image_path('5.jpg'));
+    background-image: url(image_path('media.jpg'));
   }
 }
 

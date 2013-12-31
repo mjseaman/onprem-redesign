@@ -132,7 +132,7 @@
   
 /   });
 
-
+//////////////////// DEMO 2 /////////////////////////////
 
 .slider-container.demo-2
   #slider.sl-slider-wrapper
@@ -140,51 +140,56 @@
       .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "-25", "data-slice1-scale" => "2", "data-slice2-rotation" => "-25", "data-slice2-scale" => "2"}
         .sl-slide-inner
           .bg-img.bg-img-1
-          %h2 A bene placito.
+          %h2 We Work Hard.
           %blockquote
-            %p You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.
-            %cite Ralph Waldo Emerson
+            %p "I've never seen anything like it."
+            %cite Mitch Seaman
       .sl-slide{"data-orientation" => "vertical", "data-slice1-rotation" => "10", "data-slice1-scale" => "1.5", "data-slice2-rotation" => "-15", "data-slice2-scale" => "1.5"}
         .sl-slide-inner
           .bg-img.bg-img-2
-          %h2 Regula aurea.
+          %h2 We Play Hard.
           %blockquote
-            %p Until he extends the circle of his compassion to all living things, man will not himself find peace.
-            %cite Albert Schweitzer
+            %p "I love these people so much."
+            %cite David Liu
       .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "3", "data-slice1-scale" => "2", "data-slice2-rotation" => "3", "data-slice2-scale" => "1"}
         .sl-slide-inner
           .bg-img.bg-img-3
-          %h2 Dum spiro, spero.
+          %h2 We Build a Reputation.
           %blockquote
-            %p Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.
-            %cite Dame Jane Morris Goodall
+            %p "I don't see how we would ever hire anyone else."
+            %cite Bill Client
       .sl-slide{"data-orientation" => "vertical", "data-slice1-rotation" => "-5", "data-slice1-scale" => "2", "data-slice2-rotation" => "25", "data-slice2-scale" => "1"}
         .sl-slide-inner
           .bg-img.bg-img-4
-          %h2 Donna nobis pacem.
+          %h2 We Innovate.
           %blockquote
-            %p The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.
-            %cite Michael Klaper M.D.
+            %p "It's like they had a conversation with me in 5 years and relayed the message."
+            %cite David Allen
       .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "-5", "data-slice1-scale" => "2", "data-slice2-rotation" => "10", "data-slice2-scale" => "1"}
         .sl-slide-inner
           .bg-img.bg-img-5
-          %h2 Acta Non Verba.
+          %h2 We Know Media.
           %blockquote
-            %p I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.
+            %p "These are the guys building the future of entertainment."
             %cite Margi Clarke
     / /sl-slider
+    %nav#nav-arrows.nav-arrows
+      %span.nav-arrow-prev Previous
+      %span.nav-arrow-next Next
     %nav#nav-dots.nav-dots
       %span.nav-dot-current
       %span
       %span
       %span
       %span
+
 :javascript
   $(function() {
   
     var Page = (function() {
 
-      var $nav = $( '#nav-dots > span' ),
+      var $navArrows = $( '#nav-arrows' ),
+      $nav = $( '#nav-dots > span' ),
         slitslider = $( '#slider' ).slitslider( {
           onBeforeChange : function( slide, pos ) {
 
@@ -200,6 +205,21 @@
           
         },
         initEvents = function() {
+
+          // add navigation events
+          $navArrows.children( ':last' ).on( 'click', function() {
+
+                  slitslider.next();
+                  return false;
+
+          } );
+
+          $navArrows.children( ':first' ).on( 'click', function() {
+                  
+                  slitslider.previous();
+                  return false;
+
+          } );
 
           $nav.each( function( i ) {
           
@@ -228,20 +248,5 @@
     })();
 
     Page.init();
-
-    /**
-     * Notes: 
-     * 
-     * example how to add items:
-     */
-
-    /*
-    
-    var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
-    
-    // call the plugin's add method
-    ss.add($items);
-
-    */
   
   });

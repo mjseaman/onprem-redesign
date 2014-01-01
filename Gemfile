@@ -59,9 +59,5 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 # gem 'underscore-rails'
-gem 'debugger'
-
-# To use debugger
-gem 'debugger'
 
 gem "mocha", :group => :test

@@ -61,7 +61,7 @@
         padding-top: 30px;
         display: inline-block;
         span.darken {
-        	color: $light-grey;
+        	color: #b9b9b9;
         }
       }
     }

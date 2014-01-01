@@ -1,7 +1,8 @@
 .main {
 	@extend .container;
+	// width: 90%;
 	background-color: $white;
-	margin-top: 50px;
+	margin-top: 2em;
 	// OnPrem Offerings blocks.  
 	// Four per row on large screen, 2 per row tablet, 1 per row mobile
 	#offerings {
@@ -12,14 +13,12 @@
 			.offering-header {
 				@extend .row;
 				.offering-icon {
-					@extend .col-xs-4;
+					@extend .col-xs-3, .col-sm-2, .col-md-3;
 					display: inline-block;
-					margin:auto;
-					width: 48px;
 					img { }
 				}
 				.offering-title {
-					@extend .col-xs-8;
+					@extend .col-xs-9, .col-sm-2, .col-md-9;
 					display: inline-block;
 					h2 {
 						margin: 0 auto;

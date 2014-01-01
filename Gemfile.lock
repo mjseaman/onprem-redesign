@@ -43,14 +43,7 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    columnize (0.3.6)
     daemons (1.1.9)
-    debugger (1.6.1)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     devise (3.0.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -207,7 +200,6 @@ DEPENDENCIES
   bootstrap-sass (~> 3.0.3.0)
   bourbon
   carrierwave
-  debugger
   devise
   dotenv-rails
   faker

@@ -18,10 +18,11 @@
 
 / %p= link_to "New Project", new_project_path
 
-.project-container
-  -for project in @projects
-    .project
-      .project-image
-        = image_tag project.image_url(:thumb) if project.image?
-      .project-title
-      .project-client
+.main
+  .project-container
+    -for project in @projects
+      .project
+        .project-image
+          = image_tag project.image_url(:thumb) if project.image?
+        .project-title
+        .project-client

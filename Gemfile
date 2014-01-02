@@ -30,6 +30,9 @@ gem 'haml-rails'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'
 
+# Cancan for authorization
+gem 'cancan'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

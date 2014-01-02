@@ -1,0 +1,22 @@
+.main
+  %h1
+    Users (Admin Only)
+  %table
+    %tr
+      %th Email
+      %th Sign-in Count
+      %th Last Sign In
+      %th Created At
+      %th Updated At
+      %th Provider
+    - for user in @users
+      %tr
+        %td= user.email
+        %td= user.sign_in_count
+        %td= user.last_sign_in_at
+        %td= user.created_at
+        %td= user.updated_at
+        %td= user.provider
+/       %td= link_to 'Show', user
+/       %td= link_to 'Edit', edit_project_path(user)
+/       %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete

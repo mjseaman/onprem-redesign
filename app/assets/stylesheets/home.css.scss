@@ -1,50 +1,56 @@
-.main {
-	@extend .container;
-	// width: 90%;
-	background-color: $white;
-	margin-top: 50px;
-	// OnPrem Offerings blocks.  
-	// Four per row on large screen, 2 per row tablet, 1 per row mobile
-	#offerings {
-		@extend .row;
-		.offering {
-			@extend .col-sm-6, .col-md-3;
-			background-color: $white;
-			.offering-header {
-				@extend .row;
-				.offering-icon {
-					@extend .col-xs-3, .col-sm-2, .col-md-3;
-					display: inline-block;
-					img { }
-				}
-				.offering-title {
-					@extend .col-xs-9, .col-sm-2, .col-md-9;
-					display: inline-block;
-					h2 {
-						margin: 0 auto;
-					}
+// OnPrem Offerings blocks.  
+// Four per row on large screen, 2 per row tablet, 1 per row mobile
+#offerings {
+	@extend .row;
+	.offering {
+		@extend .col-sm-6, .col-md-3;
+		background-color: $white;
+		.offering-header {
+			@extend .row;
+			.offering-icon {
+				@extend .col-xs-3, .col-sm-2, .col-md-3;
+				display: inline-block;
+				img { }
+			}
+			.offering-title {
+				@extend .col-xs-9, .col-sm-2, .col-md-9;
+				display: inline-block;
+				h2 {
+					margin: 0 auto;
 				}
 			}
-			.offering-body { }
-			.offering-detail {
-				display: none;
+		}
+		.offering-body { }
+		.offering-detail {
+			display: none;
+		}
+	}
+}
+// OnPrem Partner descriptions.  
+// Two per row on large screen, 2 per row tablet, 1 per row mobile
+.partners {
+	@extend .row;
+	display:inline-block;
+	.partner {
+		@extend .col-md-6;
+		.partner-image {
+			position:relative;
+			float:left;
+			margin: 2em 1em 0.5em 0;
+			@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+				margin: 1em 1em 0.5em 0;
 			}
+			@media screen and (max-width: $screen-xs-max) {
+				float:none;
+				margin: 0;
+      }
 		}
 	}
-	// OnPrem Partner descriptions.  
-	// Two per row on large screen, 2 per row tablet, 1 per row mobile
-	.partners {
-		@extend .row;
-		display:inline-block;
-		.partner {
-			@extend .col-sm-6;
-		}
-	}
-	#contact-us {
-		@extend .row;
-		display: inline-block;
-		.contact-info {
-			@extend .col-sm-6;
-		}
+}
+#contact-us {
+	@extend .row;
+	display: inline-block;
+	.contact-info {
+		@extend .col-sm-6;
 	}
 }

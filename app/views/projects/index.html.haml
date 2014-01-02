@@ -1,5 +1,16 @@
 - title "Projects"
 
+%h1
+  Project Work
+.project-container
+  -for project in @projects
+    .project
+      .project-image
+        = image_tag project.image_url(:thumb) if project.image?
+      .project-title
+      .project-client
+/ %h1
+/   Edit (Admin Only)
 / %table
 /   %tr
 /     %th Title
@@ -17,12 +28,3 @@
 /       %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
 
 / %p= link_to "New Project", new_project_path
-
-.main
-  .project-container
-    -for project in @projects
-      .project
-        .project-image
-          = image_tag project.image_url(:thumb) if project.image?
-        .project-title
-        .project-client

@@ -10,6 +10,14 @@ body {
   background-color: $very-dark-grey;
 }
 
+.main {
+  @extend .container;
+  // width: 90%;
+  background-color: $white;
+  margin-top: 50px;
+  padding-bottom: 2em;
+}
+
 h1 {
 	font-family: $h1-font-family;
 	font-weight: $h1-font-weight;
@@ -55,10 +63,8 @@ nav#navbar {
       padding-bottom: 0;
       padding-left: 0;
       #logopic{
-        // position:absolute;
         width:90px;
         cursor: pointer;
-        // z-index: 9999;
         @media screen and (max-width: $grid-float-breakpoint) {
           width: 50px;
         }
@@ -75,7 +81,7 @@ nav#navbar {
       }
     }
   }
-  #nav-links {
+  .nav-links {
     @extend .collapse, .navbar-collapse;
     ul {
       @extend .nav, .navbar-nav, .navbar-right;
@@ -86,6 +92,55 @@ nav#navbar {
           text-decoration: none;
           text-align: right;
           width:auto;
+        }
+      }
+    }
+  }
+}
+
+/**** Table Formatting ****/
+table {
+  @extend .table, .table-striped, .table-hover;
+}
+
+/**** Footer ****/
+.footer {
+  @extend .container;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  .footer-logo {
+    // @extend .col-xs-4, .col-sm-1;
+    float: right;
+    padding-left: 0;
+    img {
+      height: 7em;
+      width: auto;
+    }
+  }
+  .footer-nav {
+    // @extend .col-xs-8;
+    ul {
+      // position: absolute;
+      float: left;
+      margin: 0;
+      padding: 0;
+      li {
+        // text-decoration: none;
+        list-style-type: none;
+        display: inline-block;
+        border-right: 2px solid $light-blue;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        a {
+          color: $white;
+        }
+        &:last-child {
+          border-right: 0;
+        }
+        @media screen and (max-width: $grid-float-breakpoint) {
+          display: block;
+          border-right: 0;
+          border-left: 2px solid $light-blue;
         }
       }
     }

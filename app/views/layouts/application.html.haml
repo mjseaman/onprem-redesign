@@ -12,8 +12,19 @@
 		= csrf_meta_tags
 	%body
 		=render "layouts/navbar"
-		.flash
-			-flash.each do |name, msg|
-				=content_tag :div, msg, id: "flash_#{name}"
-		= yield
-		.footer 
+		- if controller_name != 'home'
+			.main
+				.flash
+					-flash.each do |name, msg|
+						=content_tag :div, msg, id: "flash_#{name}"
+				= yield
+		- else
+			.flash
+				-flash.each do |name, msg|
+					=content_tag :div, msg, id: "flash_#{name}"
+			=yield
+		.footer
+			.footer-logo
+				= image_tag("OnPrem_Logo_White.png")
+			.footer-nav
+				= render "layouts/navlinks"

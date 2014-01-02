@@ -81,7 +81,7 @@ nav#navbar {
       }
     }
   }
-  .nav-links {
+  #nav-links {
     @extend .collapse, .navbar-collapse;
     ul {
       @extend .nav, .navbar-nav, .navbar-right;

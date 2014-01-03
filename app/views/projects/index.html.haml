@@ -2,9 +2,17 @@
 
 %h1
   Project Work
+%ul#filters
+  %li
+    %a{:href => "#", :data => {:filter => "*"}}
+      Show All
+  - for industry in @industries
+    %li
+      %a{href: "#", data: {:filter => ".#{industry.name.downcase}"}}
+        = industry.name
 .project-container
   -for project in @projects
-    .project
+    .project{:class => "#{project.industry.name.downcase if project.industry}"}
       .project-image
         = image_tag project.image_url(:thumb) if project.image?
         .project-title
@@ -19,12 +27,14 @@
     %th Client
     %th Caption
     %th Description
+    %th Industry
   - for project in @projects
     %tr
       %td= project.title
       %td= project.client
       %td= project.caption
       %td= project.description
+      %td= project.industry.name if project.industry
       %td= link_to 'Show', project
       %td= link_to 'Edit', edit_project_path(project)
       %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete

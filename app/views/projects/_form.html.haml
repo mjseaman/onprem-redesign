@@ -17,7 +17,10 @@
     %br
     = f.text_area :description
   %p
-    
+    = f.label :industry
+    %br
+    = collection_select(:project, :industry_id, Industry.all, :id, :name, prompt: true)
+  %p
     =f.label :image
     %br
     = image_tag @project.image_url(:thumb) if @project.image?

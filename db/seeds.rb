@@ -9,6 +9,14 @@
 user = User.create(
 	email: "mitch@onprem.com")
 
+Industry.delete_all
+Industry.create(name: "Broadcast")
+Industry.create(name: "Film")
+Industry.create(name: "Music")
+Industry.create(name: "Nonprofit")
+Industry.create(name: "Other")
+
+Project.delete_all
 Project.create(
 	title: "TVE Assessment",
 	client: "Discovery Communications",
@@ -21,4 +29,8 @@ Project.create(
 		client: Faker::Company.name,
 		caption: Faker::Lorem.sentence(rand(3 + 6)),
 		description: Faker::Lorem.paragraph)
+end
+
+Project.all.each do |project|
+	project.industry = Industry.all.sample
 end

@@ -14,10 +14,14 @@
   = @project.description
 %p
   %strong Image:
-  = image_tag @project.image_url.to_s
+  .preview-img
+    = image_tag @project.image_url(:thumb) if @project.image?
+    #{"None" if !@project.image?}
 %p
   %strong Image:
-  = image_tag @project.logo_url.to_s
+  .preview-img
+    = image_tag @project.logo_url(:thumb) if @project.logo?
+    #{"None" if !@project.logo?}
 %p
   = link_to "Edit", edit_project_path(@project)
   |

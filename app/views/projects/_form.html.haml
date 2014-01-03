@@ -17,7 +17,10 @@
     %br
     = f.text_area :description
   %p
+    
     =f.label :image
+    %br
+    = image_tag @project.image_url(:thumb) if @project.image?
     %br
     =f.file_field :image
   %p
@@ -26,6 +29,8 @@
     =f.text_field :remote_image_url
   %p
     =f.label :logo
+    %br
+    = image_tag @project.logo_url(:thumb) if @project.logo?
     %br
     =f.file_field :logo
   %p

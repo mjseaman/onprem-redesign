@@ -7,28 +7,38 @@
 	.project-container {
 		margin:	auto;
 		.project {
-			width:14em;
-			margin:0.25em;
+			width: 260px;
+			margin: 8px;
 			background-color: #EBEBEB;
 			border: 1px solid black;
 			.project-image {
 				overflow: hidden;
 				background-color: #CCCCCC;
-				height: 10em;
+				height: 200px;
 				margin: 2%;
+				position: relative;
 				img {
 					min-width:100%;
 					min-height:100%;
 					// position:relative;
 				}
+				.project-title {
+					background-color: $project-semitrans-wht;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					padding: 2%;
+				}
 			}
-			.project-title {
-				background-color: #B0B0B0;
-				height: 3em;
-				margin: 2%;
-			}
+				
 			.project-client {
 				background-color: #808080;
+				height: 40px;
+				margin: 4% 2%;
+				img {
+					height: 100%;
+					width: auto;
+				}
 			}
 		}
 	}

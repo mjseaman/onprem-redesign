@@ -95,7 +95,7 @@ $(function(){
   $container.isotope({
     itemSelector : '.project',
     masonry : {
-      columnWidth : 120
+      // columnWidth : 110
     },
     getSortData : {
     }

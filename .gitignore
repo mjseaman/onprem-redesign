@@ -16,3 +16,6 @@
 
 # Ignore dotenv file.
 *.env
+
+# Ignore Carrierwave Image Uploads in the Project model
+/public/uploads/project

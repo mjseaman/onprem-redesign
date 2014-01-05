@@ -17,23 +17,25 @@ Industry.create(name: "Nonprofit")
 Industry.create(name: "Other")
 
 Project.delete_all
-20.times do
-	Project.create(
-		title: "TVE Assessment",
-		client: "Discovery Communications",
-		caption: "Sourced the world's best TVE vendors for a broadcaster",
-		description: "OnPrem worked with a major US broadcaster to build out a five-year TV Everywhere roadmap")
-end
-
-# 10.times do 
+# 20.times do
 # 	Project.create(
-# 		title: Faker::Company.bs.capitalize,
-# 		client: Faker::Company.name,
-# 		caption: Faker::Lorem.sentence(rand(3 + 6)),
-# 		description: Faker::Lorem.paragraph)
+# 		title: "TVE Assessment",
+# 		client: "Discovery Communications",
+# 		caption: "Sourced the world's best TVE vendors for a broadcaster",
+# 		description: "OnPrem worked with a major US broadcaster to build out a five-year TV Everywhere roadmap")
 # end
+
+20.times do 
+	Project.create(
+		title: Faker::Company.bs.capitalize,
+		client: Faker::Company.name,
+		caption: Faker::Lorem.sentence(rand(3 + 6)),
+		description: Faker::Lorem.paragraph)
+end
 
 Project.all.each do |project|
 	project.industry = Industry.all.sample
 	project.save
 end
+
+puts "Seed complete."

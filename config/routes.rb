@@ -1,5 +1,7 @@
 OnPrem::Application.routes.draw do
 
+  resources :people
+
   resources :projects
 
   resources :users, only: :index

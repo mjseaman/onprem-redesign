@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   def index
     @projects = Project.all
     @industries = Industry.all

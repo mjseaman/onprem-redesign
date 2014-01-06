@@ -1,29 +1,31 @@
 - title "Projects"
 
+/ %h1
+/   Project Work
+/ .sort-and-filter
+/   %p.filter-label
+/     Filter by Industry:
+/   %ul#filters.project-filter-list
+/     %li.project-filter
+/       %a{:href => "#", :data => {:filter => "*"}}
+/         Show All
+/     - for industry in @industries
+/       %li.project-filter
+/         %a{href: "#", data: {:filter => ".#{industry.name.downcase}"}}
+/           = industry.name
+/ .project-container
+/   -for project in @projects
+/     .project{:class => "#{project.industry.name.downcase if project.industry}"}
+/       .project-image
+/         = image_tag project.image_url(:thumb) if project.image?
+/         .project-title
+/           = project.title
+/       .project-client
+/         = image_tag project.logo_url(:thumb) if project.logo?
 %h1
-  Project Work
-.sort-and-filter
-  %p.filter-label
-    Filter by Industry:
-  %ul#filters.project-filter-list
-    %li.project-filter
-      %a{:href => "#", :data => {:filter => "*"}}
-        Show All
-    - for industry in @industries
-      %li.project-filter
-        %a{href: "#", data: {:filter => ".#{industry.name.downcase}"}}
-          = industry.name
-.project-container
-  -for project in @projects
-    .project{:class => "#{project.industry.name.downcase if project.industry}"}
-      .project-image
-        = image_tag project.image_url(:thumb) if project.image?
-        .project-title
-          = project.title
-      .project-client
-        = image_tag project.logo_url(:thumb) if project.logo?
-%h1
-  Edit (Admin Only)
+  Projects
+%h2
+  Edit with care.
 %table
   %tr
     %th Title
@@ -31,6 +33,11 @@
     %th Caption
     %th Description
     %th Industry
+    %th Image
+    %th Logo
+    %th Show
+    %th Edit
+    %th Destroy
   - for project in @projects
     %tr
       %td= project.title
@@ -38,6 +45,8 @@
       %td= project.caption
       %td= project.description
       %td= project.industry.name if project.industry
+      %td.image= image_tag project.image_url(:tiny) if project.image?
+      %td.image= image_tag project.logo_url(:tiny) if project.logo?
       %td= link_to 'Show', project
       %td= link_to 'Edit', edit_project_path(project)
       %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete

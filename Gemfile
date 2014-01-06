@@ -30,6 +30,9 @@ gem 'haml-rails'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'
 
+# Gravatar for user avatars
+gem 'gravtastic'
+
 # Cancan for authorization
 gem 'cancan'
 

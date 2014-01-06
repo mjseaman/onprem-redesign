@@ -2,13 +2,20 @@ class PagesController < ApplicationController
 	def index
 	end
 
-	def careers
-		# render 'careers'
+	def offerings
 	end
 
 	def work
 		@projects = Project.all
     @industries = Industry.all
-		# render 'projects/index'
+	end
+
+	def team
+	end
+
+	def careers
+	end
+
+	def contact
 	end
 end

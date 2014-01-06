@@ -12,8 +12,12 @@ OnPrem::Application.routes.draw do
   root to: "pages#index"
 
   match '/home' => 'pages#index'
-  match '/careers' => 'pages#careers'
+  match '/offerings' => 'pages#offerings'
   match '/work' => 'pages#work'
+  match '/team' => 'pages#team'
+  match '/careers' => 'pages#careers'
+  match '/contact' => 'pages#contact'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

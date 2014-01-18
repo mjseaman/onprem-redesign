@@ -1,4 +1,28 @@
 %title Our Team | OnPrem
 
 .main
-	%h1 Team
+  %h1
+    Team
+  %p.description
+    The hard-hitting experts who are changing the face of entertainment.
+  .sort-and-filter
+    %p.filter-label
+      Filter by Alma Mater:
+    %ul#filters.filter-list
+      %li.filter
+        %a{:href => "#", :data => {:filter => "*"}}
+          Show All
+      - for alma_mater in @alma_maters
+        %li.filter
+          %a{href: "#", data: {:filter => ".#{alma_mater.downcase}"}}
+            = alma_mater
+  .person-container
+    -for person in @people
+      .person{:class => "#{person.alma_mater.downcase if person.alma_mater}"}
+        .person-image
+          = image_tag person.gravatar_url(size: 260, default: 'wavatar')
+          .person-info
+            .person-name
+              %h2= "#{person.first_name} #{person.last_name}"
+        / .project-client
+        /   = image_tag project.logo_url(:thumb) if project.logo?

@@ -1,0 +1,75 @@
+$person-height: 200px;
+
+.main {
+	// .sort-and-filter {
+	// 	text-align: center;
+	// 	padding-bottom: 1em;
+	// 	.filter-label {
+	// 		display: inline;
+	// 	}
+	// 	ul.project-filter-list {
+	// 		padding-left: 0;
+	// 		display: inline;
+	// 		li.project-filter {
+	// 			list-style: none;
+	// 			display: inline-block;
+	// 			// border: 1px solid black;
+	// 			padding: .25em .5em;
+	// 			background-color: #EBEBEB;
+	// 			border-radius: 0.25em;
+	// 			&:hover {
+	// 				background-color: $light-grey;
+	// 			}
+	// 			a {
+	// 				text-decoration: none;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	.person-container {
+		margin:	auto;
+		.person {
+			-webkit-box-shadow: rgb(0, 0, 0) 0px 5px 5px -5px;
+			width: 260px;
+			min-height: 260px;
+			margin: 8px;
+			background-color: #EBEBEB;
+			// border: 1px solid black;
+			.person-image {
+				overflow: hidden;
+				background-color: #CCCCCC;
+				// height: 260px;
+				margin: 1%;
+				position: relative;
+				img {
+					background-color: #CCCCCC;
+					min-width:100%;
+					height: auto;
+					// position:relative;
+				}
+				.person-info {
+					display: none;
+					background-color: $person-semitrans-blk;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 100%;
+					padding: 2%;
+					.person-name {
+						margin: 0 auto;
+						text-align: center;
+						h2 {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// thumbnail images in index table
+td.image img {
+	max-width: 48px;
+	max-height: 48px;
+}

@@ -2,6 +2,8 @@
 
 %h1 Edit Person
 
+= image_tag @person.gravatar_url(size: 128, default: 'identicon')
+
 = render 'form'
 
 %p

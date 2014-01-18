@@ -5,12 +5,12 @@
   .sort-and-filter
     %p.filter-label
       Filter by Industry:
-    %ul#filters.project-filter-list
-      %li.project-filter
+    %ul#filters.filter-list
+      %li.filter
         %a{:href => "#", :data => {:filter => "*"}}
           Show All
       - for industry in @industries
-        %li.project-filter
+        %li.filter
           %a{href: "#", data: {:filter => ".#{industry.name.downcase}"}}
             = industry.name
   .project-container

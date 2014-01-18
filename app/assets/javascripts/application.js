@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require isotope.min.js
 //= require bootstrap.js
-//= require project.js
 //= require modernizr.custom.79639.js
 //= require jquery.ba-cond.min.js
 //= require jquery.slitslider.js

@@ -7,6 +7,7 @@ $(document).ready(function(){
     $(this).find('.person-info').hide();
   });
   
+  // ISOTOPE
   var $container = $('.person-container');
   
   

@@ -17,4 +17,5 @@
 //= require modernizr.custom.79639.js
 //= require jquery.ba-cond.min.js
 //= require jquery.slitslider.js
+//= require slitslider-init.js
 //= require_tree .

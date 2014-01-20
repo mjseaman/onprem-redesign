@@ -17,8 +17,10 @@
     %br
     = f.text_field :author_title
   %p
-    = f.label :image
+    =f.label :image
     %br
-    = f.text_field :image
+    = image_tag @slide.image_url(:thumb) if @slide.image?
+    %br
+    =f.file_field :image
   %p
     = f.submit

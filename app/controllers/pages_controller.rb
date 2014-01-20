@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 	def index
+		@slides = Slide.limit(5)
 	end
 
 	def offerings

@@ -1,0 +1,24 @@
+/ Carousel
+.slider-container.demo-2
+  #slider.sl-slider-wrapper
+    - for slide in @slides
+      .sl-slider
+        .sl-slide{:data => {:orientation => ['horizontal','vertical'].sample, :slice1_rotation => "#{rand(-40..40)}", :slice1_scale => "2", :slice2_rotation => "#{rand(-40..40)}", :slice2_scale => "2"}}
+          .sl-slide-inner
+            .bg-img{:style => "background-image: url(#{slide.image_url})"}
+            %h2=slide.header
+            %blockquote
+              %p=slide.quote
+              %cite 
+                =slide.author
+                %br
+                %span.darken
+                  =slide.author_title
+    / /sl-slider
+    %nav#nav-arrows.nav-arrows
+      %span.nav-arrow-prev Previous
+      %span.nav-arrow-next Next
+    %nav#nav-dots.nav-dots
+      %span.nav-dot-current
+      -(@slides.size - 1).times do
+        %span

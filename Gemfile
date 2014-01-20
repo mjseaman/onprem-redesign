@@ -41,8 +41,6 @@ gem 'cancan'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'bourbon'
-  # gem 'compass-rails'
-  # gem 'susy'
   gem 'font-awesome-sass'
   gem 'bootstrap-sass', '~> 3.0.3.0'
   
@@ -50,7 +48,7 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'annotate'
+  gem 'annotate' # Type "annotate" into console to annotate models, tests, fixtures and factories
   gem 'rspec'
   gem 'rspec-rails'
   gem 'nifty-generators' # Ryan Bates generators

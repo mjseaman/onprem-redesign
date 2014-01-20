@@ -14,7 +14,8 @@
   = @slide.author_title
 %p
   %strong Image:
-  = @slide.image
+  %br
+  = image_tag @slide.image_url(:thumb) if @slide.image?
 
 %p
   = link_to "Edit", edit_slide_path(@slide)

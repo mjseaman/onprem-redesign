@@ -1,5 +1,5 @@
 - title "Slides"
-
+%h1 Slit-Slider Slides
 %table
   %tr
     %th Header
@@ -13,7 +13,7 @@
       %td= slide.quote
       %td= slide.author
       %td= slide.author_title
-      %td= slide.image
+      %td.image= image_tag slide.image_url(:tiny) if slide.image?
       %td= link_to 'Show', slide
       %td= link_to 'Edit', edit_slide_path(slide)
       %td= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete

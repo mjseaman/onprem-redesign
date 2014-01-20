@@ -12,6 +12,7 @@
 #  updated_at  :datetime         not null
 #  image       :string(255)
 #  logo        :string(255)
+#  industry_id :integer
 #
 
 class Project < ActiveRecord::Base

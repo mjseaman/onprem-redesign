@@ -2,7 +2,7 @@
 .slider-container.demo-2
   #slider.sl-slider-wrapper
     .sl-slider
-      .sl-slide{"data-orientation" => "horizontal", "data-slice1-rotation" => "-25", "data-slice1-scale" => "2", "data-slice2-rotation" => "-25", "data-slice2-scale" => "2"}
+      .sl-slide{:data => {:orientation => 'horizontal', :slice1_rotation => "-25", :slice1_scale => "2", :slice2_rotation => "-25", :slice2_scale => "2"}}
         .sl-slide-inner
           .bg-img.bg-img-1
           %h2 We Work Hard.
@@ -13,7 +13,7 @@
               %br
               %span.darken
                 Founding Partner
-      .sl-slide{"data-orientation" => "vertical", "data-slice1-rotation" => "10", "data-slice1-scale" => "1.5", "data-slice2-rotation" => "-15", "data-slice2-scale" => "1.5"}
+      .sl-slide{:data => {:orientation => 'vertical', :slice1_rotation => "10", :slice1_scale => "1.5", :slice2_rotation => "-15", :slice2_scale => "1.5"}}
         .sl-slide-inner
           .bg-img.bg-img-2
           %h2 We Play Hard.

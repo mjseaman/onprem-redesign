@@ -1,0 +1,21 @@
+- title "Slides"
+
+%table
+  %tr
+    %th Header
+    %th Quote
+    %th Author
+    %th Author title
+    %th Image
+  - for slide in @slides
+    %tr
+      %td= slide.header
+      %td= slide.quote
+      %td= slide.author
+      %td= slide.author_title
+      %td= slide.image
+      %td= link_to 'Show', slide
+      %td= link_to 'Edit', edit_slide_path(slide)
+      %td= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Slide", new_slide_path

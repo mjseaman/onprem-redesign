@@ -1,5 +1,7 @@
 OnPrem::Application.routes.draw do
 
+  resources :slides
+
   resources :people
 
   resources :projects

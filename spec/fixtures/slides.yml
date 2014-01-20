@@ -1,0 +1,13 @@
+one:
+  header: MyString
+  quote: MyString
+  author: MyString
+  author_title: MyString
+  image: MyString
+
+two:
+  header: MyString
+  quote: MyString
+  author: MyString
+  author_title: MyString
+  image: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140118210500) do
+ActiveRecord::Schema.define(:version => 20140120061823) do
 
   create_table "filters", :force => true do |t|
     t.text     "name"
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(:version => 20140118210500) do
     t.string   "image"
     t.string   "logo"
     t.integer  "industry_id"
+  end
+
+  create_table "slides", :force => true do |t|
+    t.string   "header"
+    t.string   "quote"
+    t.string   "author"
+    t.string   "author_title"
+    t.string   "image"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

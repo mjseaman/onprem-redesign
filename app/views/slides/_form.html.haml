@@ -1,0 +1,24 @@
+= form_for @slide do |f|
+  = f.error_messages
+  %p
+    = f.label :header
+    %br
+    = f.text_field :header
+  %p
+    = f.label :quote
+    %br
+    = f.text_field :quote
+  %p
+    = f.label :author
+    %br
+    = f.text_field :author
+  %p
+    = f.label :author_title
+    %br
+    = f.text_field :author_title
+  %p
+    = f.label :image
+    %br
+    = f.text_field :image
+  %p
+    = f.submit

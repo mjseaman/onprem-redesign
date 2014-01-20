@@ -26,9 +26,6 @@ $(document).ready(function(){
   $container.isotope({
     itemSelector : '.person',
     masonry : {
-      // columnWidth : 110
-    },
-    getSortData : {
     }
   });
 

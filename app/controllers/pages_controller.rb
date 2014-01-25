@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	def index
-		@slides = Slide.limit(5)
+		@slides = Page.where(name: __method__).first.slides.shuffle
 	end
 
 	def offerings
@@ -19,8 +19,10 @@ class PagesController < ApplicationController
 	end
 
 	def careers
+		@slides = Page.where(name: __method__).first.slides.shuffle
 	end
 
 	def contact
+		@slides = Page.where(name: __method__).first.slides.shuffle
 	end
 end

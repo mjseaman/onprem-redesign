@@ -2,6 +2,7 @@
 %h1 Slit-Slider Slides
 %table
   %tr
+    %th Page
     %th Header
     %th Quote
     %th Author
@@ -9,6 +10,7 @@
     %th Image
   - for slide in @slides
     %tr
+      %td= slide.page.name if slide.page
       %td= slide.header
       %td= slide.quote
       %td= slide.author

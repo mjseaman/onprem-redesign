@@ -1,6 +1,9 @@
 - title "Slide"
 
 %p
+  %strong Page:
+  = @slide.page.name if @slide.page
+%p
   %strong Header:
   = @slide.header
 %p

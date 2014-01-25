@@ -10,10 +10,11 @@
 #  image        :string(255)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  page         :string(255)
+#  page_id      :integer
 #
 
 class Slide < ActiveRecord::Base
-  attr_accessible :header, :quote, :author, :author_title, :image
+  attr_accessible :header, :quote, :author, :author_title, :image, :page_id
+  belongs_to :page
   mount_uploader :image, ImageUploader
 end

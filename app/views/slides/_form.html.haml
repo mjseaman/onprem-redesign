@@ -1,6 +1,10 @@
 = form_for @slide do |f|
   = f.error_messages
   %p
+    = f.label :page
+    %br
+    = collection_select(:slide, :page_id, Page.all, :id, :name, prompt: true)
+    %p
     = f.label :header
     %br
     = f.text_field :header

@@ -4,10 +4,11 @@
 body {
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
-  background-image: $dark-background;
+  // background-image: $dark-background;
   margin: 0;
   background-repeat: repeat;
-  background-color: $very-dark-grey;
+  // background-color: $very-dark-grey;
+  background-color: white;
 }
 
 .main {
@@ -104,43 +105,46 @@ table {
 }
 
 /**** Footer ****/
-.footer {
-  @extend .container;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  .footer-logo {
-    // @extend .col-xs-4, .col-sm-1;
-    float: right;
-    padding-left: 0;
-    img {
-      height: 7em;
-      width: auto;
+.footer-container {
+  background-color: $black;
+  .footer {
+    @extend .container;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    .footer-logo {
+      // @extend .col-xs-4, .col-sm-1;
+      float: right;
+      padding-left: 0;
+      img {
+        height: 7em;
+        width: auto;
+      }
     }
-  }
-  .footer-nav {
-    // @extend .col-xs-8;
-    ul {
-      // position: absolute;
-      float: left;
-      margin: 0;
-      padding: 0;
-      li {
-        // text-decoration: none;
-        list-style-type: none;
-        display: inline-block;
-        border-right: 2px solid $light-blue;
-        padding-right: 0.5em;
-        padding-left: 0.5em;
-        a {
-          color: $white;
-        }
-        &:last-child {
-          border-right: 0;
-        }
-        @media screen and (max-width: $grid-float-breakpoint) {
-          display: block;
-          border-right: 0;
-          border-left: 2px solid $light-blue;
+    .footer-nav {
+      // @extend .col-xs-8;
+      ul {
+        // position: absolute;
+        float: left;
+        margin: 0;
+        padding: 0;
+        li {
+          // text-decoration: none;
+          list-style-type: none;
+          display: inline-block;
+          border-right: 2px solid $light-blue;
+          padding-right: 0.5em;
+          padding-left: 0.5em;
+          a {
+            color: $white;
+          }
+          &:last-child {
+            border-right: 0;
+          }
+          @media screen and (max-width: $grid-float-breakpoint) {
+            display: block;
+            border-right: 0;
+            border-left: 2px solid $light-blue;
+          }
         }
       }
     }

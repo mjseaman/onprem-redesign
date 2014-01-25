@@ -10,7 +10,7 @@
 #  image        :string(255)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  page         :string(255)
+#  page_id      :integer
 #
 
 one:

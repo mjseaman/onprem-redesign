@@ -1,0 +1,5 @@
+- unless flash.empty?
+	.flash.popup.popup-success
+		-flash.each do |name, msg|
+			=content_tag :div, msg, id: "flash_#{name}"
+		%button{:href => "#", :data => {:dismiss => "alert"}} Dismiss

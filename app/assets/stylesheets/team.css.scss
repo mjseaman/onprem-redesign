@@ -30,19 +30,19 @@ $person-height: 200px;
 		margin:	auto;
 		.person {
 			-webkit-box-shadow: rgb(0, 0, 0) 0px 5px 5px -5px;
-			width: 260px;
-			min-height: 260px;
+			width: 160px;
+			min-height: 160px;
 			margin: 8px;
 			background-color: #EBEBEB;
 			// border: 1px solid black;
 			.person-image {
 				overflow: hidden;
-				background-color: #CCCCCC;
+				// background-color: #CCCCCC;
 				// height: 260px;
 				margin: 1%;
 				position: relative;
 				img {
-					background-color: #CCCCCC;
+					// background-color: #CCCCCC;
 					min-width:100%;
 					height: auto;
 					// position:relative;
@@ -58,8 +58,37 @@ $person-height: 200px;
 					.person-name {
 						margin: 0 auto;
 						text-align: center;
-						h2 {
-							color: $white;
+						color: $white;
+						// text-decoration: underline;
+						font-family: $roboto-condensed;
+						margin: 1em auto 0.5em auto;
+						font-size: 1.5em;
+					}
+					.person-title {
+						margin: 0 auto;
+						text-align: center;
+						color: $white;
+					}
+					.icons {
+						text-align: center;
+						margin-top: 1.25em;
+						span.icon {
+							@extend .fa-stack;
+							i.square-bg {
+								@extend .fa, .fa-square, .fa-stack-2x, .fa-inverse;
+							}
+							i.linkedin {
+								@extend .fa, .fa-linkedin, .fa-stack-1x;
+							}
+							i.twitter {
+								@extend .fa, .fa-twitter, .fa-stack-1x;
+							}
+							i.email {
+								@extend .fa, .fa-envelope, .fa-stack-1x;
+							}
+							i.github {
+								@extend .fa, .fa-github-alt, .fa-stack-1x;
+							}
 						}
 					}
 				}

@@ -1,0 +1,17 @@
+- title "Schools"
+
+%h1 Schools
+
+%table
+  %tr
+    %th Name
+    %th Icon
+  - for school in @schools
+    %tr
+      %td= school.name
+      %td= image_tag school.icon_url(:tiny) if school.icon?
+      %td= link_to 'Show', school, :class => "primary-button"
+      %td= link_to 'Edit', edit_school_path(school), :class => "info-button"
+      %td= link_to 'Destroy', school, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
+
+%p= link_to "New School", new_school_path

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140120192643) do
+ActiveRecord::Schema.define(:version => 20140126205733) do
 
   create_table "filters", :force => true do |t|
     t.text     "name"
@@ -38,12 +38,19 @@ ActiveRecord::Schema.define(:version => 20140120192643) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "bio"
-    t.string   "alma_mater"
     t.string   "linkedin"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.string   "title"
+    t.string   "phone"
+    t.string   "twitter_handle"
+    t.string   "github"
+  end
+
+  create_table "people_schools", :force => true do |t|
+    t.integer "person_id"
+    t.integer "school_id"
   end
 
   create_table "projects", :force => true do |t|
@@ -57,6 +64,13 @@ ActiveRecord::Schema.define(:version => 20140120192643) do
     t.string   "image"
     t.string   "logo"
     t.integer  "industry_id"
+  end
+
+  create_table "schools", :force => true do |t|
+    t.string   "name"
+    t.string   "icon"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "slides", :force => true do |t|

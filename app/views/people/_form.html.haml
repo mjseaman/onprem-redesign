@@ -1,5 +1,5 @@
 = form_for @person do |f|
-  = f.error_messages
+  = render :partial => "layouts/error", :locals => {:error_message => f.error_messages}
   %p
     = f.label :first_name
     %br
@@ -17,16 +17,28 @@
     %br
     = f.text_field :bio
   %p
-    = f.label :alma_mater
+    = f.label :schools
     %br
-    = f.text_field :alma_mater
+    = collection_select(:person, :school_ids, School.find(:all, :order => "name ASC"), :id, :name, {prompt: true}, {:multiple => true})
   %p
-    = f.label :linkedin
+    = f.label :linkedin, "Linkedin URL"
     %br
     = f.text_field :linkedin
   %p
-    = f.label :email
+    = f.label :email, "Email Address"
     %br
-    = f.text_field :email
+    = f.text_field :email  
+  %p
+    = f.label :phone
+    %br
+    = f.text_field :phone
+  %p
+    = f.label :twitter_handle, "Twitter Handle"
+    %br
+    = f.text_field :twitter_handle
+  %p
+    = f.label :github, "Github URL"
+    %br
+    = f.text_field :github
   %p
     = f.submit

@@ -15,11 +15,22 @@
   %strong Bio:
   = @person.bio
 %p
-  %strong Alma Mater:
-  = @person.alma_mater
+  %strong Schools:
+  %ul
+  - for school in @person.schools
+    %li= school.name
 %p
   %strong Linkedin:
   = @person.linkedin
+%p
+  %strong Phone:
+  = @person.phone
+%p
+  %strong Twitter handle:
+  = @person.twitter_handle
+%p
+  %strong Github:
+  = @person.github
 %p
   %strong Email:
   = @person.email

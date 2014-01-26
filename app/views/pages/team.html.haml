@@ -20,9 +20,30 @@
     -for person in @people
       .person{:class => "#{person.alma_mater.downcase if person.alma_mater}"}
         .person-image
-          = image_tag person.gravatar_url(size: 260, default: 'wavatar')
+          = image_tag person.gravatar_url(size: 160, default: 'wavatar')
           .person-info
             .person-name
-              %h2= "#{person.first_name} #{person.last_name}"
+              = "#{person.first_name} #{person.last_name}"
+            .person-title
+              = person.title
+            .icons
+              - if person.linkedin > ""
+                %a{:title => "linkedin", :href => person.linkedin}
+                  %span.icon
+                    %i.square-bg
+                    %i.linkedin
+              %span.icon
+                %i.square-bg
+                %i.twitter
+              %span.icon
+                %i.square-bg
+                %i.email
+            -if person.github > ""
+              %a{:title => "github", :href => person.github}
+                %span.icon
+                  %i.square-bg
+                  %i.github
+
+
         / .project-client
         /   = image_tag project.logo_url(:thumb) if project.logo?

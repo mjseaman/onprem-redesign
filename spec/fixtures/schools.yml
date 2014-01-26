@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: schools
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  icon       :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  icon: MyString
+
+two:
+  name: MyString
+  icon: MyString

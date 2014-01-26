@@ -16,8 +16,8 @@
       %td= slide.author
       %td= slide.author_title
       %td.image= image_tag slide.image_url(:tiny) if slide.image?
-      %td= link_to 'Show', slide
-      %td= link_to 'Edit', edit_slide_path(slide)
-      %td= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Show', slide, :class => "primary-button"
+      %td= link_to 'Edit', edit_slide_path(slide), :class => "info-button"
+      %td= link_to 'Destroy', slide, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
 
 %p= link_to "New Slide", new_slide_path

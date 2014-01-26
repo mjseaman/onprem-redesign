@@ -1,0 +1,14 @@
+= form_for @school do |f|
+  = render :partial => "layouts/error", :locals => {:error_message => f.error_messages}
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    =f.label :icon
+    %br
+    = image_tag @school.icon_url(:thumb) if @school.icon?
+    %br
+    =f.file_field :icon
+  %p
+    = f.submit

@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
   before_filter :authenticate_user!
   def index
-    @people = Person.all
+    @people = Person.find(:all, :order => "last_name ASC")
   end
 
   def show
@@ -27,6 +27,7 @@ class PeopleController < ApplicationController
 
   def update
     @person = Person.find(params[:id])
+    # params.require(:transaction).permit(:name, school_ids => [])
     if @person.update_attributes(params[:person])
       redirect_to @person, :notice  => "Successfully updated person."
     else

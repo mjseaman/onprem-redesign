@@ -99,9 +99,56 @@ nav#navbar {
   }
 }
 
+/**** Popup Alerts ****/
+.popup {
+  @extend .alert, .fade, .in;
+  position: fixed;
+  width: 50%;
+  top: 100px;
+  left: 25%;
+  h2 {
+    margin-top: 0;
+  }
+  button {
+    @extend .btn, .btn-default;
+  }
+}
+.popup-errors {
+  @extend .alert-danger;
+}
+.popup-success {
+  @extend .alert-success;
+}
+
 /**** Table Formatting ****/
 table {
-  @extend .table, .table-striped, .table-hover;
+  @extend .table, .table-striped, .table-hover, .table-condensed;
+}
+
+/**** Button Formatting ****/
+// White
+.default-button {
+  @extend .btn, .btn-default;
+}
+// Blue
+.primary-button {
+  @extend .btn, .btn-primary;
+}
+// Green
+.success-button {
+  @extend .btn, .btn-success;
+}
+// Light Blue
+.info-button {
+  @extend .btn, .btn-info;
+}
+// Orange
+.warning-button {
+  @extend .btn, .btn-warning;
+}
+// Red
+.danger-button {
+  @extend .btn, .btn-danger;
 }
 
 /**** Footer ****/

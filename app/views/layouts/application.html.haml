@@ -14,18 +14,14 @@
 		=render "layouts/navbar"
 		- if controller_name != 'pages'
 			.main
-				.flash
-					-flash.each do |name, msg|
-						=content_tag :div, msg, id: "flash_#{name}"
+				= render :partial => "layouts/flash", :locals => {:flash => flash}
 				= yield
 		- else
-			.flash
-				-flash.each do |name, msg|
-					=content_tag :div, msg, id: "flash_#{name}"
+			= render :partial => "layouts/flash", :locals => {:flash => flash}
 			=yield
 	.footer-container
 		.footer
 			.footer-logo
 				= image_tag("OnPrem_Logo_White.png")
 			.footer-nav
-				= render "layouts/navlinks"
+				= render :partial => "layouts/navlinks"

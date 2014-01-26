@@ -47,8 +47,8 @@
       %td= project.industry.name if project.industry
       %td.image= image_tag project.image_url(:tiny) if project.image?
       %td.image= image_tag project.logo_url(:tiny) if project.logo?
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Show', project, :class => "primary-button"
+      %td= link_to 'Edit', edit_project_path(project), :class => "info-button"
+      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
 
 %p= link_to "New Project", new_project_path

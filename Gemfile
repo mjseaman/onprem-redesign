@@ -28,6 +28,7 @@ gem 'haml-rails'
 
 # Carrierwave for image uploads
 gem 'carrierwave'
+gem 'fog', '~> 1.3.1'
 gem 'rmagick', '2.13.2'
 
 # Gravatar for user avatars

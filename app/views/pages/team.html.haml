@@ -8,24 +8,20 @@
   .combo-filters.sort-and-filter
     %p.filter-label
       Filter by School:
-    %ul.filter.option-set{:data => {:filter_group => "school"}}
-      %li
-        %a.selected{:href => "#filter-school-any", :data => {:filter_value => ""}}
-          Show All
+    .filter.option-set{:data => {:filter_group => "school"}}
+      %a.selected{:href => "#filter-school-any", :data => {:filter_value => ""}}
+        Show All
       - for school in @schools
-        %li
-          %a{href: "#filter-school-#{school.name.parameterize}", data: {:filter_value => ".#{school.name.parameterize}"}}
-            = school.name
+        %a{href: "#filter-school-#{school.name.parameterize}", data: {:filter_value => ".#{school.name.parameterize}"}}
+          = school.name
     %p.filter-label
       Filter by Title:
-    %ul.filter.option-set{:data => {:filter_group => "title"}}
-      %li
-        %a.selected{:href => "#filter-title-any", :data => {:filter_value => ""}}
-          Show All
+    .filter.option-set{:data => {:filter_group => "title"}}
+      %a.selected{:href => "#filter-title-any", :data => {:filter_value => ""}}
+        Show All
       - for title in @titles
-        %li
-          %a{href: "#filter-title-#{title.parameterize}", data: {:filter_value => ".#{title.parameterize}"}}
-            = title
+        %a{href: "#filter-title-#{title.parameterize}", data: {:filter_value => ".#{title.parameterize}"}}
+          = title
   .person-container
     -for person in @people
       .person{:class => person.filter_tags}

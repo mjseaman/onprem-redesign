@@ -4,35 +4,39 @@
 // }
 .main {
 	.sort-and-filter {
-		text-align: center;
-		padding-bottom: 1em;
-		.filter-label {
-			display: inline;
-		}
-		ul.option-set {
-			padding-left: 0;
-			display: inline;
-			li {
-				list-style: none;
-				display: inline-block;
-				// border: 1px solid black;
-				padding: .25em .5em;
-				background-color: #EBEBEB;
-				border-radius: 0.25em;
-				&:hover {
-					background-color: $light-grey;
-				}
-				a {
-					text-decoration: none;
-				}
-			}
-		}
+		// text-align: center;
+		// padding-bottom: 1em;
+		// .filter-label {
+		// 	display: inline;
+		// }
 		// ul.option-set {
-		// 	@extend .btn-group;
+		// 	padding-left: 0;
+		// 	display: inline;
 		// 	li {
-		// 		@extend .btn, .btn-group;
+		// 		list-style: none;
+		// 		display: inline-block;
+		// 		// border: 1px solid black;
+		// 		padding: .25em .5em;
+		// 		background-color: #EBEBEB;
+		// 		border-radius: 0.25em;
+		// 		&:hover {
+		// 			background-color: $light-grey;
+		// 		}
+		// 		a {
+		// 			text-decoration: none;
+		// 		}
 		// 	}
 		// }
+		.option-set {
+			// display: inline-block;
+			@extend .btn-group;
+			a {
+				@extend .btn, .btn-default, .btn-group;
+			}
+			.selected {
+				@extend .active;
+			}
+		}
 	}
 	.project-container {
 		margin:	auto;

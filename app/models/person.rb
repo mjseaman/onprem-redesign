@@ -23,7 +23,7 @@ class Person < ActiveRecord::Base
 
   validates :github, format: { with: /\Ahttps:\/\/github.com\//, message: "must be formatted as a URL starting with the text 'https://github.com/' followed by your username", allow_blank: true }
   validates :twitter, format: { with: /\Ahttps:\/\/twitter.com\//, message: "must be formatted as a URL starting with the text 'https://twitter.com/' followed by your username", allow_blank: true }
-  validates :linkedin, format: { with: /\/www.linkedin.com\//, message: "must be formatted as a URL with the text 'www.linkedin.com/' followed by your personal URL", allow_blank: true }
+  validates :linkedin, format: { with: /www.linkedin.com\//, message: "must be formatted as a URL with the text 'www.linkedin.com/' followed by your personal URL", allow_blank: true }
   validates :email, presence:true, format: { with: /\w*@\w*\./, message: "must be a valid email address"}
 
   include Gravtastic

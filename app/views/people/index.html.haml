@@ -7,22 +7,14 @@
     %th First name
     %th Last name
     %th Title
-    / %th Linkedin
     %th Email
-    / %th Phone
-    / %th Twitter Handle
-    / %th Github
   - for person in @people
     %tr
       %td= image_tag person.gravatar_url(:size => 48, default: 'wavatar')
       %td= person.first_name
       %td= person.last_name
       %td= person.title
-      / %td= person.linkedin
       %td= person.email
-      / %td= person.phone
-      / %td= person.twitter_handle
-      / %td= person.github
       %td= link_to 'Show', person, :class => "primary-button"
       %td= link_to 'Edit', edit_person_path(person), :class => "info-button"
       %td= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"

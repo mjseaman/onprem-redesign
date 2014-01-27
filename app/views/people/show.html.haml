@@ -26,8 +26,8 @@
   %strong Phone:
   = @person.phone
 %p
-  %strong Twitter handle:
-  = @person.twitter_handle
+  %strong Twitter URL:
+  = @person.twitter
 %p
   %strong Github:
   = @person.github
@@ -36,8 +36,6 @@
   = @person.email
 
 %p
-  = link_to "Edit", edit_person_path(@person)
-  |
-  = link_to "Destroy", @person, :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", people_path
+  = link_to "Edit", edit_person_path(@person), :class => "info-button"
+  = link_to "Destroy", @person, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
+  = link_to "View All", people_path, :class => "primary-button"

@@ -5,6 +5,5 @@
 = render 'form'
 
 %p
-  = link_to "Show", @school
-  |
-  = link_to "View All", schools_path
+  = link_to "Show", @school, :class => "info-button"
+  = link_to "View All", schools_path, :class => "primary-button"

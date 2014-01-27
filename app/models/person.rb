@@ -18,10 +18,11 @@
 #
 
 class Person < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :bio, :alma_mater, :linkedin, :email, :title, :school_ids, :phone, :twitter_handle, :github
+  attr_accessible :first_name, :last_name, :bio, :linkedin, :email, :title, :school_ids, :phone, :twitter, :github
   has_and_belongs_to_many :schools
 
   validates :github, format: { with: /\Ahttps:\/\/github.com\//, message: "must be formatted as a URL starting with the text 'https://github.com/' followed by your username", allow_blank: true }
+  validates :twitter, format: { with: /\Ahttps:\/\/twitter.com\//, message: "must be formatted as a URL starting with the text 'https://twitter.com/' followed by your username", allow_blank: true }
   validates :linkedin, format: { with: /\/www.linkedin.com\//, message: "must be formatted as a URL with the text 'www.linkedin.com/' followed by your personal URL", allow_blank: true }
   validates :email, presence:true, format: { with: /\w*@\w*\./, message: "must be a valid email address"}
 

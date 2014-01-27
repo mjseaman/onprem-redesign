@@ -7,18 +7,18 @@
     The hard-hitting experts who are changing the face of entertainment.
   .sort-and-filter
     %p.filter-label
-      Filter by Alma Mater:
+      Filter by School:
     %ul#filters.filter-list
       %li.filter
         %a{:href => "#", :data => {:filter => "*"}}
           Show All
-      - for alma_mater in @alma_maters
+      - for school in @schools
         %li.filter
-          %a{href: "#", data: {:filter => ".#{alma_mater.downcase}"}}
-            = alma_mater
+          %a{href: "#", data: {:filter => ".#{school.name.downcase}"}}
+            = school.name
   .person-container
     -for person in @people
-      .person{:class => "#{person.alma_mater.downcase if person.alma_mater}"}
+      .person{:class => "#{person.schools.map {|school| school.name.downcase }.join(" ") if !person.schools.empty?}"}
         .person-image
           = image_tag person.gravatar_url(size: 160, default: 'wavatar')
           .person-info
@@ -27,22 +27,26 @@
             .person-title
               = person.title
             .icons
-              - if person.linkedin > ""
-                %a{:title => "linkedin", :href => person.linkedin}
+              - if !person.linkedin.empty?
+                %a{:title => "#{person.first_name}'s linkedin", :href => person.linkedin}
                   %span.icon
                     %i.square-bg
                     %i.linkedin
-              %span.icon
-                %i.square-bg
-                %i.twitter
-              %span.icon
-                %i.square-bg
-                %i.email
-            -if person.github > ""
-              %a{:title => "github", :href => person.github}
-                %span.icon
-                  %i.square-bg
-                  %i.github
+              -if !person.twitter.empty?
+                %a{:title => "#{person.first_name}'s twitter", :href => person.twitter}
+                  %span.icon
+                    %i.square-bg
+                    %i.twitter
+              -if !person.email.empty?
+                %a{:title => "#{person.first_name}'s email", :href => "mailto:#{person.email}"}
+                  %span.icon
+                    %i.square-bg
+                    %i.email
+              -if !person.github.empty?
+                %a{:title => "#{person.first_name}'s github", :href => person.github}
+                  %span.icon
+                    %i.square-bg
+                    %i.github
 
 
         / .project-client

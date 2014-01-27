@@ -33,12 +33,12 @@
     %br
     = f.text_field :phone
   %p
-    = f.label :twitter_handle, "Twitter Handle"
+    = f.label :twitter, "Twitter URL"
     %br
-    = f.text_field :twitter_handle
+    = f.text_field :twitter
   %p
     = f.label :github, "Github URL"
     %br
     = f.text_field :github
   %p
-    = f.submit
+    = f.submit "Save", :class => "success-button"

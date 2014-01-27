@@ -13,8 +13,7 @@ class PagesController < ApplicationController
 
 	def team
 		@people = Person.limit(50)
-		ap @people.size
-		@alma_maters = Person.uniques(:alma_mater)
+		@schools = School.limit(15)
 		ap Person.all.size
 	end
 

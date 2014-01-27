@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140126205733) do
+ActiveRecord::Schema.define(:version => 20140126232852) do
 
   create_table "filters", :force => true do |t|
     t.text     "name"
@@ -40,11 +40,11 @@ ActiveRecord::Schema.define(:version => 20140126205733) do
     t.string   "bio"
     t.string   "linkedin"
     t.string   "email"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "title"
     t.string   "phone"
-    t.string   "twitter_handle"
+    t.string   "twitter"
     t.string   "github"
   end
 

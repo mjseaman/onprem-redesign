@@ -14,6 +14,7 @@ class PagesController < ApplicationController
 	def team
 		@people = Person.limit(50)
 		@schools = School.limit(15)
+		@titles = Person.uniques(:title)
 		ap Person.all.size
 	end
 

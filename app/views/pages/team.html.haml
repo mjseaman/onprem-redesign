@@ -5,7 +5,7 @@
     Team
   %p.description
     The hard-hitting experts who are changing the face of entertainment.
-  .combo-filters#options
+  .combo-filters.sort-and-filter
     %p.filter-label
       Filter by School:
     %ul.filter.option-set{:data => {:filter_group => "school"}}
@@ -14,11 +14,21 @@
           Show All
       - for school in @schools
         %li
-          %a{href: "#filter-school-#{school.name.downcase}", data: {:filter_value => ".#{school.name.downcase}"}}
+          %a{href: "#filter-school-#{school.name.parameterize}", data: {:filter_value => ".#{school.name.parameterize}"}}
             = school.name
+    %p.filter-label
+      Filter by Title:
+    %ul.filter.option-set{:data => {:filter_group => "title"}}
+      %li
+        %a.selected{:href => "#filter-title-any", :data => {:filter_value => ""}}
+          Show All
+      - for title in @titles
+        %li
+          %a{href: "#filter-title-#{title.parameterize}", data: {:filter_value => ".#{title.parameterize}"}}
+            = title
   .person-container
     -for person in @people
-      .person{:class => "#{person.schools.map {|school| school.name.downcase }.join(" ") if !person.schools.empty?}"}
+      .person{:class => person.filter_tags}
         .person-image
           = image_tag person.gravatar_url(size: 160, default: 'wavatar')
           .person-info

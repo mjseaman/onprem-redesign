@@ -9,10 +9,10 @@
 		.filter-label {
 			display: inline;
 		}
-		ul.filter-list {
+		ul.option-set {
 			padding-left: 0;
 			display: inline;
-			li.filter {
+			li {
 				list-style: none;
 				display: inline-block;
 				// border: 1px solid black;
@@ -27,6 +27,12 @@
 				}
 			}
 		}
+		// ul.option-set {
+		// 	@extend .btn-group;
+		// 	li {
+		// 		@extend .btn, .btn-group;
+		// 	}
+		// }
 	}
 	.project-container {
 		margin:	auto;

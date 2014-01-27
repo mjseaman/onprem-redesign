@@ -36,4 +36,11 @@ class Person < ActiveRecord::Base
   def school_choices
   	School.find(:all, :order => "name ASC")
   end
+
+  def filter_tags
+  	filters = []
+  	filters << schools.map {|school| school.name.parameterize }
+  	filters << title.parameterize
+  	ap filters.flatten.join " "
+  end
 end

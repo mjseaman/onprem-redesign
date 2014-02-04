@@ -1,21 +1,19 @@
-%title "Our Work | OnPrem"
+%title Our Work | OnPrem
 .main
   %h1
     Project Work
-  .sort-and-filter
+  .combo-filters
     %p.filter-label
       Filter by Industry:
-    %ul#filters.filter-list
-      %li.filter
-        %a{:href => "#", :data => {:filter => "*"}}
-          Show All
+    .filter.option-set{:data => {:filter_group => "industry"}}
+      %a.selected{:href => "#filter-industry-any", :data => {:filter_value => ""}}
+        Show All
       - for industry in @industries
-        %li.filter
-          %a{href: "#", data: {:filter => ".#{industry.name.downcase}"}}
-            = industry.name
+        %a{href: "#filter-industry-#{industry.name.parameterize}", data: {:filter_value => ".#{industry.name.parameterize}"}}
+          = industry.name
   .project-container
     -for project in @projects
-      .project{:class => "#{project.industry.name.downcase if project.industry}"}
+      .project{:class => "#{project.industry.name.parameterize if project.industry}"}
         .project-image
           = image_tag project.image_url(:thumb) if project.image?
           .project-title

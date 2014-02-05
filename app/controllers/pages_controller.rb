@@ -12,9 +12,9 @@ class PagesController < ApplicationController
 	end
 
 	def team
-		@people = Person.limit(50)
+		@people = Person.limit(50).sort_by!{ |n| n.last_name.downcase }
 		@schools = School.limit(15)
-		@titles = Person.uniques(:title)
+		@titles = Person.uniques(:title).sort_by!{ |t| t.downcase }
 		ap Person.all.size
 	end
 

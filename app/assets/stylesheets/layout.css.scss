@@ -1,5 +1,3 @@
-
-
 // Font and Background defaults
 body {
 	font-family: $body-font-family;
@@ -124,6 +122,18 @@ nav#navbar {
 table {
   @extend .table, .table-striped, .table-hover, .table-condensed;
 }
+
+
+/**** Form Formatting ****/
+// form {
+//   p {
+//     @extend .form-group, .col-md-6, .col-lg-4;
+//     display: block;
+//   }
+//   input {
+//     @extend .form-control;
+//   }
+// }
 
 /**** Button Formatting ****/
 // White

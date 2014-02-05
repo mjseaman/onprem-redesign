@@ -33,26 +33,27 @@
             .person-title
               = person.title
             .icons
-              - if !person.linkedin.empty?
-                %a{:title => "#{person.first_name}'s linkedin", :href => person.linkedin}
+              - if person.linkedin && !person.linkedin.empty?
+                %a{:title => "#{person.first_name}'s Linkedin", :href => person.linkedin, :target => "_blank"}
                   %span.icon
                     %i.square-bg
                     %i.linkedin
-              -if !person.twitter.empty?
-                %a{:title => "#{person.first_name}'s twitter", :href => person.twitter}
+              -if person.twitter && !person.twitter.empty?
+                %a{:title => "#{person.first_name}'s Twitter", :href => person.twitter, :target => "_blank"}
                   %span.icon
                     %i.square-bg
                     %i.twitter
-              -if !person.email.empty?
-                %a{:title => "#{person.first_name}'s email", :href => "mailto:#{person.email}"}
+              -if person.email && !person.email.empty?
+                %a{:title => "#{person.first_name}'s Email", :href => "mailto:#{person.email}"}
                   %span.icon
                     %i.square-bg
                     %i.email
-              -if !person.github.empty?
-                %a{:title => "#{person.first_name}'s github", :href => person.github}
+              -if person.github && !person.github.empty?
+                %a{:title => "#{person.first_name}'s Github", :href => person.github, :target => "_blank"}
                   %span.icon
                     %i.square-bg
                     %i.github
+
 
 
         / .project-client

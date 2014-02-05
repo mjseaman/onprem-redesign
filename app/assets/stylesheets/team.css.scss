@@ -3,11 +3,12 @@ $person-height: 200px;
 .main {
 	.person-container {
 		margin:	auto;
+		margin-top: 2em;
 		.person {
 			// -webkit-box-shadow: rgb(0, 0, 0) 0px 5px 5px -5px;
 			width: 140px;
 			min-height: 140px;
-			margin: 2px;
+			margin: 1px;
 			background-color: #EBEBEB;
 			// border: 1px solid black;
 			.person-image {
@@ -36,7 +37,7 @@ $person-height: 200px;
 						color: $white;
 						// text-decoration: underline;
 						font-family: $roboto-condensed;
-						margin: 1em auto 0.5em auto;
+						margin: 0.5em auto 0.25em auto;
 						font-size: 1.5em;
 					}
 					.person-title {
@@ -46,7 +47,7 @@ $person-height: 200px;
 					}
 					.icons {
 						text-align: center;
-						margin-top: 1.25em;
+						margin-top: 0.75em;
 						span.icon {
 							@extend .fa-stack;
 							i.square-bg {
@@ -65,6 +66,9 @@ $person-height: 200px;
 								@extend .fa, .fa-github-alt, .fa-stack-1x;
 							}
 						}
+					}
+					.person-detail {
+						display: none;
 					}
 				}
 			}

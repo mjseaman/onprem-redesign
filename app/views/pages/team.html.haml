@@ -1,19 +1,11 @@
 %title Our Team | OnPrem
-
+= javascript_include_tag "team.js"
 .main
   %h1
     Team
   %p.description
     The hard-hitting experts who are changing the face of entertainment.
   .combo-filters
-    %p.filter-label
-      Filter by School:
-    .filter.option-set{:data => {:filter_group => "school"}}
-      %a.selected{:href => "#filter-school-any", :data => {:filter_value => ""}}
-        Show All
-      - for school in @schools
-        %a{href: "#filter-school-#{school.name.parameterize}", data: {:filter_value => ".#{school.name.parameterize}"}}
-          = school.name
     %p.filter-label
       Filter by Title:
     .filter.option-set{:data => {:filter_group => "title"}}

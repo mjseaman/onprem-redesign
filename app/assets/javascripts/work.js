@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
   
   var $container = $('.project-container');
   
@@ -18,9 +18,6 @@ $(function(){
   $container.isotope({
     itemSelector : '.project',
     masonry : {
-      // columnWidth : 110
-    },
-    getSortData : {
     }
   });
 

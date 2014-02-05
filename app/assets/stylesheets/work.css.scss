@@ -41,15 +41,15 @@
 	.project-container {
 		margin:	auto;
 		.project {
-			box-shadow: 1px 1px 2px #888888;
-			width: 260px;
-			margin: 8px;
+			// box-shadow: 1px 1px 2px #888888;
+			width: 280px;
+			margin: 2px;
 			background-color: #EBEBEB;
 			// border: 1px solid black;
 			.project-image {
 				overflow: hidden;
 				background-color: #CCCCCC;
-				height: 200px;
+				height: 240px;
 				margin: 2%;
 				position: relative;
 				img {
@@ -58,6 +58,7 @@
 					// position:relative;
 				}
 				.project-title {
+					display: none;
 					background-color: $project-semitrans-wht;
 					position: absolute;
 					bottom: 0;

@@ -18,4 +18,6 @@
 //= require jquery.ba-cond.min.js
 //= require jquery.slitslider.js
 //= require slitslider-init.js
-//= require_tree .
+//= require isotope_centered_masonry.js
+//= require omniauth_callbacks.js
+//= require layout.js

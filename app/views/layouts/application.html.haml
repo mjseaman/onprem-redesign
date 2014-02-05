@@ -3,6 +3,8 @@
 	%head
 		= yield(:title) || "OnPrem Solution Partners"
 
+		= yield(:javascripts)
+
 		%meta{content: "width=device-width,initial-scale=1.0", name: "viewport"}/
 
 		%link{href: "http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700|Oswald:700|Droid+Serif:400,700italic|Rokkitt:700|Coustard:900|Bitter:900", rel: "stylesheet", type: "text/css"}/

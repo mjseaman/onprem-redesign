@@ -14,6 +14,14 @@
       - for title in @titles
         %a{href: "#filter-title-#{title.parameterize}", data: {:filter_value => ".#{title.parameterize}"}}
           = title
+    %p.filter-label
+      Filter by Alma Mater:
+    .filter.option-set{:data => {:filter_group => "school"}}
+      %a.selected{:href => "#filter-title-any", :data => {:filter_value => ""}}
+        Show All
+      - for school in @schools
+        %a{href: "#filter-school-#{school.name.parameterize}", data: {:filter_value => ".#{school.name.parameterize}"}}
+          = school.name
   .person-container
     -for person in @people
       .person{:class => person.filter_tags}

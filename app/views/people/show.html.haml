@@ -4,7 +4,15 @@
   = @person.first_name
   = " "
   = @person.last_name
-= image_tag @person.gravatar_url(size: 128, default: 'identicon')
+%p
+  %strong Portrait:
+  .preview-img
+    = image_tag @person.portrait_url(:thumb) if @person.portrait?
+    #{"None" if !@person.portrait?}
+%p
+  %strong Gravatar:
+  %p
+  = image_tag @person.gravatar_url(size: 128, default: 'wavatar')
 %p
   %strong First Name:
   = @person.first_name

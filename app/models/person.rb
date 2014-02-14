@@ -18,8 +18,10 @@
 #
 
 class Person < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :bio, :linkedin, :email, :title, :school_ids, :phone, :twitter, :github
+  attr_accessible :first_name, :last_name, :bio, :linkedin, :email, :title, :school_ids, :phone, :twitter, :github, :portrait
   has_and_belongs_to_many :schools
+
+  mount_uploader :portrait, PortraitUploader
 
   validates :github, format: { with: /\Ahttps:\/\/github.com\//, message: "must be formatted as a URL starting with the text 'https://github.com/' followed by your username", allow_blank: true }
   validates :twitter, format: { with: /\Ahttps:\/\/twitter.com\//, message: "must be formatted as a URL starting with the text 'https://twitter.com/' followed by your username", allow_blank: true }

@@ -21,6 +21,12 @@
     %br
     = collection_select(:person, :school_ids, School.find(:all, :order => "name ASC"), :id, :name, {prompt: true}, {:multiple => true})
   %p
+    =f.label :portrait
+    %br
+    = image_tag @person.portrait_url(:thumb) if @person.portrait?
+    %br
+    =f.file_field :portrait
+  %p
     = f.label :linkedin, "Linkedin URL"
     %br
     = f.text_field :linkedin

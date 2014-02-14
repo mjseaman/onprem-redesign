@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140126232852) do
+ActiveRecord::Schema.define(:version => 20140214045507) do
 
   create_table "filters", :force => true do |t|
     t.text     "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20140126232852) do
     t.string   "phone"
     t.string   "twitter"
     t.string   "github"
+    t.string   "portrait"
   end
 
   create_table "people_schools", :force => true do |t|

@@ -1,7 +1,8 @@
 !!!
 %html
 	%head
-		= yield(:title) || "OnPrem Solution Partners"
+		%title
+			= h(yield(:title) || "OnPrem")
 
 		= yield(:javascripts)
 

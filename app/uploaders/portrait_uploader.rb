@@ -35,11 +35,11 @@ class PortraitUploader < CarrierWave::Uploader::Base
   # end
 
   version :thumb do
-    process :resize_to_limit => [140,140]
+    process :resize_to_fill => [140,140]
   end
 
   version :tiny do
-    process :resize_to_limit => [48,48]
+    process :resize_to_fill => [48,48]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

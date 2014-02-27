@@ -54,3 +54,10 @@
 		@extend .col-sm-6;
 	}
 }
+
+.call-to-action {
+	@extend .row;
+	.continue {
+	@extend .btn, .btn-default, .col-xs-2;
+	}
+}

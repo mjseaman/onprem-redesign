@@ -4,14 +4,17 @@ class PagesController < ApplicationController
 	end
 
 	def offerings
+		@slides = Page.where(name: __method__).first.slides.shuffle
 	end
 
 	def work
+		@slides = Page.where(name: __method__).first.slides.shuffle
 		@projects = Project.limit(20)
     @industries = Industry.all
 	end
 
 	def team
+		@slides = Page.where(name: __method__).first.slides.shuffle
 		@people = Person.limit(50).sort_by!{ |n| n.last_name.downcase }
 		@schools = School.limit(15)
 		@titles = Person.uniques(:title).sort_by!{ |t| t.downcase }

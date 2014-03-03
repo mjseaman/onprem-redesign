@@ -1,0 +1,6 @@
+.culture {
+	@extend .row;
+	.culture-item {
+		@extend .col-sm-6, .col-md-3;
+	}
+}

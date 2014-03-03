@@ -1,0 +1,25 @@
+#offerings-full {
+	@extend .row;
+	.offering {
+		@extend .col-sm-6;
+		background-color: $white;
+		.offering-header {
+			@extend .row;
+			.offering-icon {
+				@extend .col-xs-3, .col-sm-2;
+				display: inline-block;
+				img { }
+			}
+			.offering-title {
+				@extend .col-xs-9, .col-sm-2;
+				display: inline-block;
+				h2 {
+					margin: 0 auto;
+				}
+			}
+		}
+		.offering-detail {
+			// display: none;
+		}
+	}
+}

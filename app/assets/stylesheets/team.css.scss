@@ -40,24 +40,6 @@ $person-height: 200px;
 					.icons {
 						text-align: center;
 						margin-top: 0.75em;
-						span.icon {
-							@extend .fa-stack;
-							i.square-bg {
-								@extend .fa, .fa-square, .fa-stack-2x, .fa-inverse;
-							}
-							i.linkedin {
-								@extend .fa, .fa-linkedin, .fa-stack-1x;
-							}
-							i.twitter {
-								@extend .fa, .fa-twitter, .fa-stack-1x;
-							}
-							i.email {
-								@extend .fa, .fa-envelope, .fa-stack-1x;
-							}
-							i.github {
-								@extend .fa, .fa-github-alt, .fa-stack-1x;
-							}
-						}
 					}
 					.person-detail {
 						display: none;

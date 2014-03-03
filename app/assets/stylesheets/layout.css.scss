@@ -13,7 +13,7 @@ body {
   @extend .container;
   // width: 90%;
   background-color: $white;
-  margin-top: 50px;
+  // margin-top: 50px;
   padding-bottom: 2em;
 }
 
@@ -29,7 +29,7 @@ h2 {
   font-weight: $h2-font-weight;
   font-size  : $h2-font-size;
   // font-style : italic;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 p {
@@ -123,18 +123,6 @@ table {
   @extend .table, .table-striped, .table-hover, .table-condensed;
 }
 
-
-/**** Form Formatting ****/
-// form {
-//   p {
-//     @extend .form-group, .col-md-6, .col-lg-4;
-//     display: block;
-//   }
-//   input {
-//     @extend .form-control;
-//   }
-// }
-
 /**** Button Formatting ****/
 // White
 .default-button {
@@ -161,10 +149,43 @@ table {
   @extend .btn, .btn-danger;
 }
 
+/**** Social Media Icons ****/
+span.icon {
+  a {
+    color: default !important;
+  }
+  @extend .fa-stack;
+  i.square-bg {
+    @extend .fa, .fa-square, .fa-stack-2x, .fa-inverse;
+  }
+  i.linkedin {
+    @extend .fa, .fa-linkedin, .fa-stack-1x;
+  }
+  i.twitter {
+    @extend .fa, .fa-twitter, .fa-stack-1x;
+  }
+  i.email {
+    @extend .fa, .fa-envelope, .fa-stack-1x;
+  }
+  i.github {
+    @extend .fa, .fa-github-alt, .fa-stack-1x;
+  }
+  i.facebook {
+    @extend .fa, .fa-facebook, .fa-stack-1x;
+  }
+}
+
 /**** Footer ****/
+
+$footer-left-pad: 0.5em;
+$footer-right-pad: 0.5em;
+
 .footer-container {
   background-color: $black;
   .footer {
+    p {
+      color: white;
+    }
     @extend .container;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -180,17 +201,14 @@ table {
     .footer-nav {
       // @extend .col-xs-8;
       ul {
-        // position: absolute;
-        float: left;
         margin: 0;
         padding: 0;
         li {
-          // text-decoration: none;
           list-style-type: none;
           display: inline-block;
           border-right: 2px solid $light-blue;
-          padding-right: 0.5em;
-          padding-left: 0.5em;
+          padding-right: $footer-right-pad;
+          padding-left: $footer-left-pad;
           a {
             color: $white;
           }
@@ -204,6 +222,29 @@ table {
           }
         }
       }
+    }
+    .social {
+      padding-left: $footer-left-pad;
+      .social-icons {
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            color: $white;
+            list-style-type: none;
+            display: inline-block;
+            &:last-child {
+              border-right: 0;
+            }
+            @media screen and (max-width: $grid-float-breakpoint) {
+              border-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .copyright {
+      padding-left: $footer-left-pad;
     }
   }
 }

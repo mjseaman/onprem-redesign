@@ -17,6 +17,11 @@ body {
   padding-bottom: 2em;
 }
 
+// Add margin to the top of the page if there is no slider.
+.top-spacer {
+  height: ($navbar-height + 15px);
+}
+
 h1 {
 	font-family: $h1-font-family;
 	font-weight: $h1-font-weight;

@@ -10,6 +10,9 @@ CarrierWave.configure do |config|
 
 	# Use CloudFront CDN when in Production environment
 	if Rails.env == "production"
+		p "**********************"
+		p "IN PROD"
+		p "**********************"
 		config.asset_host	= "http://d2papxxk0j9ui4.cloudfront.net"
 	end
 end

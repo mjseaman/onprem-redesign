@@ -111,6 +111,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.7.0)
+    newrelic_rpm (3.7.2.195)
     nifty-generators (0.4.6)
     nokogiri (1.5.11)
     oauth (0.4.7)
@@ -231,6 +232,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mocha
+  newrelic_rpm
   nifty-generators
   oauth
   omniauth-facebook

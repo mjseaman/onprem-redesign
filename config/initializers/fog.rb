@@ -9,7 +9,7 @@ CarrierWave.configure do |config|
 	config.fog_public				= false
 
 	# Use CloudFront CDN when in Production environment
-	if RAILS_ENV == "production"
+	if Rails.env == "production"
 		config.fog_host					= d2papxxk0j9ui4.cloudfront.net
 	end
 end

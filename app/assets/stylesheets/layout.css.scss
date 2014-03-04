@@ -26,20 +26,31 @@ h1 {
 	font-family: $h1-font-family;
 	font-weight: $h1-font-weight;
   font-size: $h1-font-size;
+  color: #0d3a67;
   text-transform: uppercase;
+  margin: 0.2em 0 0 0;
+  line-height: 70px;
 }
 
 h2 {
   font-family: $h2-font-family;
   font-weight: $h2-font-weight;
   font-size  : $h2-font-size;
+  color      : $light-blue;
   // font-style : italic;
   // text-transform: uppercase;
+}
+
+h3.sub-header {
+  margin: -0.7em 0 1em 0.1em;
+  text-transform: uppercase;
+  color: $light-grey;
 }
 
 p {
 	font-family: $body-font-family;
 	font-weight: $body-font-weight;
+  color      : $very-dark-grey;
 }
 
 /**** Responsive Header ****/
@@ -186,7 +197,7 @@ $footer-left-pad: 0.5em;
 $footer-right-pad: 0.5em;
 
 .footer-container {
-  background-color: $black;
+  background-color: $light-blue;
   .footer {
     p {
       color: white;
@@ -211,7 +222,7 @@ $footer-right-pad: 0.5em;
         li {
           list-style-type: none;
           display: inline-block;
-          border-right: 2px solid $light-blue;
+          border-right: 2px solid $dark-blue;
           padding-right: $footer-right-pad;
           padding-left: $footer-left-pad;
           a {

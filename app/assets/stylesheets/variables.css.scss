@@ -12,6 +12,7 @@ $oswald									: "Oswald", sans-serif;
 $droid-serif						: "Droid Serif", serif;
 $bitter									: "Bitter", sans-serif;
 $montserrat							: "Montserrat", sans-serif;
+$helvetica							: "HelveticaNeue-CondensedBold", "Arial", sans-serif;
 
 
 // // ROKKITT-ROBOTO
@@ -34,9 +35,9 @@ $montserrat							: "Montserrat", sans-serif;
 $default-font-family		: $roboto;
 $default-font-weight		: 200;
 
-$h1-font-family					: $oswald; 
-$h1-font-weight					: 900; 
-$h1-font-size						: 3em;
+$h1-font-family					: $helvetica; 
+$h1-font-weight					: 400; 
+$h1-font-size						: 4.5em;
 
 $h2-font-family					: $roboto-condensed; 
 // $h2-font-family					: $montserrat; 
@@ -45,9 +46,6 @@ $h2-font-size						: 1.5em;
 
 $body-font-family				: $roboto;
 $body-font-weight				: normal;
-
-
-
 
 // Color Defaults
 $dark-blue        			: #0d3a67;

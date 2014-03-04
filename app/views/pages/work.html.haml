@@ -27,7 +27,10 @@
       .project{:class => "#{project.industry.name.parameterize if project.industry}"}
         .project-image
           = image_tag project.image_url(:thumb) if project.image?
-          .project-title
-            = project.title
-        .project-client
-          = image_tag project.logo_url(:thumb) if project.logo?
+          / .project-title
+          /   = project.title
+        .project-info
+          /   = image_tag project.logo_url(:thumb) if project.logo?
+          = project.title
+        .project-title
+  

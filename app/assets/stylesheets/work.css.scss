@@ -45,36 +45,40 @@
 			// box-shadow: 1px 1px 2px #888888;
 			width: 280px;
 			margin: 2px;
-			// background-color: #EBEBEB;
-			border: 1px solid #F2F2F2;
+			// background-color: #FCFEF5;
+			border: 1px solid #E3E3E3;
 			.project-image {
 				overflow: hidden;
 				// background-color: #CCCCCC;
-				height: 240px;
-				margin: 1.5%;
+				height: 260px;
+				// margin: 1.5%;
 				position: relative;
 				img {
 					min-width:100%;
 					min-height:100%;
 					// position:relative;
 				}
-				// .project-title {
-				// 	display: none;
-				// 	background-color: $project-semitrans-wht;
-				// 	position: absolute;
-				// 	bottom: 0;
-				// 	width: 100%;
-				// 	padding: 2%;
-				// }
+				.project-description {
+					display: none;
+					background-color: $project-semitrans-wht;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					padding: 2%;
+				}
 			}
 				
 			.project-info {
 				// background-color: $white;
-				height: 30px;
-				margin: 4%;
+				height: 50px;
+				margin: 3%;
 				img {
 					height: 100%;
 					width: auto;
+				}
+				h2 {
+					margin: 0;
+					line-height: 1.2em;
 				}
 			}
 		}

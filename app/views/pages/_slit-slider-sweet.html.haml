@@ -5,7 +5,7 @@
       .sl-slider
         .sl-slide{:data => {:orientation => ['horizontal','vertical'].sample, :slice1_rotation => "#{rand(-40..40)}", :slice1_scale => "2", :slice2_rotation => "#{rand(-40..40)}", :slice2_scale => "2"}}
           .sl-slide-inner
-            .bg-img{:style => "background-image: url(#{slide.image_url})"}
+            .bg-img{:style => "background-image: url(#{slide.image_url(:screen)})"}
             %h2=slide.header
             %blockquote
               %p="\"#{slide.quote}\""

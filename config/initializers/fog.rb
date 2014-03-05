@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
 		:region									=> 'us-west-1'
 	}
 	config.fog_directory		= "onpremrails-#{Rails.env}"
-	config.fog_public				= false
+	# config.fog_public				= false
 
 	# Use CloudFront CDN when in Production environment
 	if Rails.env == "production"

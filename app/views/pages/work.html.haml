@@ -24,7 +24,7 @@
           = industry.name
   .project-container
     -for project in @projects
-      .project{:class => "#{project.industry.name.parameterize if project.industry}"}
+      .project{:class => "#{project.industry.name.parameterize if project.industry}", :data => {:toggle => "modal", :target => "##{project.id}"}}
         .project-image
           = image_tag project.image_url(:thumb) if project.image?
           .project-description
@@ -33,3 +33,13 @@
           /   = image_tag project.logo_url(:thumb) if project.logo?
           %h2= project.title
         .project-title
+-for project in @projects
+  .modal.fade{:id => "#{project.id}", :tabindex => "-1", :aria_labelledby => "#{project.id}"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{:data => {dismiss:"modal"}, :aria_hidden => "true", :type => "button"} &times;
+          %h2.modal-title= project.title
+        .modal-body= project.description
+        .modal-footer
+          %button.btn.close{data:{dismiss:"modal"}} Close

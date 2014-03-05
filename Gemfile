@@ -46,7 +46,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'bourbon'
   gem 'font-awesome-sass'
-  gem 'bootstrap-sass', '~> 3.0.3.0'
+  gem 'bootstrap-sass', '~> 3.1.1.0', :path => "vendor/bootstrap-sass"
   
   gem 'uglifier', '>= 1.0.3'
 end

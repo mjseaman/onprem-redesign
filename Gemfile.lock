@@ -1,3 +1,9 @@
+PATH
+  remote: vendor/bootstrap-sass
+  specs:
+    bootstrap-sass (3.1.1.0)
+      sass (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -33,8 +39,6 @@ GEM
     arel (3.0.2)
     awesome_print (1.1.0)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (3.0.3.0)
-      sass (~> 3.2)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -217,7 +221,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   awesome_print
-  bootstrap-sass (~> 3.0.3.0)
+  bootstrap-sass (~> 3.1.1.0)!
   bourbon
   cancan
   carrierwave

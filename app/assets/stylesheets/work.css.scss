@@ -29,9 +29,9 @@
 		// }
 		.option-set {
 			// display: inline-block;
-			@extend .btn-group;
+			// @extend .btn-group;
 			a {
-				@extend .btn, .btn-default, .btn-group;
+				@extend .btn, .btn-default, .btn-sm;//, .btn-group;
 			}
 			.selected {
 				@extend .active;

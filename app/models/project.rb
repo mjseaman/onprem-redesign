@@ -16,7 +16,7 @@
 #
 
 class Project < ActiveRecord::Base
-  attr_accessible :title, :client, :caption, :description, :image_url, :image, :remote_image_url, :logo, :logo_url, :industry, :industry_id
+  attr_accessible :title, :client, :caption, :description, :image_url, :image, :remote_image_url, :logo_url, :logo, :industry, :industry_id
   belongs_to :industry
   mount_uploader :image, ImageUploader
   mount_uploader :logo, ImageUploader

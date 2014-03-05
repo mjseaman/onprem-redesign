@@ -59,8 +59,29 @@
 		%h2 Current Positions
 		%p
 			We are currently hiring for the positions listed below. To view the required and desired requirements for each role, just click on the role(s) you're interested in:
-		%h3 Business Analyst
+		%a{:href => "javascript:void(0)", :class => "business-analyst", :data => {:toggle => "modal", :target => "#business-analyst"}}
+			%h3
+				Business Analyst
 		%h3 Consultant
 		%h3 Senior Consultant
 		%h3 Project Manager
 		%h3 Senior Project Manager
+.modal.fade{:id => "business-analyst", :tabindex => "-1", :aria_labelledby => "business-analyst"}
+	.modal-dialog
+		.modal-content
+			.modal-header
+				%button.close{:data => {dismiss:"modal"}, :aria_hidden => "true", :type => "button"} &times;
+				%h2.modal-title Business Analyst
+			.modal-body
+				A Business Analyst is:
+				%ul
+					%li Courteous
+					%li Kind
+					%li Obedient
+					%li Cheerful
+					%li Thrifty
+					%li Brave
+					%li Clean
+					%li Reverent
+				.modal-footer
+					%button.btn.close{data:{dismiss:"modal"}} Close

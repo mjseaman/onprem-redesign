@@ -28,10 +28,8 @@
 		// 	}
 		// }
 		.option-set {
-			// display: inline-block;
-			// @extend .btn-group;
 			a {
-				@extend .btn, .btn-default, .btn-sm;//, .btn-group;
+				@extend .btn, .btn-default, .btn-sm;
 			}
 			.selected {
 				@extend .active;

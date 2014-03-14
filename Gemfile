@@ -16,9 +16,10 @@ gem "friendly_id", "~> 4.0.0.beta8"
 # Authentication, API and Oauth
 gem 'devise'
 gem 'oauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
+# gem 'omniauth-twitter'
+# gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem 'cancan'
 
 # For printing
 gem 'awesome_print'

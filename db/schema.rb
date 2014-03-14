@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140214045507) do
+ActiveRecord::Schema.define(:version => 20140314010837) do
 
   create_table "filters", :force => true do |t|
     t.text     "name"
@@ -65,6 +65,17 @@ ActiveRecord::Schema.define(:version => 20140214045507) do
     t.string   "image"
     t.string   "logo"
     t.integer  "industry_id"
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles_users", :force => true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
   end
 
   create_table "schools", :force => true do |t|

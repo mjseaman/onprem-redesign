@@ -1,20 +1,18 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!
+  load_and_authorize_resource
+
   def index
-    @projects = Project.all
     @industries = Industry.all
   end
 
   def show
-    @project = Project.find(params[:id])
   end
 
   def new
-    @project = Project.new
   end
 
   def create
-    @project = Project.new(params[:project])
     if @project.save
       redirect_to @project, :notice => "Successfully created project."
     else
@@ -23,12 +21,10 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = Project.find(params[:id])
   end
 
   def update
     ap params
-    @project = Project.find(params[:id])
     if @project.update_attributes(params[:project])
       redirect_to @project, :notice  => "Successfully updated project."
     else
@@ -37,7 +33,6 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
     @project.destroy
     redirect_to projects_url, :notice => "Successfully destroyed project."
   end

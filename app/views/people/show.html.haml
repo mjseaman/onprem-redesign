@@ -44,6 +44,8 @@
   = @person.email
 
 %p
-  = link_to "Edit", edit_person_path(@person), :class => "info-button"
-  = link_to "Destroy", @person, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
+  -if can? :edit, @person
+    = link_to "Edit", edit_person_path(@person), :class => "info-button"
+  -if can? :destroy, @person
+    = link_to "Destroy", @person, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
   = link_to "View All", people_path, :class => "primary-button"

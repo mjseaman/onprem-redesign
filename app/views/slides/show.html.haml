@@ -23,8 +23,8 @@
   = image_tag @slide.image_url(:thumb) if @slide.image?
 
 %p
-  = link_to "Edit", edit_slide_path(@slide)
-  |
-  = link_to "Destroy", @slide, :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", slides_path
+  -if can? :edit, @slide
+    = link_to "Edit", edit_slide_path(@slide), :class => "info-button"
+  -if can? :delete, @slide
+    = link_to "Destroy", @slide, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
+  = link_to "View All", slides_path, :class => "primary-button"

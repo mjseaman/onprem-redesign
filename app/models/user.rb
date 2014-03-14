@@ -20,11 +20,15 @@
 #
 
 class User < ActiveRecord::Base
+
+  has_and_belongs_to_many :roles
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :omniauthable,
-         :recoverable, :rememberable, :trackable, :validatable
+  # devise :database_authenticatable, :registerable, :omniauthable,
+  #        :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :omniauthable,
+         :rememberable, :trackable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
@@ -32,6 +36,10 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   # validates :email, :presence => { :message => "is required to complete registration." }
+
+  def role?(role)
+    roles.map{|role| role.name}.include? role.to_s
+  end
 
   def self.from_omniauth(auth)
   	where(auth.slice(:provider, :uid)).first_or_create do |user|

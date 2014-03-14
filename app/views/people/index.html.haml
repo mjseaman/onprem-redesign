@@ -16,7 +16,10 @@
       %td= person.title
       %td= person.email
       %td= link_to 'Show', person, :class => "primary-button"
-      %td= link_to 'Edit', edit_person_path(person), :class => "info-button"
-      %td= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
+      -if can? :edit, person
+        %td= link_to 'Edit', edit_person_path(person), :class => "info-button"
+      -if can? :destroy, person
+        %td= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
 
-%p= link_to "New Person", new_person_path, :class => "success-button"
+-if can? :create, Person
+  %p= link_to "New Person", new_person_path, :class => "success-button"

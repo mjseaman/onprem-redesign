@@ -25,8 +25,8 @@
     = image_tag @project.logo_url(:thumb) if @project.logo?
     #{"None" if !@project.logo?}
 %p
-  = link_to "Edit", edit_project_path(@project)
-  |
-  = link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete
-  |
+  -if can? :edit, @project
+    = link_to "Edit", edit_project_path(@project)
+  -if can? :destroy, @project
+    = link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete
   = link_to "View All", projects_path

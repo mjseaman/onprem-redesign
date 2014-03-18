@@ -30,20 +30,22 @@ class Ability
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
     user ||= User.new # Guest user
 
-    if user.email =~ /(.*)@onprem.com/
+    
+
+    if user.role? :admin
+      can :manage, :all
+
+    elsif user.role? :editor
+      can :manage, [Project, School, Slide]
+      
+    elsif user.email =~ /(.*)@onprem.com/
       can :read, :all
       can [:edit, :update], Person do |person|
         user.email == person.email
       end
     end
 
-    if user.role? :admin
-      can :manage, :all
-    end
-
-    if user.role? :editor
-      can :manage, [Project, School, Slide]
-    end
+    
 
   end
 end

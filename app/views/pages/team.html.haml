@@ -49,16 +49,13 @@
                   %span.icon
                     %i.square-bg
                     %i.twitter
-              -if person.email && !person.email.empty?
-                %a{:title => "#{person.first_name}'s Email", :href => "mailto:#{person.email}"}
-                  %span.icon
-                    %i.square-bg
-                    %i.email
+              / -if person.email && !person.email.empty?
+              /   %a{:title => "#{person.first_name}'s Email", :href => "mailto:#{person.email}"}
+              /     %span.icon
+              /       %i.square-bg
+              /       %i.email
               -if person.github && !person.github.empty?
                 %a{:title => "#{person.first_name}'s Github", :href => person.github, :target => "_blank"}
                   %span.icon
                     %i.square-bg
                     %i.github
-
-  / .project-client
-  /   = image_tag project.logo_url(:thumb) if project.logo?

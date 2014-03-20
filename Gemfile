@@ -19,6 +19,8 @@ gem 'oauth'
 # gem 'omniauth-twitter'
 # gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+
+# Cancan for authorization
 gem 'cancan'
 
 # For printing
@@ -34,9 +36,6 @@ gem 'fog', '~> 1.3.1'
 
 # Gravatar for user avatars
 gem 'gravtastic'
-
-# Cancan for authorization
-gem 'cancan'
 
 # New Relic for measurement
 gem 'newrelic_rpm'

@@ -47,13 +47,6 @@
 		}
 	}
 }
-#contact-us {
-	@extend .row;
-	display: inline-block;
-	.contact-info {
-		// @extend .col-sm-6;
-	}
-}
 
 .call-to-action {
 	@extend .row;

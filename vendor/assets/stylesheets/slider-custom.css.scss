@@ -33,25 +33,25 @@
       font-weight: 300;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
       p {
-        margin: 0 2.5em;
-        width: 60%;
-        max-width: 400px;
+        margin: 0;
+        width: 80%;
+        // max-width: 500px;
         position: relative;
         color: $white;
-        &:before {
-          color: #f0f0f0;
-          color: rgba(244, 244, 244, 0.65);
-          font-family: "Bookman Old Style", Bookman, Garamond, serif;
-          position: absolute;
-          line-height: 60px;
-          width: 75px;
-          height: 75px;
-          font-size: 200px;
-          z-index: -1;
-          left: -80px;
-          top: 35px;
-          content: '\201C';
-        }
+        // &:before {
+        //   color: #f0f0f0;
+        //   color: rgba(244, 244, 244, 0.65);
+        //   font-family: "Bookman Old Style", Bookman, Garamond, serif;
+        //   position: absolute;
+        //   line-height: 60px;
+        //   width: 75px;
+        //   height: 75px;
+        //   font-size: 200px;
+        //   z-index: -1;
+        //   left: -80px;
+        //   top: 35px;
+        //   content: '\201C';
+        // }
       }
       cite {
         font-size: 16px;

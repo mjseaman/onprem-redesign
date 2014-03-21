@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
 	def index
 		@slides = Page.where(name: __method__).first.slides.shuffle
 		# expires_in 3.minutes, :public => true
@@ -27,6 +28,10 @@ class PagesController < ApplicationController
 	end
 
 	def contact
+		@slides = Page.where(name: __method__).first.slides.shuffle
+	end
+
+	def idc
 		@slides = Page.where(name: __method__).first.slides.shuffle
 	end
 end

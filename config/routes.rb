@@ -22,6 +22,7 @@ OnPrem::Application.routes.draw do
   match '/careers' => 'pages#careers'
   match '/contact' => 'pages#contact'
   match '/idc' => 'pages#idc'
+  match '/about' => 'pages#about'
   
   
   # The priority is based upon order of creation:

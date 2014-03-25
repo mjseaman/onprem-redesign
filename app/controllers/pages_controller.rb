@@ -5,6 +5,10 @@ class PagesController < ApplicationController
 		# expires_in 3.minutes, :public => true
 	end
 
+	def about
+		@slides = Page.where(name: __method__).first.slides.shuffle
+	end
+
 	def offerings
 		@slides = Page.where(name: __method__).first.slides.shuffle
 	end

@@ -29,6 +29,7 @@ Page.create(name:"team",description:"/team")
 Page.create(name:"careers",description:"/careers")
 Page.create(name:"innovation",description:"/innovation")
 Page.create(name:"contact",description:"/contact")
+p "Created pages for use in slides"
 
 # Reset/create projects
 Project.delete_all
@@ -78,69 +79,6 @@ Person.create(first_name:"Tu",last_name:"Quach",title:"Senior PM",email:"tu@onpr
 Person.create(first_name:"Tyler",last_name:"Jury",title:"Project Manager",email:"tyler@onprem.com",linkedin:"http://www.linkedin.com/pub/tyler-jury/19/389/156")
 Person.create(first_name:"Vanessa",last_name:"Fiola",title:"Director",email:"vanessa@onprem.com",linkedin:"http://www.linkedin.com/pub/vanessa-fiola/1/2a2/66a")
 Person.create(first_name:"Yuna",last_name:"Oh",title:"Senior Consultant",email:"yuna@onprem.com",linkedin:"http://www.linkedin.com/in/yunaoh")
-# Person.create(
-# 	first_name: "Mitch",
-# 	last_name: "Seaman",
-# 	bio: "Here is a little information about me.",
-# 	alma_mater: "UCLA",
-# 	linkedin: "linkedin.com/in/mitchelseaman",
-# 	email: "mitch@onprem.com")
-# Person.create(
-# 	first_name: "Eric",
-# 	last_name: "Chen",
-# 	bio: "Eric Chen is a certified badass with a n award-winning smile.",
-# 	alma_mater: "Harvard",
-# 	linkedin: "",
-# 	email: "eric.chen0121@gmail.com")
-# Person.create(
-# 	first_name: "Addison",
-# 	last_name: "Huddy",
-# 	bio: "",
-# 	alma_mater: "UCLA",
-# 	linkedin: "",
-# 	email: "addisonhuddy@gmail.com")
-# Person.create(
-# 	first_name: "Clint",
-# 	last_name: "Mullins",
-# 	bio: "",
-# 	alma_mater: "Connecticut",
-# 	linkedin: "",
-# 	email: "clintfmullins@gmail.com")
-# Person.create(
-# 	first_name: "Daniel",
-# 	last_name: "Willems",
-# 	bio: "",
-# 	alma_mater: "Oberlin",
-# 	linkedin: "",
-# 	email: "dmkwillems@gmail.com")
-# Person.create(
-# 	first_name: "Maria",
-# 	last_name: "Piper",
-# 	bio: "",
-# 	alma_mater: "Berkeley",
-# 	linkedin: "",
-# 	email: "maria.b.piper@gmail.com")
-# Person.create(
-# 	first_name: "Adam",
-# 	last_name: "Loo",
-# 	bio: "",
-# 	alma_mater: "Berkeley",
-# 	linkedin: "",
-# 	email: "adamloo85@gmail.com")
-# Person.create(
-# 	first_name: "Zassmin",
-# 	last_name: "Montes De Oca",
-# 	bio: "",
-# 	alma_mater: "",
-# 	linkedin: "",
-# 	email: "zmontesd@gmail.com")
-# Person.create(
-# 	first_name: "Sherif",
-# 	last_name: "Abushadi",
-# 	bio: "",
-# 	alma_mater: "",
-# 	linkedin: "",
-# 	email: "sherif@devbootcamp.com")
 p "People set to defaults"
 
 

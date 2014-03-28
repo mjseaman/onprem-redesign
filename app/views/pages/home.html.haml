@@ -16,7 +16,7 @@
   .circle-links
     -for page in @pages
       .circle-link-box
-        .circle-link
+        .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb)})"}
           .circle-link-label
             %h2= page.display_name
         .circle-link-desc

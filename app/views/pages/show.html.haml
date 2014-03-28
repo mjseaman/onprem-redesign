@@ -3,6 +3,10 @@
 .main
   .top-spacer
   %h1= @page.display_name
+  
+  %p
+    %strong Display Order:
+    = @page.display_order
   %p
     %strong Name:
     = @page.name

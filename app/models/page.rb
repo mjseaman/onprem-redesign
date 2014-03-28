@@ -10,6 +10,6 @@
 #
 
 class Page < ActiveRecord::Base
-  attr_accessible :description, :name, :display_name
+  attr_accessible :description, :name, :display_name, :display_order
   has_many :slides
 end

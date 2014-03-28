@@ -5,11 +5,13 @@
   %h1 Pages
   %table
     %tr
+      %th Display Order
       %th Name
       %th Display name
       %th Description
     - for page in @pages
       %tr
+        %td= page.display_order
         %td= page.name
         %td= page.display_name
         %td= page.description

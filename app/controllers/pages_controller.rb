@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   # Vanity routes for main pages
 
 	def home
+		@pages = Page.where('display_order IS NOT NULL').order('display_order ASC')
 		@slides = Page.where(name: __method__).first.slides.shuffle
 		# expires_in 3.minutes, :public => true
 	end
@@ -44,7 +45,7 @@ class PagesController < ApplicationController
 	# Restful routes for editing pages
 
   def index
-    @pages = Page.all
+    @pages = Page.order('display_order ASC')
   end
 
   def show

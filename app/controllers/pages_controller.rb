@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
 	def team
 		@slides = Page.where(name: __method__).first.slides.shuffle
-		@pages = page.limit(50).sort_by!{ |n| n.last_name.downcase }
+		@pages = Page.limit(50).sort_by!{ |n| n.last_name.downcase }
 		@schools = School.order(:name)
 		@titles = page.uniques(:title).sort_by!{ |t| t.downcase }
 		ap page.all.size

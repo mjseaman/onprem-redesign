@@ -41,11 +41,11 @@ class SlideUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process :resize_to_limit => [240, 240]
+    process :resize_to_fill => [240, 240]
   end
 
   version :tiny do
-    process :resize_to_limit => [48,48]
+    process :resize_to_fill => [48,48]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

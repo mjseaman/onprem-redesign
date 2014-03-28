@@ -5,4 +5,6 @@ class ApplicationController < ActionController::Base
   	flash[:error] = "Access denied."
   	redirect_to "/users/login"
   end
+
+  helper :all
 end

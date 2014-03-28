@@ -5,7 +5,6 @@ class PagesController < ApplicationController
 	def home
 		@pages = Page.where('display_order IS NOT NULL').order('display_order ASC')
 		@slides = Page.where(name: __method__).first.slides.shuffle
-		# expires_in 3.minutes, :public => true
 	end
 
 	def about

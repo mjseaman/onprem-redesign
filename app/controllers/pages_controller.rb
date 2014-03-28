@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  
+  # Vanity routes for main pages
 
 	def home
 		@slides = Page.where(name: __method__).first.slides.shuffle
@@ -21,10 +23,10 @@ class PagesController < ApplicationController
 
 	def team
 		@slides = Page.where(name: __method__).first.slides.shuffle
-		@people = Person.limit(50).sort_by!{ |n| n.last_name.downcase }
+		@pages = page.limit(50).sort_by!{ |n| n.last_name.downcase }
 		@schools = School.order(:name)
-		@titles = Person.uniques(:title).sort_by!{ |t| t.downcase }
-		ap Person.all.size
+		@titles = page.uniques(:title).sort_by!{ |t| t.downcase }
+		ap page.all.size
 	end
 
 	def careers
@@ -38,4 +40,46 @@ class PagesController < ApplicationController
 	def idc
 		@slides = Page.where(name: __method__).first.slides.shuffle
 	end
+
+	# Restful routes for editing pages
+
+  def index
+    @pages = Page.all
+  end
+
+  def show
+    @page = Page.find(params[:id])
+  end
+
+  def new
+    @page = Page.new
+  end
+
+  def create
+    @page = Page.new(params[:page])
+    if @page.save
+      redirect_to @page, :notice => "Successfully created page."
+    else
+      render :action => 'new'
+    end
+  end
+
+  def edit
+    @page = Page.find(params[:id])
+  end
+
+  def update
+    @page = Page.find(params[:id])
+    if @page.update_attributes(params[:page])
+      redirect_to @page, :notice  => "Successfully updated page."
+    else
+      render :action => 'edit'
+    end
+  end
+
+  def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+    redirect_to pages_url, :notice => "Successfully destroyed page."
+  end
 end

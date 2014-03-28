@@ -1,0 +1,11 @@
+- title "Edit Page"
+
+.main
+  .top-spacer
+  %h1 Edit Page
+
+  = render 'form'
+
+  %p
+    = link_to "Show", @page, :class => "info-button"
+    = link_to "View All", pages_path, :class => "primary-button"

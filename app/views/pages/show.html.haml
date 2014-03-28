@@ -1,0 +1,19 @@
+- title "Page"
+
+.main
+  .top-spacer
+  %h1= @page.display_name
+  %p
+    %strong Name:
+    = @page.name
+  %p
+    %strong Display Name:
+    = @page.display_name
+  %p
+    %strong Description:
+    = @page.description
+
+  %p
+    = link_to "Edit", edit_page_path(@page), :class => "info-button"
+    = link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
+    = link_to "View All", pages_path, :class => "primary-button"

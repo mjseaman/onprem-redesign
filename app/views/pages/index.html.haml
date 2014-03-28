@@ -1,52 +1,20 @@
--title "OnPrem Solution Partners"
-
-= render "pages/slit-slider-sweet"
+- title "Pages"
 
 .main
-  %h1 About Us
-  %h3.sub-header Who We Are
-  #about-us
+  .top-spacer
+  %h1 Pages
+  %table
+    %tr
+      %th Name
+      %th Display name
+      %th Description
+    - for page in @pages
+      %tr
+        %td= page.name
+        %td= page.display_name
+        %td= page.description
+        %td= link_to 'Show', page, :class => "primary-button"
+        %td= link_to 'Edit', edit_page_path(page), :class => "info-button"
+        %td= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete, :class => "danger-button"
 
-    OnPrem is a Southern California consulting and technology innovation startup.
-
-    Founded in 2013 by four consulting industry leaders, we work with some of the most innovative companies in the world including major studios, large broadcasters and leading technology companies.
-
-    OnPrem's focus on top talent, company culture and creating the next generation consulting firm make it an exciting place to work for anyone with an entrepreneurial mindset.
-  .spacer
-  .circle-links
-    .circle-link-box
-      .circle-link
-        .circle-link-label
-          %h2 About Us
-      .circle-link-desc
-        %p Some text describing the page. You'll love it so much you won't even know what to do.
-    .circle-link-box
-      .circle-link
-        .circle-link-label
-          %h2 Offerings
-      .circle-link-desc
-        %p Some text describing the page. You'll love it so much you won't even know what to do.
-    .circle-link-box
-      .circle-link
-        .circle-link-label
-          %h2 Our Work
-      .circle-link-desc
-        %p Some text describing the page. You'll love it so much you won't even know what to do.
-    .circle-link-box
-      .circle-link
-        .circle-link-label
-          %h2 The Team
-      .circle-link-desc
-        %p Some text describing the page. You'll love it so much you won't even know what to do.
-    .circle-link-box
-      .circle-link
-        .circle-link-label
-          %h2 Careers
-      .circle-link-desc
-        %p Some text describing the page. You'll love it so much you won't even know what to do.
-    .circle-link-box
-      .circle-link
-        .circle-link-label
-          %h2 Contact Us
-      .circle-link-desc
-        %p Some text describing the page. You'll love it so much you won't even know what to do.
+  %p= link_to "New Page", new_page_path, :class => "success-button"

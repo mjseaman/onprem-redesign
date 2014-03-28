@@ -1,0 +1,16 @@
+= form_for @page do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :display_name
+    %br
+    = f.text_field :display_name
+  %p
+    = f.label :description
+    %br
+    = f.text_field :description
+  %p
+    = f.submit "Save", :class => "success-button"

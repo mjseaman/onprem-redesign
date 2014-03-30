@@ -29,3 +29,8 @@ Capybara.register_driver :poltergeist do |app|
       window_size: [1280, 1024]
   )
 end
+
+# Devise Helper
+class ActionController::TestCase
+  include Devise::TestHelpers
+end

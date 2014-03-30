@@ -17,6 +17,12 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
+  # FactoryGirl
+  config.include FactoryGirl::Syntax::Methods
+
+  # Devise
+  config.include Devise::TestHelpers, :type => :controller
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -35,19 +41,28 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  config.before(:suite) do
+    begin
+      DatabaseCleaner.start
+      FactoryGirl.lint
+    ensure
+      DatabaseCleaner.clean
+    end
+  end
 end
 
-def stub_env_for_omniauth(provider = "google_oauth2", email = "mitch@onprem.com", name = "Matt Damon")
-  env = { 
-    "omniauth.auth" => { 
-      "provider" => provider, 
-      "uid" => uid, 
-      info => {
-        "email" => email,
-        "name" => name
-      }
-    }
-  }
-  @controller.stub!(:env).and_return(env)
-  env 
-end
+# def stub_env_for_omniauth(provider = "google_oauth2", email = "mitch@onprem.com", name = "Matt Damon")
+#   env = { 
+#     "omniauth.auth" => { 
+#       "provider" => provider, 
+#       "uid" => uid, 
+#       info => {
+#         "email" => email,
+#         "name" => name
+#       }
+#     }
+#   }
+#   @controller.stub!(:env).and_return(env)
+#   env 
+# end

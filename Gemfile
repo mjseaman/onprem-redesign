@@ -55,8 +55,9 @@ group :development, :test do
   gem 'annotate' # Type "annotate" into console to annotate models, tests, fixtures and factories
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'database_cleaner'
   gem 'nifty-generators' # Ryan Bates generators
-  # gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.4.0'
   gem 'faker'
   # gem 'shoulda-matchers'
   # gem 'database_cleaner'

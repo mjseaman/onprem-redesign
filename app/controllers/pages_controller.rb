@@ -4,40 +4,40 @@ class PagesController < ApplicationController
 
 	def home
 		@pages = Page.where('display_order IS NOT NULL').order('display_order ASC')
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('home')
 	end
 
 	def about
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('about')
 	end
 
 	def offerings
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('offerings')
 	end
 
 	def work
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('work')
 		@projects = Project.limit(20)
     @industries = Industry.all
 	end
 
 	def team
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('team')
 		@people = Person.limit(50).sort_by!{ |n| n.last_name.downcase }
 		@schools = School.order(:name)
 		@titles = Person.uniques(:title).sort_by!{ |t| t.downcase }
 	end
 
 	def careers
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('careers')
 	end
 
 	def contact
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('contact')
 	end
 
 	def idc
-		@slides = Page.where(name: __method__).first.slides.shuffle
+		@slides = slides('idc')
 	end
 
 	# Restful routes for editing pages
@@ -80,5 +80,17 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     @page.destroy
     redirect_to pages_url, :notice => "Successfully destroyed page."
+  end
+
+  private
+
+  def slides(page_name)
+  	page_rel = Page.where(name: page_name)
+  	ap page_rel
+  	if !page_rel.empty? && !page_rel.first.slides.empty?
+  		return page_rel.first.slides.shuffle
+  	else
+  		nil
+  	end
   end
 end

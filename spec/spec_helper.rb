@@ -52,6 +52,14 @@ RSpec.configure do |config|
   end
 end
 
+module ControllerMacros
+  def login_admin
+    before(:each) do
+      sign_in FactoryGirl.create
+    end
+  end
+end
+
 # def stub_env_for_omniauth(provider = "google_oauth2", email = "mitch@onprem.com", name = "Matt Damon")
 #   env = { 
 #     "omniauth.auth" => { 

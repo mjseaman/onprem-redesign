@@ -80,7 +80,7 @@ nav#navbar {
       #logopic{
         width:90px;
         cursor: pointer;
-        @media screen and (max-width: $grid-float-breakpoint) {
+        @media screen and (max-width: $screen-md-min) {
           width: 50px;
         }
       }

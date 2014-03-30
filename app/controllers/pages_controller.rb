@@ -44,14 +44,17 @@ class PagesController < ApplicationController
 
   def index
     @pages = Page.order('display_order ASC')
+    authorize! :index, Page
   end
 
   def show
     @page = Page.find(params[:id])
+    authorize! :show, @page
   end
 
   def new
     @page = Page.new
+    authorize! :new, @page
   end
 
   def create
@@ -61,10 +64,12 @@ class PagesController < ApplicationController
     else
       render :action => 'new'
     end
+    authorize! :create, @page
   end
 
   def edit
     @page = Page.find(params[:id])
+    authorize! :edit, @page
   end
 
   def update
@@ -74,12 +79,14 @@ class PagesController < ApplicationController
     else
       render :action => 'edit'
     end
+    authorize! :update, @page
   end
 
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
     redirect_to pages_url, :notice => "Successfully destroyed page."
+    authorize! :destroy, @page
   end
 
   private

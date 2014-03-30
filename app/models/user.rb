@@ -31,14 +31,18 @@ class User < ActiveRecord::Base
          :rememberable, :trackable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :admin, :editor
   # attr_reader :sign_in_count, :last_sign_in_at, :created_at, :updated_at, :provider
   # attr_accessible :title, :body
 
   # validates :email, :presence => { :message => "is required to complete registration." }
 
-  def role?(role)
-    roles.map{|role| role.name}.include? role.to_s
+  def admin?
+    return true if admin
+  end
+
+  def editor?
+    return true if editor
   end
 
   def self.from_omniauth(auth)

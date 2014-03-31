@@ -22,4 +22,5 @@
 //= require omniauth_callbacks.js
 //= require layout.js
 //= require home.js
+//= require custom.js
 

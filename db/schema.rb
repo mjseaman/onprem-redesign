@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20140330210323) do
 
-  create_table "filters", :force => true do |t|
-    t.text     "name"
-    t.integer  "filterable_id"
-    t.string   "filterable_type"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
   create_table "industries", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -88,7 +80,7 @@ ActiveRecord::Schema.define(:version => 20140330210323) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
+    t.string   "email",                  :default => ""
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

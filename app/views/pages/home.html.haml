@@ -2,6 +2,8 @@
 
 = render "pages/slit-slider-sweet"
 
+= javascript_include_tag "custom.js"
+
 .main
   %h1 Welcome to OnPrem.
   %h3.sub-header Here's what we offer:
@@ -26,7 +28,7 @@
   .circle-links
     -for page in @pages
       .circle-link-box
-        %a{href:"/#{page.name}"}
+        %a{href:"/#{page.name}" .transition}
           .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb) if !page.slides.empty?})"}   
             .circle-link-label
               %h2= page.display_name

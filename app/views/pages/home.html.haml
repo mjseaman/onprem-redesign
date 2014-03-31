@@ -26,44 +26,9 @@
   .circle-links
     -for page in @pages
       .circle-link-box
-        .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb) if !page.slides.empty?})"}   
-          .circle-link-label
-            %h2= page.display_name
-        .circle-link-desc
-          %p= page.description
-    / .circle-link-box
-    /   .circle-link
-    /     .circle-link-label
-    /       %h2 About Us
-    /   .circle-link-desc
-    /     %p Some text describing the page. You'll love it so much you won't even know what to do.
-    / .circle-link-box
-    /   .circle-link
-    /     .circle-link-label
-    /       %h2 Offerings
-    /   .circle-link-desc
-    /     %p Some text describing the page. You'll love it so much you won't even know what to do.
-    / .circle-link-box
-    /   .circle-link
-    /     .circle-link-label
-    /       %h2 Our Work
-    /   .circle-link-desc
-    /     %p Some text describing the page. You'll love it so much you won't even know what to do.
-    / .circle-link-box
-    /   .circle-link
-    /     .circle-link-label
-    /       %h2 The Team
-    /   .circle-link-desc
-    /     %p Some text describing the page. You'll love it so much you won't even know what to do.
-    / .circle-link-box
-    /   .circle-link
-    /     .circle-link-label
-    /       %h2 Careers
-    /   .circle-link-desc
-    /     %p Some text describing the page. You'll love it so much you won't even know what to do.
-    / .circle-link-box
-    /   .circle-link
-    /     .circle-link-label
-    /       %h2 Contact Us
-    /   .circle-link-desc
-    /     %p Some text describing the page. You'll love it so much you won't even know what to do.
+        %a{href:"/#{page.name}"}
+          .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb) if !page.slides.empty?})"}   
+            .circle-link-label
+              %h2= page.display_name
+          .circle-link-desc
+            %p= page.description

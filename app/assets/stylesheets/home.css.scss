@@ -26,6 +26,9 @@ $circle-diameter: 17em;
 	@extend .row;
 	.circle-link-box {
 		@extend .col-sm-6, .col-md-4;
+		a {
+			text-decoration: none;
+		}
 		.circle-link {
 			width: $circle-diameter;
 		  height: $circle-diameter;

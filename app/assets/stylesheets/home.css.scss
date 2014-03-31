@@ -16,6 +16,10 @@
     height: 100%;
 }
 
+h3#sneak-peek {
+	color: $dark-blue;
+}
+
 $circle-diameter: 17em;
 
 .circle-links {
@@ -31,9 +35,6 @@ $circle-diameter: 17em;
 		  overflow: hidden;
 		  // background: rgba(0,0,0,0) url("http://i.imgur.com/tJyC8mb.jpg");
 		  background-position: center center;
-		  &:hover {
-		  	background: rgba(0,0,0,0.5) url("http://i.imgur.com/tJyC8mb.jpg");
-		  }
 	  	// &:before {
 	  	// 	position:absolute;
 	  	// 	width:$circle-diameter;

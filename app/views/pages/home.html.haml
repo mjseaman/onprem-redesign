@@ -3,12 +3,21 @@
 = render "pages/slit-slider-sweet"
 
 .main
-  %h1 About Us
-  %h3.sub-header Who We Are
+  %h1 Welcome to OnPrem.
+  %h3.sub-header Here's what we offer:
+  %p 
+    %span.strong Best Service:
+    We provide world-class service in business strategy and technology consulting services, with development services soon to come.
+  %p 
+    %span.strong Best Clients:
+    We work with the biggest names in Media & Entertainment.
+  %p 
+    %span.strong Best People:
+    We hire only the best and most passionate talent in the market.
   %h3#sneak-peek
     True to our commitment to constant innovation, a sneak peek at the plans for our new 
     =link_to "Innovation and Development Center", "pages#idc"
-    in Austin TX:
+    in Austin, TX:
 
   
   .video-container
@@ -17,7 +26,7 @@
   .circle-links
     -for page in @pages
       .circle-link-box
-        .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb)})"}   
+        .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb) if !page.slides.empty?})"}   
           .circle-link-label
             %h2= page.display_name
         .circle-link-desc

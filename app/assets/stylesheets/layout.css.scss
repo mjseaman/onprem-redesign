@@ -53,6 +53,13 @@ p {
   color      : $very-dark-grey;
 }
 
+span.strong {
+  font-family: $body-font-family;
+  font-size: 1.5em;
+  font-weight: 600;
+  color      : $black;
+}
+
 /**** Responsive Header ****/
 
 nav#navbar {

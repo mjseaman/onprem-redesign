@@ -113,6 +113,13 @@ nav#navbar {
   }
 }
 
+/**** Spacer in case page contains no slides ****/
+.spacer {
+  display: block;
+  height: 3em;
+  @extend .col-xs-12;
+}
+
 /**** Popup Alerts ****/
 .popup {
   @extend .alert, .fade, .in, .alert-dismissable;

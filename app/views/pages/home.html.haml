@@ -5,13 +5,14 @@
 .main
   %h1 About Us
   %h3.sub-header Who We Are
-  #about-us
+  %h3#sneak-peek
+    True to our commitment to constant innovation, a sneak peek at the plans for our new 
+    =link_to "Innovation and Development Center", "pages#idc"
+    in Austin TX:
 
-    OnPrem is a Southern California consulting and technology innovation startup.
-
-    Founded in 2013 by four consulting industry leaders, we work with some of the most innovative companies in the world including major studios, large broadcasters and leading technology companies.
-
-    OnPrem's focus on top talent, company culture and creating the next generation consulting firm make it an exciting place to work for anyone with an entrepreneurial mindset.
+  
+  .video-container
+    %iframe{allowfullscreen: "", frameborder: "0", height: "480", width: "853", src: "//www.youtube-nocookie.com/embed/rId6PKlDXeU?rel=0&amp;autohide=1&showinfo=0&fs=0"}
   .spacer
   .circle-links
     -for page in @pages

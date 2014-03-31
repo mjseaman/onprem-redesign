@@ -1,6 +1,15 @@
 #contact-us {
 	@extend .row;
 	display: inline-block;
+	.contact-map {
+		@extend .col-sm-6;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		// background: url(https://s3-us-west-1.amazonaws.com/onpremrails-production/static/OnPrem_Map_3.png);
+		// background-size: contain;
+	}
 	.contact-info {
 		@extend .col-sm-6;
 	}

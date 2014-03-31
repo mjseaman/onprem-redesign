@@ -115,7 +115,7 @@ nav#navbar {
 
 /**** Popup Alerts ****/
 .popup {
-  @extend .alert, .fade, .in;
+  @extend .alert, .fade, .in, .alert-dismissable;
   position: fixed;
   width: 50%;
   top: 100px;

@@ -1,13 +1,9 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-
-
 describe PagesController do
 
-  before(:all) do
-    
-    sign_in :user, @user
-  end
+  login_admin
+
   fixtures :all
   render_views
 

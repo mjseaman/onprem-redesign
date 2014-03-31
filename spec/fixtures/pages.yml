@@ -11,7 +11,8 @@
 #  display_order :integer
 #
 
-class Page < ActiveRecord::Base
-  attr_accessible :description, :name, :display_name, :display_order
-  has_many :slides
-end
+one:
+  name: home
+  description: /
+  display_order: 1
+  display_name: Home

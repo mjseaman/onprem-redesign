@@ -17,6 +17,6 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Slide do
   it "should be valid" do
-    Slide.new.should be_valid
+    expect(build :slide).to be_a Slide
   end
 end

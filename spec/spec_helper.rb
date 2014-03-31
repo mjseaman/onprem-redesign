@@ -22,6 +22,7 @@ RSpec.configure do |config|
 
   # Devise
   config.include Devise::TestHelpers, :type => :controller
+  config.extend ControllerMacros, :type => :controller
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -48,14 +49,6 @@ RSpec.configure do |config|
       FactoryGirl.lint
     ensure
       DatabaseCleaner.clean
-    end
-  end
-end
-
-module ControllerMacros
-  def login_admin
-    before(:each) do
-      sign_in FactoryGirl.create
     end
   end
 end

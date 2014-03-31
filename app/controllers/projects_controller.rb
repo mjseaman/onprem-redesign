@@ -24,7 +24,6 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    ap params
     if @project.update_attributes(params[:project])
       redirect_to @project, :notice  => "Successfully updated project."
     else

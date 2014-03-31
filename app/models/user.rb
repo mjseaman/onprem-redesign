@@ -17,6 +17,8 @@
 #  updated_at             :datetime         not null
 #  provider               :string(255)
 #  uid                    :string(255)
+#  admin                  :boolean
+#  editor                 :boolean
 #
 
 class User < ActiveRecord::Base
@@ -35,7 +37,7 @@ class User < ActiveRecord::Base
   # attr_reader :sign_in_count, :last_sign_in_at, :created_at, :updated_at, :provider
   # attr_accessible :title, :body
 
-  # validates :email, :presence => { :message => "is required to complete registration." }
+  validates :email, :presence => { :message => "is required to complete registration." }
 
   def admin?
     return true if admin

@@ -1,6 +1,9 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe PeopleController do
+
+  login_admin
+
   fixtures :all
   render_views
 

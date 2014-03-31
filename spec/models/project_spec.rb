@@ -18,7 +18,8 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Project do
+
   it "should be valid" do
-    Project.new.should be_valid
+    expect(build :project).to be_a Project
   end
 end

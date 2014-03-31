@@ -11,5 +11,11 @@
 require 'spec_helper'
 
 describe Industry do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should be valid" do
+    Industry.new.should be_valid
+  end
+
+  it "should require a username" do
+  	expect(build(:admin, email: nil)).not_to be_valid
+  end
 end

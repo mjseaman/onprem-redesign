@@ -24,4 +24,5 @@
 //= require home.js
 //= require custom.js
 //= require work.js
+//= require team.js
 

@@ -2,6 +2,8 @@
 
 = render "pages/slit-slider-sweet"
 
+= javascript_include_tag "work.js"
+
 .main
   %h1 Project Work
   %h3.sub-header What We've Done
@@ -14,6 +16,7 @@
     To learn more about some of the innovative projects we are leading, click through the images below:
   .combo-filters
     %p.filter-label
+
       Filter by Industry:
     .filter.option-set{:data => {:filter_group => "industry"}}
       %a.selected{:href => "#filter-industry-any", :data => {:filter_value => ""}}

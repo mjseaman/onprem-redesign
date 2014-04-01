@@ -28,7 +28,7 @@
   .circle-links
     -for page in @pages
       .circle-link-box
-        %a{href:"/#{page.name}" .transition}
+        %a.transition{href:"/#{page.name}"}
           .circle-link{style: "background: url(#{page.slides.sample.image_url(:thumb) if !page.slides.empty?})"}   
             .circle-link-label
               %h2= page.display_name

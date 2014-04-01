@@ -2,8 +2,6 @@
 
 = render "pages/slit-slider-sweet"
 
-= javascript_include_tag "custom.js"
-
 .main
   %h1 About Us
   %h3.sub-header Who We Are
@@ -22,7 +20,7 @@
 
     .partner
       .partner-image
-        = image_tag("jon_pic.png")
+        %img{src: s3_static("jon_pic.png"), alt: "Jon Christian"}
 
       %h2 Jon Christian
       %p 
@@ -30,7 +28,7 @@
 
     .partner
       .partner-image
-        = image_tag("frank_pic.png")
+        %img{src: s3_static("frank_pic.png"), alt: "Frank Leal"}
 
       %h2 Frank Leal
       %p 
@@ -40,7 +38,7 @@
 
     .partner
       .partner-image
-        = image_tag("candice_pic.png")
+        %img{src: s3_static("candice_pic.png"), alt: "Candice Lu"}
 
       %h2 Candice Lu
       %p 
@@ -48,7 +46,7 @@
 
     .partner
       .partner-image
-        = image_tag("christophe_pic.png")
+        %img{src: s3_static("christophe_pic.png"), alt: "Christophe Ponsart"}
 
       %h2 Christophe Ponsart
       %p 

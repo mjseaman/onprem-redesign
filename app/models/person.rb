@@ -43,6 +43,5 @@ class Person < ActiveRecord::Base
   	filters = []
   	filters << schools.map {|school| school.name.parameterize }
   	filters << title.parameterize
-  	ap filters.flatten.join " "
   end
 end

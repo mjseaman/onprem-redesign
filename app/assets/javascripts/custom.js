@@ -9,6 +9,7 @@ $(document).ready(function() {
 		linkLocation = this.href;
 		$("body").fadeOut(500, redirectPage);		
 	});
+	
 		
 	function redirectPage() {
 		window.location = linkLocation;

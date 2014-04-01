@@ -9,9 +9,8 @@
         %span
         %span
       %a.logo{href: "/"}
-        / #logodiv
-        = image_tag("OnPremLogoOnly.png", id: "logopic")
-        = image_tag("OnPremTextOnly.png", id: "logotext")
+        %img{src: s3_static("OnPremLogoOnlySm.png"),alt:"OnPrem Logo Text Only", id: "logopic"}
+        %img{src: s3_static("OnPremTextOnly.png"),alt:"OnPrem Logo Text Only", id: "logotext"}
     / Collect the nav links, forms, and other content for toggling
     #nav-links
       = render "layouts/navlinks"

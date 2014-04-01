@@ -19,4 +19,8 @@ module LayoutHelper
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end
+
+  def s3_static(image_name)
+    "https://s3-us-west-1.amazonaws.com/onpremrails-production/static/#{image_name}"
+  end
 end

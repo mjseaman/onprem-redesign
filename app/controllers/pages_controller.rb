@@ -93,7 +93,6 @@ class PagesController < ApplicationController
 
   def slides(page_name)
   	page_rel = Page.where(name: page_name)
-  	ap page_rel
   	if !page_rel.empty? && !page_rel.first.slides.empty?
   		return page_rel.first.slides.shuffle
   	else

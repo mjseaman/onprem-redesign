@@ -3,23 +3,59 @@
 	.offering {
 		@extend .col-sm-6;
 		background-color: $white;
+		border: 1px solid #E3E3E3;
+		//margin:	auto;		
+		margin-top: 2em;
+		height: 600px;
 		.offering-header {
 			@extend .row;
 			.offering-icon {
-				@extend .col-xs-3, .col-sm-2;
-				display: inline-block;
-				img { }
+				//@extend .row;
+				overflow: hidden;
+				height: 525px;
+				margin: 1.5%;
+				top: 44px;
+				position: relative;
+				img {
+					min-width:100%;
+					min-height:100%;
+					// position:relative;
+				}
 			}
 			.offering-title {
-				@extend .col-xs-9, .col-sm-2;
-				display: inline-block;
+				//@extend .row;
+				background-color: $white;
+				width: 100%;
+				height: auto;
+				position: absolute;
+				margin: 0px 1.5%;
+				top: 4px;
 				h2 {
 					margin: 0 auto;
 				}
 			}
 		}
+		.offering-body {
+			//@extend .row;
+			background-color: $white;
+			margin: 1.5%;
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 30px;
+			left: 0px;
+		}
 		.offering-detail {
-			// display: none;
+			//@extend .row;
+			background-color: $white;
+			margin: 1.5%;
+			display: none;
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			height: auto;
+			left: 0px;
+			//padding: 6px;
 		}
 	}
 }

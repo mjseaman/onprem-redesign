@@ -4,13 +4,15 @@ $(document).ready(function(){
   
   // hover slide and fade effect (dave)
   $('.offering').hover(function(){
-    $(this).find('.offering-detail').slideDown('fast');
+    //$(this).find('.offering-detail').slideDown('fast');
+    $(this).find('.offering-detail').slideDown(250);
     $('img',this).stop().animate({'opacity': '.4'}, 'fast');
-    $(this).height('auto');
+    //$(this).height('auto');
   }, function(){
-    $(this).find('.offering-detail').slideUp('fast');
+    //$(this).find('.offering-detail').slideUp('fast');
+    $(this).find('.offering-detail').slideUp(250);
     $('img',this).stop().animate({'opacity': '1'}, 'fast');
-    $(this).height('450px');
+    //$(this).height('450px');
   });
   
   // add randomish size classes

@@ -94,7 +94,7 @@ class PagesController < ApplicationController
   def slides(page_name)
   	page_rel = Page.where(name: page_name)
   	if !page_rel.empty? && !page_rel.first.slides.empty?
-  		return page_rel.first.slides.shuffle
+  		return page_rel.first.slides.order("display_order ASC")
   	else
   		nil
   	end

@@ -2,7 +2,7 @@ class SlidesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @slides = Slide.all.shuffle
+    @slides = Slide.order("display_order ASC")
   end
 
   def show

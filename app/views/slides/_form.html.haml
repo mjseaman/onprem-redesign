@@ -4,7 +4,13 @@
     = f.label :page
     %br
     = collection_select(:slide, :page_id, Page.all, :id, :name, prompt: true)
-    %p
+  %p
+    = f.label :display_order
+    %br
+    For best results, make sure this slide's position doesn't conflict with other slides on the same page.
+    %br
+    = f.text_field :display_order
+  %p
     = f.label :header
     %br
     = f.text_field :header

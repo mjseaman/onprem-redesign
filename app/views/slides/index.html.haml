@@ -2,6 +2,7 @@
 %h1 Slit-Slider Slides
 %table
   %tr
+    %th Display Order
     %th Page
     %th Header
     %th Quote
@@ -10,6 +11,7 @@
     %th Image
   - for slide in @slides
     %tr
+      %td= slide.display_order
       %td= slide.page.name if slide.page
       %td= slide.header
       %td= slide.quote

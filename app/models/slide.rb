@@ -14,7 +14,7 @@
 #
 
 class Slide < ActiveRecord::Base
-  attr_accessible :header, :quote, :author, :author_title, :image, :page_id
+  attr_accessible :header, :quote, :author, :author_title, :image, :page_id, :display_order
   belongs_to :page
   mount_uploader :image, SlideUploader
 end

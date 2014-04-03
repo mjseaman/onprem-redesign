@@ -15,6 +15,9 @@
   %strong Description:
   = @project.description
 %p
+  %strong Published?:
+  = @project.publish ? "Yes!" : "No"
+%p
   %strong Image:
   .preview-img
     = image_tag @project.image_url(:thumb) if @project.image?

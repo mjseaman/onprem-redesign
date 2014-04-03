@@ -46,8 +46,9 @@ OnPrem::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile << '*.js'
-  # config.assets.precompile << 'work.js'
+  config.assets.precompile << 'work.js'
+  config.assets.precompile << 'team.js'
+  config.assets.precompile << 'offerings.js'
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

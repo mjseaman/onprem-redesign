@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140330210323) do
+ActiveRecord::Schema.define(:version => 20140403021359) do
+
+  create_table "filters", :force => true do |t|
+    t.text     "name"
+    t.integer  "filterable_id"
+    t.string   "filterable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "industries", :force => true do |t|
     t.string   "name"
@@ -49,16 +57,17 @@ ActiveRecord::Schema.define(:version => 20140330210323) do
   end
 
   create_table "projects", :force => true do |t|
-    t.string   "title",       :null => false
+    t.string   "title",                         :null => false
     t.string   "client"
-    t.string   "caption",     :null => false
-    t.text     "description", :null => false
+    t.string   "caption",                       :null => false
+    t.text     "description",                   :null => false
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "image"
     t.string   "logo"
     t.integer  "industry_id"
+    t.boolean  "publish",     :default => true
   end
 
   create_table "schools", :force => true do |t|
@@ -80,7 +89,7 @@ ActiveRecord::Schema.define(:version => 20140330210323) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => ""
+    t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

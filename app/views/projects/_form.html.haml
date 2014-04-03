@@ -37,4 +37,10 @@
     %br
     =f.file_field :logo
   %p
+    = f.label :publish
+    %br
+    Check this if you want this project to be live on the site!
+    %br
+    = f.check_box :publish
+  %p
     = f.submit "Save", :class => "success-button"

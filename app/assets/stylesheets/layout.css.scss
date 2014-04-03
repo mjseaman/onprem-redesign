@@ -121,6 +121,7 @@ nav#navbar {
 }
 
 /**** Spacer in case page contains no slides ****/
+
 .spacer {
   display: block;
   height: 3em;
@@ -146,6 +147,19 @@ nav#navbar {
 }
 .popup-success {
   @extend .alert-success;
+}
+
+/**** Call to action ****/
+.call-to-action {
+  @extend .col-xs-12;
+  text-align: center;
+  margin-top: 1em;
+  a {
+    @extend .btn, .btn-primary;
+  }
+  button {
+    @extend .btn, .btn-primary;
+  }
 }
 
 /**** Table Formatting ****/

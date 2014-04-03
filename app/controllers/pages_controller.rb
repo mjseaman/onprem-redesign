@@ -17,7 +17,7 @@ class PagesController < ApplicationController
 
 	def work
 		@slides = slides('work')
-		@projects = Project.limit(20)
+		@projects = Project.where("publish = ?", "true")
     @industries = Industry.all
 	end
 

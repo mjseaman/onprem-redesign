@@ -1,33 +1,12 @@
 - title "Projects"
 
-/ %h1
-/   Project Work
-/ .sort-and-filter
-/   %p.filter-label
-/     Filter by Industry:
-/   %ul#filters.project-filter-list
-/     %li.project-filter
-/       %a{:href => "#", :data => {:filter => "*"}}
-/         Show All
-/     - for industry in @industries
-/       %li.project-filter
-/         %a{href: "#", data: {:filter => ".#{industry.name.downcase}"}}
-/           = industry.name
-/ .project-container
-/   -for project in @projects
-/     .project{:class => "#{project.industry.name.downcase if project.industry}"}
-/       .project-image
-/         = image_tag project.image_url(:thumb) if project.image?
-/         .project-title
-/           = project.title
-/       .project-client
-/         = image_tag project.logo_url(:thumb) if project.logo?
 %h1
   Projects
 %h2
   Edit with care.
 %table
   %tr
+    %th Published?
     %th Title
     %th Client
     %th Caption
@@ -40,6 +19,7 @@
     %th Destroy
   - for project in @projects
     %tr
+      %td= project.publish ? "Yes!" : "No"
       %td= project.title
       %td= project.client
       %td= project.caption

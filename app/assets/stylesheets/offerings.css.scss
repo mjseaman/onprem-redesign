@@ -1,35 +1,36 @@
 #offerings-full {
 	@extend .row;
+	margin:	auto;		
+	margin-top: 2em;
 	.offering {
 		@extend .col-sm-6;
 		background-color: $white;
 		border: 1px solid #E3E3E3;
-		//margin:	auto;		
-		margin-top: 2em;
-		height: 600px;
+		height: 450px;
+		//margin: 1px;
 		.offering-header {
 			@extend .row;
 			.offering-icon {
 				//@extend .row;
 				overflow: hidden;
-				height: 525px;
+				height: 350px;
 				margin: 1.5%;
 				top: 44px;
 				position: relative;
 				img {
 					min-width:100%;
-					min-height:100%;
-					// position:relative;
+					max-height:100%;
 				}
 			}
 			.offering-title {
 				//@extend .row;
 				background-color: $white;
 				width: 100%;
-				height: auto;
+				//height: auto;
 				position: absolute;
-				margin: 0px 1.5%;
+				//margin: 0px 1.5%;
 				top: 4px;
+				padding: 2%;
 				h2 {
 					margin: 0 auto;
 				}
@@ -39,11 +40,12 @@
 			//@extend .row;
 			background-color: $white;
 			margin: 1.5%;
-			width: 100%;
+			width: 98%;
 			height: auto;
 			position: absolute;
-			top: 30px;
+			top: 40px;
 			left: 0px;
+			padding-right: 1opx;
 		}
 		.offering-detail {
 			//@extend .row;
@@ -52,7 +54,7 @@
 			display: none;
 			position: absolute;
 			bottom: 0px;
-			width: 100%;
+			width: 98%;
 			height: auto;
 			left: 0px;
 			//padding: 6px;

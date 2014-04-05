@@ -1,10 +1,11 @@
 -title "Our Offerings | OnPrem"
 
 = render "pages/slit-slider-sweet"
+/ ".anything" means this is an HTML CLASS. THis is a label for HTML.  Any HTML element can have a class.
 
 = javascript_include_tag "offerings.js"
+= javascript_include_tag "custom.js"
 
-/ ".anything" means this is an HTML CLASS. THis is a label for HTML.  Any HTML element can have a class.
 .main
   %h1 Offerings
   %h3.sub-header What We Do
@@ -13,145 +14,133 @@
     .offering
       .offering-header
         .offering-icon
-          %img{src: s3_static("glasses.png"), alt: "glasses"}
+          = image_tag("Strategy - Chess.jpg")
 
         .offering-title
           %h2 
-            Business 
-            %br
-            Consulting
+            Strategy
           
       .offering-body
         %p
-          OnPrem is a talent-driven firm and our focus is on high-quality talent with deep industry knowledge and experience. Leveraging best practices from within and outside your industry, we will help lead your organization into the best-in-class category. We provide a comprehensive set of business consulting services.
+          A thriving tomorrow starts with a clear strategy today. We are a talent-driven firm with deep industry knowledge and the experience to understand industry challenges and trends to lead your organization into the best-in-class category.
       
       .offering-detail
         %ul
           %li
-            Business Strategy and Roadmap Definition
+            Business Strategy & Mission/Vision Development
           %li
-            Organizational Optimization
+            Departmental Roles and Responsibilities Definition and Goal Setting
           %li
-            Business Process Improvement
-          %li
-            Organizational Change Management
+            Activity Prioritization and Roadmap Development
 
     .offering
       .offering-header
         .offering-icon
-          %img{src: s3_static("leader.png"), alt: "leader"}
+          = image_tag("tech_leadership.png")
 
         .offering-title
           %h2 
-            Technology 
-            %br
-            Leadership
+            Technology Leadership
             
       .offering-body
         %p 
-          Our founders have been advising CIOs and CTOs across a number of industries for decades. We're passionate about helping you make the right technology decision. This group of service offerings focuses on advising technology leaders in their attempt to optimally align with business and effectively invest in technology. Our consultants have extensive experience with IT outsourcing and optimizing to ensure the very best output is delivered.
+          Business and technology are inextricably interlinked in today’s fast-paced  environment  We are passionate about helping you make the right technology decisions that also optimally align with your business.  Our team has extensive experience with IT outsourcing and optimizing to ensure that the very best output is delivered. 
 
       .offering-detail
         %ul
           %li 
-            Business Alignment and Technology Strategy Development
+            Business and Technology Alignment
           %li
-            Roadmap Development
+            Technology Strategy Development
           %li
             IT Process Optimization
           %li
             IT Budget and Planning Support
           %li
             Outsourcing Deal Assessments and Optimization
+          %li
+            Technology Implementation Planning
+          %li
+            Methodology Training and Implementation (e.g. Agile coaching)
 
     .offering
       .offering-header
         .offering-icon
-          %img{src: s3_static("server.png"), alt: "server"}
-          / %i.fa-camera-retro
+          = image_tag("processimprovement.jpg")
 
         .offering-title
           %h2 
-            Technology 
-            %br
-            Delivery
+            Process Improvement
           
       .offering-body
         %p
-          We have extensive experience delivering complex technology projects and are able to execute entire projects or oversee projects performed by other entities. We deliver technology projects through a risk management focused methodology. We focus on effectively managing scope, risk, user expectations, and investment.
+          Let us optimize your organization by leveraging best practices and industry expertise. We help to identify your key business challenges and fundamentally redesign them to maximize productivity and ROI. 
+      
       .offering-detail
         %ul
           %li
-            Project Definition, Scoping, Blueprinting, and Planning ("Phase 0")
+            Lean Business Process Improvement
           %li
-            Solution Evaluation, Selection and Procurement
-          %ul
-            %li
-              Requirements Definition
-            %li
-              RFP Creation
-            %li
-              Vendor Shortlisting
-            %li
-              Vendor Demonstrations and PoCs
-            %li
-              Vendor Evaluation and Selection
-            %li
-              TCO Analysis
-            %li
-              Contract Negotiation and Procurement
-            %li
-              Implementation Planning
-            %li
-              PMO Setup
-          %li 
-            Technology Project Delivery
-          %ul
-            %li
-              Custom Development via Agile or Waterfall Methodologies
-            %li
-              Package Implementation and Extension
-            %li
-              Functional Delivery Support
-            %li
-              Change Management Services
-            %li
-              PMO Services
-            %li
-              Methodology Training and Implementation
+            Organization Design
+          %li
+            Change Management
+          %li
+            Project Change Management
 
     .offering
       .offering-header
         .offering-icon
-          %img{src: s3_static("rocket.png"), alt: "rocket"}
+          = image_tag("tech_delivery.jpg")
 
         .offering-title
           %h2 
-            Innovative 
-            %br
-            Technologies
-
+            Technology System Delivery
+          
       .offering-body
         %p
-          Our goal is to provide our clients with talent that exceeds the marketplace.  We focus on those business activities and technologies that are critical to your business. Our talent has experience with the end-to-end Digital Project Lifecycle from the earliest conceptual stage to the fully functional platform.
+          Managing a complex project from ideation through to delivery can be difficult!  Our team has extensive experience delivering complex technology projects through a risk management focused methodology.  Our focus on effectively managing scope, risk, user expectations, and investment helps us to successfully execute projects and/or oversee projects performed by other entities.
 
       .offering-detail
         %ul
           %li
-            Digital Supply Chain
-          %ul
-            %li
-              DAM, MDM, Search, Transcode, Content Protection, Distribution, Analytics, etc.
+            Project Definition, Scoping, Blueprinting, and Planning
+          %li
+            Solution Requirements, Evaluation, Selection and Procurement
+          %li
+            ROI / TCO Analysis
+          %li
+            Technology Contract Negotiation and Procurement
+          %li
+            Iterative Delivery Methodology utilizing the Agile philosophy 
+          %li
+            Custom Systems Integration and Development Services
+          %li
+            Technology Package Implementation and Extension
+          %li
+            PMO / Project Governance
+
+    .offering
+      .offering-header
+        .offering-icon
+          = image_tag("Innovation.jpg")
+
+        .offering-title
+          %h2 
+            Innovation
+
+      .offering-body
+        %p
+          When it comes to the latest technologies, our team is focused on what’s critical to your business. Our talent has experience with the end-to-end Digital Project Lifecycle from the earliest conceptual stage to the fully functional platform.  And on top of that, we just love to think outside the box!
+
+      .offering-detail
+        %ul
+          %li
+            End-to-end Digital Supply Chain (e.g. Content Protection, DAM, Distribution, MDM)
           %li
             Digital Rights Management
           %li
             Social Media and Use of Social Data
           %li
-            Actionable Data Analytics
-          %ul
-            %li
-              Differentiating between meaningful data and noise
-            %li
-              Defining data-determined and data-influenced decisions
+            Intelligent Data Analytics
           %li
             Mobility

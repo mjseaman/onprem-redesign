@@ -49,7 +49,7 @@ OnPrem::Application.configure do
   config.assets.precompile << 'work.js'
   config.assets.precompile << 'team.js'
   config.assets.precompile << 'offerings.js'
-  config.assets.precompile << 'app/assets/javascripts/*.js'
+  config.assets.precompile << ['app/assets/javascripts/*.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

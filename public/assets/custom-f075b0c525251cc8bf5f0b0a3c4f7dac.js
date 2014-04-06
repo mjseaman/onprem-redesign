@@ -1,0 +1,1 @@
+$(document).ready(function(){function n(){window.location=linkLocation}$("body").css("display","none"),$("body").fadeIn(500),$("a.transition").click(function(o){o.preventDefault(),linkLocation=this.href,$("body").fadeOut(500,n)})});

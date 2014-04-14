@@ -21,6 +21,6 @@ module LayoutHelper
   end
 
   def s3_static(image_name)
-    "https://s3-us-west-1.amazonaws.com/onpremrails-production/static/#{image_name}"
+    "https://d2papxxk0j9ui4.cloudfront.net/static/#{image_name}"
   end
 end

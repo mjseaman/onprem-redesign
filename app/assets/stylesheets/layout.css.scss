@@ -216,6 +216,9 @@ span.icon {
   }
   i.facebook {
     @extend .fa, .fa-facebook, .fa-stack-1x;
+  }  
+  i.instagram {
+    @extend .fa, .fa-instagram, .fa-stack-1x;
   }
 }
 

@@ -52,6 +52,13 @@ $(function() {
             return false;
           
           } );
+
+          function animate() {
+            slitslider.next();
+            setTimeout(animate, 5000);
+          }
+
+          setTimeout(animate, 5000);
           
         } );
 

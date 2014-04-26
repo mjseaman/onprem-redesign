@@ -13,4 +13,24 @@
         %img{src: s3_static("OnPremTextOnly.png"),alt:"OnPrem Logo Text Only", id: "logotext"}
     / Collect the nav links, forms, and other content for toggling
     #nav-links
-      = render "layouts/navlinks"
+      %ul.main-links
+        = render "layouts/navlinks"
+        - if can? :create, :people
+          %li.dropdown.
+            %a.dropdown-toggle{href:"#", data:{toggle:"dropdown"}}
+              %i.fa.fa-gear
+              Admin 
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                = link_to "Pages", pages_path
+              %li
+                = link_to "People", people_path
+              %li
+                = link_to "Projects", projects_path
+              %li
+                = link_to "Schools", schools_path
+              %li
+                = link_to "Slides", slides_path
+              %li
+                = link_to "Users", users_path

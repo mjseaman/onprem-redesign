@@ -29,7 +29,8 @@
 			.footer-logo
 				%img{src: s3_static("OnPrem_Logo_White.png"), alt: "OnPrem Logo White"}
 			.footer-nav
-				= render :partial => "layouts/navlinks"
+				%ul
+					= render :partial => "layouts/navlinks"
 			%p
 			.social
 				= render :partial => "layouts/social-icons"

@@ -40,3 +40,5 @@
               - if can? :view, :users
                 %li
                   = link_to "Users", users_path
+              %li
+                = link_to "Sign Out", destroy_user_session_path, :method => :delete

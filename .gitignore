@@ -15,7 +15,7 @@
 /tmp
 
 # Ignore dotenv file.
-*.env
+.env
 
 # Ignore Carrierwave Image Uploads in the Project model
 /public/uploads/*

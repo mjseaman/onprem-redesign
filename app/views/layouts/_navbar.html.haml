@@ -15,7 +15,7 @@
     #nav-links
       %ul.main-links
         = render "layouts/navlinks"
-        - if can? :create, :people
+        - if can? :view, :people
           %li.dropdown
             %a.dropdown-toggle{href:"#", data:{toggle:"dropdown"}}
               %i.fa.fa-gear

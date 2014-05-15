@@ -37,5 +37,8 @@ describe "Page navigation" do
     expect(response).to render_template(:idc)
     expect(response.body).to include("main")
   end
-
+  it "does not contain the Admin menu if the user is not an admin" do
+    get "/" 
+    expect(response).to_not include("Admin")
+  end
 end

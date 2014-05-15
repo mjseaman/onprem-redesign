@@ -3,33 +3,12 @@
 // 	border: 1px solid red;
 // }
 .main {
+	// Filters - ALSO APPLIES TO TEAM PAGE
 	.combo-filters {
-		// text-align: center;
-		// padding-bottom: 1em;
-		// .filter-label {
-		// 	display: inline;
-		// }
-		// ul.option-set {
-		// 	padding-left: 0;
-		// 	display: inline;
-		// 	li {
-		// 		list-style: none;
-		// 		display: inline-block;
-		// 		// border: 1px solid black;
-		// 		padding: .25em .5em;
-		// 		background-color: #EBEBEB;
-		// 		border-radius: 0.25em;
-		// 		&:hover {
-		// 			background-color: $light-grey;
-		// 		}
-		// 		a {
-		// 			text-decoration: none;
-		// 		}
-		// 	}
-		// }
 		.option-set {
 			a {
 				@extend .btn, .btn-default, .btn-sm;
+				margin-bottom: 3px;
 			}
 			.selected {
 				@extend .active;

@@ -16,12 +16,13 @@
                   %span.darken
                     =slide.author_title
       / /sl-slider
-      %nav#nav-arrows.nav-arrows
-        %span.nav-arrow-prev Previous
-        %span.nav-arrow-next Next
-      %nav#nav-dots.nav-dots
-        %span.nav-dot-current
-        -(@slides.size - 1).times do
-          %span
+      -if @slides.size > 1
+        %nav#nav-arrows.nav-arrows
+          %span.nav-arrow-prev Previous
+          %span.nav-arrow-next Next
+        %nav#nav-dots.nav-dots
+          %span.nav-dot-current
+          -(@slides.size - 1).times do
+            %span
 -else
   .spacer

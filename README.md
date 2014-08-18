@@ -1,10 +1,10 @@
-==OnPrem Redesign
+#OnPrem Redesign
 
 This is the redesign of the OnPrem website. Please don't use without permission.
 
-===Setup
+##Setup
 
-1. Make sure you have Ruby 1.9.3, Rails ~3.2.13, ImageMagick, the Nokogiri gem including dependencies, and Postgresql installed and running on your machine.
+1. Make sure you have Ruby 1.9.3, Rails ~3.2.13, [ImageMagick](http://cactuslab.com/imagemagick/), the [Nokogiri gem including dependencies](http://nokogiri.org/tutorials/installing_nokogiri.html), and [Postgresql](https://www.codefellows.org/blog/how-to-install-postgresql) installed and running on your machine.
 2. Clone this repo.
 3. Navigate to the root directory of this repo in your terminal and run the following. If you have installation issues it is probably due to one of the dependencies above not being installed correctly.
 ```
@@ -23,3 +23,5 @@ Note: if you want to run RSPEC, make sure to run the following to set up your te
 ```
 rake db:test:prepare
 ```
+
+Happy coding!

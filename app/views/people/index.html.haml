@@ -11,7 +11,7 @@
   - for person in @people
     %tr
       %td= person.portrait? ? image_tag(person.portrait_url(:tiny)) : "None"
-      %td= person.first_name
+      / %td= person.first_name
       %td= person.last_name
       %td= person.title
       %td= person.email
